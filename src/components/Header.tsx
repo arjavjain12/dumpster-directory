@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Truck, Phone } from 'lucide-react'
+import { Truck } from 'lucide-react'
 
 export default function Header() {
   return (
@@ -34,13 +34,6 @@ export default function Header() {
 
           {/* CTA */}
           <div className="flex items-center gap-3">
-            <a
-              href="tel:+18005550000"
-              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-600 hover:text-green-600 transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="font-medium">1-800-555-0000</span>
-            </a>
             <Link
               href="/dumpster-rental-near-me"
               className="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
