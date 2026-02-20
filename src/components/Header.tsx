@@ -24,11 +24,11 @@ export default function Header() {
             <Link href="/dumpster-sizes" className="hover:text-green-600 transition-colors">
               Size Guide
             </Link>
+            <Link href="/dumpster-rental-cost" className="hover:text-green-600 transition-colors">
+              Pricing
+            </Link>
             <Link href="/dumpster-rental-near-me" className="hover:text-green-600 transition-colors">
               Near Me
-            </Link>
-            <Link href="/blog" className="hover:text-green-600 transition-colors">
-              Resources
             </Link>
           </nav>
 

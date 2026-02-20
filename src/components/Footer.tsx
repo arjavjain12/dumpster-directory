@@ -92,12 +92,12 @@ export default function Footer() {
             <ul className="space-y-1.5">
               {[
                 { label: 'Size Guide', href: '/dumpster-sizes' },
-                { label: '10 Yard Dumpster', href: '/dumpster-sizes/10-yard' },
-                { label: '20 Yard Dumpster', href: '/dumpster-sizes/20-yard' },
-                { label: '30 Yard Dumpster', href: '/dumpster-sizes/30-yard' },
+                { label: 'Pricing Guide', href: '/dumpster-rental-cost' },
+                { label: 'Construction Rental', href: '/dumpster-rental/construction' },
+                { label: 'Residential Rental', href: '/dumpster-rental/residential' },
+                { label: 'Roll-Off Rental', href: '/dumpster-rental/roll-off' },
+                { label: 'Roofing Dumpsters', href: '/dumpster-rental/roofing' },
                 { label: 'Near Me', href: '/dumpster-rental-near-me' },
-                { label: 'Blog', href: '/blog' },
-                { label: 'List Your Business', href: '/list-your-business' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

@@ -162,12 +162,14 @@ export default async function CityPage({
             </Link>
           </div>
 
-          {/* Intro paragraph */}
+          {/* Intro paragraph — Kimi-generated if available, fallback template */}
           <p className="mt-5 max-w-3xl text-gray-600 leading-relaxed">
-            Looking for dumpster rental in {city.city_name}? Whether you&apos;re tackling a home cleanout,
-            renovation, roofing project, or construction job in {city.county}, our directory connects
-            you with trusted local roll-off dumpster companies. Compare prices, read reviews, and get
-            free quotes — all in one place.
+            {city.intro
+              ? city.intro
+              : `Looking for dumpster rental in ${city.city_name}? Whether you're tackling a home cleanout,
+                renovation, roofing project, or construction job in ${city.county}, our directory connects
+                you with trusted local roll-off dumpster companies. Compare prices, read reviews, and get
+                free quotes — all in one place.`}
           </p>
         </div>
       </div>
