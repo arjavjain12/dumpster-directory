@@ -221,28 +221,40 @@ async function processBatch(slice, maxPerCity, idMap, batchLabel) {
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
-  const args  = process.argv.slice(2)
-  const limit = parseInt(args[args.indexOf('--limit') + 1] || '2000')
+  const args   = process.argv.slice(2)
+  const limit  = parseInt(args[args.indexOf('--limit')  + 1] || '2000')
+  const offset = parseInt(args[args.indexOf('--offset') + 1] || '0')
 
   console.log(`\n🚀  Dumpster business scraper (tiered limits)`)
-  console.log(`    Cities: top ${limit} by population`)
+  console.log(`    Cities: ${offset + 1}–${offset + limit} by population`)
   console.log(`    Tiers: rank 1-50 → 20/city | 51-200 → 10/city | 201-500 → 7/city | 501+ → 5/city\n`)
 
   // Estimate cost
-  const est50  = Math.min(50,  limit)
-  const est200 = Math.max(0, Math.min(200, limit) - 50)
-  const est500 = Math.max(0, Math.min(500, limit) - 200)
-  const estRest = Math.max(0, limit - 500)
+  const est50   = Math.max(0, Math.min(50,  offset + limit) - Math.max(0,  offset))
+  const est200  = Math.max(0, Math.min(200, offset + limit) - Math.max(50,  offset))
+  const est500  = Math.max(0, Math.min(500, offset + limit) - Math.max(200, offset))
+  const estRest = Math.max(0, (offset + limit) - Math.max(500, offset))
   const estCost = (est50 * 20 + est200 * 10 + est500 * 7 + estRest * 5) * 0.004
   console.log(`    💰  Estimated cost: $${estCost.toFixed(2)}\n`)
 
-  // Fetch cities
-  const { data: cities, error: cityErr } = await supabase
-    .from('cities')
-    .select('id, city_name, state')
-    .order('population', { ascending: false })
-    .limit(limit)
-  if (cityErr) { console.error('❌  Supabase error:', cityErr.message); process.exit(1) }
+  // Fetch cities in pages of 1000 (Supabase row limit)
+  let cities = []
+  let page   = 0
+  const PAGE = 1000
+  while (cities.length < limit) {
+    const from = offset + page * PAGE
+    const to   = from + Math.min(PAGE, limit - cities.length) - 1
+    const { data, error: cityErr } = await supabase
+      .from('cities')
+      .select('id, city_name, state')
+      .order('population', { ascending: false })
+      .range(from, to)
+    if (cityErr) { console.error('❌  Supabase error:', cityErr.message); process.exit(1) }
+    if (!data || data.length === 0) break
+    cities = cities.concat(data)
+    if (data.length < PAGE) break
+    page++
+  }
   console.log(`📋  ${cities.length} cities loaded`)
 
   // Build search strings + city map

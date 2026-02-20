@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
   return {
     rules: [
       {
@@ -10,6 +9,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: [
+      'https://dumpstersearch.com/sitemap.xml',
+      'https://dumpstersearch.com/cities-sitemap.xml',
+      'https://dumpstersearch.com/businesses-sitemap.xml',
+    ],
   }
 }

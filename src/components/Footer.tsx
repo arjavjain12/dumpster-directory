@@ -98,6 +98,7 @@ export default function Footer() {
                 { label: 'Roll-Off Rental', href: '/dumpster-rental/roll-off' },
                 { label: 'Roofing Dumpsters', href: '/dumpster-rental/roofing' },
                 { label: 'Near Me', href: '/dumpster-rental-near-me' },
+                { label: 'List Your Business', href: '/list-your-business' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

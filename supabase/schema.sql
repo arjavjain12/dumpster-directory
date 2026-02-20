@@ -98,6 +98,26 @@ create index if not exists idx_leads_status on leads(status);
 create index if not exists idx_leads_created_at on leads(created_at desc);
 
 -- ============================================================
+-- LISTING REQUESTS (from /list-your-business form)
+-- ============================================================
+create table if not exists listing_requests (
+  id            bigserial primary key,
+  business_name text not null,
+  contact_name  text not null,
+  email         text not null,
+  phone         text not null,
+  city_state    text not null,
+  website       text,
+  plan          text default 'free' check (plan in ('free','basic','premium')),
+  message       text,
+  status        text default 'new' check (status in ('new','contacted','approved','rejected')),
+  created_at    timestamptz default now()
+);
+
+create index if not exists idx_listing_requests_status on listing_requests(status);
+create index if not exists idx_listing_requests_created_at on listing_requests(created_at desc);
+
+-- ============================================================
 -- NEARBY CITIES FUNCTION
 -- Returns cities near a given lat/lng, excluding the current city
 -- ============================================================
