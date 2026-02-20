@@ -69,7 +69,7 @@ Write the description now:`
     method:  'POST',
     headers: { 'Authorization': `Bearer ${KIMI_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model:      'moonshot-v1-8k',
+      model:      'kimi-k2-turbo-preview',
       messages:   [{ role: 'user', content: prompt }],
       max_tokens: 160,
       temperature: 0.85,
@@ -114,46 +114,49 @@ async function main() {
 
   let success = 0
   let failed  = 0
+  let cursor  = 0
+  const CONCURRENCY = 5
 
-  for (let i = 0; i < businesses.length; i++) {
-    const biz       = businesses[i]
-    const cityName  = biz.city?.city_name ?? 'your city'
-    const stateName = biz.city?.state     ?? ''
-    const label     = `${biz.name} (${cityName}, ${stateName})`
+  async function processOne() {
+    while (cursor < businesses.length) {
+      const i   = cursor++
+      const biz = businesses[i]
+      const cityName  = biz.city?.city_name ?? 'your city'
+      const stateName = biz.city?.state     ?? ''
+      const label     = `${biz.name} (${cityName}, ${stateName})`
 
-    process.stdout.write(`[${i + 1}/${businesses.length}] ${label}... `)
+      process.stdout.write(`[${i + 1}/${businesses.length}] ${label}... `)
 
-    try {
-      const description = await generateDescription(biz, cityName, stateName)
+      try {
+        const description = await generateDescription(biz, cityName, stateName)
 
-      if (!description) {
-        console.log('⚠️  Empty response, skipping')
+        if (!description) {
+          console.log('⚠️  Empty response, skipping')
+          failed++
+          continue
+        }
+
+        const { error: updateError } = await supabase
+          .from('businesses')
+          .update({ description })
+          .eq('id', biz.id)
+
+        if (updateError) {
+          console.log(`❌  DB: ${updateError.message}`)
+          failed++
+        } else {
+          console.log('✓')
+          success++
+        }
+      } catch (err) {
+        console.log(`❌  ${err.message}`)
         failed++
-        continue
+        await new Promise((r) => setTimeout(r, 2000))
       }
-
-      const { error: updateError } = await supabase
-        .from('businesses')
-        .update({ description })
-        .eq('id', biz.id)
-
-      if (updateError) {
-        console.log(`❌  DB: ${updateError.message}`)
-        failed++
-      } else {
-        console.log('✓')
-        success++
-      }
-
-      // Rate limit: ~3 req/sec
-      await new Promise((r) => setTimeout(r, 350))
-
-    } catch (err) {
-      console.log(`❌  ${err.message}`)
-      failed++
-      await new Promise((r) => setTimeout(r, 2000))
     }
   }
+
+  await Promise.all(Array.from({ length: CONCURRENCY }, processOne))
 
   console.log(`\n🎉  Done!`)
   console.log(`    ${success} descriptions generated`)
