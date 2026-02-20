@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpstersearch.com'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpsterlisting.com'
 
 // This is the main sitemap. It covers all static, category, and state-level
 // pages. The large dynamic collections (cities, businesses) are split into

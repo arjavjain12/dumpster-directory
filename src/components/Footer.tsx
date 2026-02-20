@@ -115,7 +115,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} DumpsterSearch. All rights reserved.
+            © {new Date().getFullYear()} DumpsterListing. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>

@@ -10,9 +10,9 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      'https://dumpstersearch.com/sitemap.xml',
-      'https://dumpstersearch.com/cities-sitemap.xml',
-      'https://dumpstersearch.com/businesses-sitemap.xml',
+      'https://dumpsterlisting.com/sitemap.xml',
+      'https://dumpsterlisting.com/cities-sitemap.xml',
+      'https://dumpsterlisting.com/businesses-sitemap.xml',
     ],
   }
 }

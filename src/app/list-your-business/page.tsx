@@ -3,12 +3,12 @@ import { Building2, CheckCircle, Star, Phone, Globe, Shield, TrendingUp, Users }
 import ListingForm from './ListingForm'
 
 export const metadata: Metadata = {
-  title: 'List Your Business | DumpsterSearch',
+  title: 'List Your Business | DumpsterListing',
   description:
-    'Get your dumpster rental company listed on DumpsterSearch and reach customers actively searching for dumpster rental in your city. Free listing available.',
+    'Get your dumpster rental company listed on DumpsterListing and reach customers actively searching for dumpster rental in your city. Free listing available.',
   alternates: { canonical: '/list-your-business' },
   openGraph: {
-    title: 'List Your Dumpster Business on DumpsterSearch',
+    title: 'List Your Dumpster Business on DumpsterListing',
     description:
       'Reach customers searching for dumpster rental in your area. Free listing with options to upgrade for more visibility.',
   },
@@ -80,7 +80,7 @@ const BENEFITS = [
     icon: Users,
     title: 'Customers Already Searching',
     description:
-      'DumpsterSearch attracts people actively looking to rent a dumpster — high-intent visitors ready to book. You skip the cold outreach entirely.',
+      'DumpsterListing attracts people actively looking to rent a dumpster — high-intent visitors ready to book. You skip the cold outreach entirely.',
   },
   {
     icon: TrendingUp,
@@ -138,7 +138,7 @@ export default function ListYourBusinessPage() {
             For Dumpster Rental Companies
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
-            Get Your Dumpster Business Listed<br className="hidden sm:block" /> on DumpsterSearch
+            Get Your Dumpster Business Listed<br className="hidden sm:block" /> on DumpsterListing
           </h1>
           <p className="mt-5 mx-auto max-w-2xl text-lg text-gray-600 leading-relaxed">
             Reach customers actively searching for dumpster rental in your city. Start with a free listing
@@ -225,9 +225,9 @@ export default function ListYourBusinessPage() {
         {/* Benefits */}
         <section>
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-extrabold text-gray-900">Why List on DumpsterSearch?</h2>
+            <h2 className="text-3xl font-extrabold text-gray-900">Why List on DumpsterListing?</h2>
             <p className="mt-3 text-gray-600 max-w-xl mx-auto">
-              We built DumpsterSearch specifically for people searching to rent a dumpster — meaning every
+              We built DumpsterListing specifically for people searching to rent a dumpster — meaning every
               visitor is a potential customer for your business.
             </p>
           </div>
@@ -300,7 +300,7 @@ export default function ListYourBusinessPage() {
           <Building2 className="mx-auto mb-4 h-10 w-10 text-green-200" />
           <h2 className="text-3xl font-extrabold mb-3">Ready to Grow Your Business?</h2>
           <p className="mx-auto mb-8 max-w-xl text-green-100 text-lg">
-            Join dumpster rental companies already listed on DumpsterSearch. It takes less than 2 minutes
+            Join dumpster rental companies already listed on DumpsterListing. It takes less than 2 minutes
             to submit your information.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

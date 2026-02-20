@@ -73,7 +73,7 @@ export default async function CostPage({
     '@type': 'Article',
     headline: `Dumpster Rental Cost in ${city.city_name}, ${stateName}`,
     description: `How much does dumpster rental cost in ${city.city_name}? Compare prices by size.`,
-    author: { '@type': 'Organization', name: 'DumpsterSearch' },
+    author: { '@type': 'Organization', name: 'DumpsterListing' },
   }
 
   return (

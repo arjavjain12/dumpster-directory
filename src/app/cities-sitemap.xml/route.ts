@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpstersearch.com'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpsterlisting.com'
 
 // Escape XML special characters in a URL so the sitemap remains well-formed.
 function escapeXml(str: string): string {

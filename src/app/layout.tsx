@@ -8,15 +8,15 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'DumpsterSearch — Find Dumpster Rental Companies Near You',
-    template: '%s | DumpsterSearch',
+    default: 'DumpsterListing — Find Dumpster Rental Companies Near You',
+    template: '%s | DumpsterListing',
   },
   description:
     'Compare dumpster rental companies in your city. Get free quotes from local providers. 10, 20, 30, 40 yard roll-off dumpsters available.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   openGraph: {
     type: 'website',
-    siteName: 'DumpsterSearch',
+    siteName: 'DumpsterListing',
   },
   robots: {
     index: true,
