@@ -38,7 +38,21 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: `/dumpster-rental/${state}/${city}/${business}` },
-    openGraph:  { title, description, url: `/dumpster-rental/${state}/${city}/${business}` },
+    openGraph: {
+      title,
+      description,
+      url: `/dumpster-rental/${state}/${city}/${business}`,
+      images: [{
+        url: `/api/og?title=${encodeURIComponent(biz.name)}&subtitle=${encodeURIComponent(`Dumpster Rental · ${cityName}, ${stateName}${biz.rating ? ` · ${biz.rating}★ rating` : ''}`)}`,
+        width: 1200,
+        height: 630,
+        alt: biz.name,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [`/api/og?title=${encodeURIComponent(biz.name)}&subtitle=${encodeURIComponent(`Dumpster Rental · ${cityName}, ${stateName}`)}`],
+    },
   }
 }
 

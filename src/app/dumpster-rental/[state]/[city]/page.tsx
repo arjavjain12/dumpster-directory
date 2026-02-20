@@ -39,7 +39,7 @@ export async function generateMetadata({
 
   if (!data) return { title: 'Not Found' }
 
-  const { city: c } = data
+  const { city: c, businesses } = data
   const stateName = STATE_NAMES[state] ?? titleCase(state)
   const title = `Dumpster Rental in ${c.city_name}, ${c.state} (2025) | Compare Local Companies`
   const description = `Find and compare dumpster rental companies in ${c.city_name}, ${stateName}. Get free quotes on 10–40 yard roll-off dumpsters. Serving ${c.county}.`
@@ -54,6 +54,16 @@ export async function generateMetadata({
       title,
       description,
       url: `/dumpster-rental/${state}/${city}`,
+      images: [{
+        url: `/api/og?title=${encodeURIComponent(`Dumpster Rental in ${c.city_name}, ${c.state}`)}&subtitle=${encodeURIComponent(`Compare ${businesses.length} local companies · Free quotes`)}`,
+        width: 1200,
+        height: 630,
+        alt: `Dumpster Rental in ${c.city_name}, ${c.state}`,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [`/api/og?title=${encodeURIComponent(`Dumpster Rental in ${c.city_name}, ${c.state}`)}&subtitle=${encodeURIComponent(`Compare ${businesses.length} local companies · Free quotes`)}`],
     },
   }
 }
