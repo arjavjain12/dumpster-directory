@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'DumpsterListing',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'DumpsterListing — Find Dumpster Rental Companies Near You' }],
+    images: [{ url: '/api/og', width: 1200, height: 630, alt: 'DumpsterListing — Find Dumpster Rental Companies Near You' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DumpsterListing — Find Dumpster Rental Companies Near You',
     description: 'Compare dumpster rental companies in your city. Free quotes from local roll-off providers.',
-    images: ['/og-image.png'],
+    images: ['/api/og'],
   },
   robots: {
     index: true,
