@@ -5,9 +5,9 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { formatPrice, DEFAULT_PRICING } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'How Much Does Dumpster Rental Cost? (2025 Pricing Guide)',
+  title: 'Dumpster Rental Prices & Cost Guide (2026) — What to Expect',
   description:
-    'Dumpster rental costs $275–$750 depending on size and location. See national averages by size, what affects price, and how to get the best rate.',
+    'Dumpster rental prices range from $275–$750 depending on size and location. See 2026 national averages by size, what affects price, and how to get the best rate.',
   alternates: { canonical: '/dumpster-rental-cost' },
   openGraph: {
     title: 'Dumpster Rental Cost Guide (2025)',
