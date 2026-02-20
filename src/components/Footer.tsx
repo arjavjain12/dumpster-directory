@@ -39,7 +39,7 @@ export default function Footer() {
                 <Truck className="w-4 h-4 text-white" />
               </div>
               <span className="font-bold text-white text-lg">
-                Dumpster<span className="text-green-400">Search</span>
+                Dumpster<span className="text-green-400">Listing</span>
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
