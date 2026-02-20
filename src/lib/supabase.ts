@@ -121,3 +121,17 @@ export async function getAllCitySlugs() {
     .select('state_slug, city_slug')
   return data || []
 }
+
+export async function getAllBusinessSlugs() {
+  const { data } = await getClient()
+    .from('businesses')
+    .select('slug, city:cities(state_slug, city_slug)')
+    .eq('is_active', true)
+  return (data || []) as unknown as Array<{ slug: string; city: { state_slug: string; city_slug: string } }>
+}
+
+export async function getBusinessByPath(stateSlug: string, citySlug: string, businessSlug: string) {
+  const city = await getCityBySlug(stateSlug, citySlug)
+  if (!city) return null
+  return getBusinessBySlug(city.id, businessSlug)
+}
