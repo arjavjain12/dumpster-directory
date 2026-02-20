@@ -98,6 +98,11 @@ export default function Footer() {
                 { label: 'Roll-Off Rental', href: '/dumpster-rental/roll-off' },
                 { label: 'Roofing Dumpsters', href: '/dumpster-rental/roofing' },
                 { label: 'Near Me', href: '/dumpster-rental-near-me' },
+                { label: 'Large Dumpster Rental', href: '/large-dumpster-rental' },
+                { label: 'Small Dumpster Rental', href: '/small-dumpster-rental' },
+                { label: 'Cheap Dumpster Rental', href: '/cheap-dumpster-rental' },
+                { label: 'How Much Does It Cost?', href: '/how-much-does-dumpster-rental-cost' },
+                { label: 'About Us', href: '/about' },
                 { label: 'List Your Business', href: '/list-your-business' },
               ].map((link) => (
                 <li key={link.href}>
