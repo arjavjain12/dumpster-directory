@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/how-much-does-dumpster-rental-cost`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/dumpster-rental-near-me`,
       lastModified: now,
       changeFrequency: 'weekly',
@@ -44,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/small-dumpster-rental`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/large-dumpster-rental`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
