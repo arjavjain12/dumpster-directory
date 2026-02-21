@@ -25,7 +25,7 @@ export async function generateMetadata({
   const data = await getCostData(state, city)
   if (!data) return { title: 'Not Found' }
   const stateName = STATE_NAMES[state] ?? titleCase(state)
-  const title = `Dumpster Rental Cost in ${data.city.city_name}, ${stateName} (2025 Pricing Guide)`
+  const title = `Dumpster Rental Cost in ${data.city.city_name}, ${stateName} (February 2026 Pricing Guide)`
   const description = `How much does dumpster rental cost in ${data.city.city_name}? Compare 10–40 yard prices, rental fees, and what affects cost in ${data.city.city_name}, ${stateName}.`
   return {
     title, description,

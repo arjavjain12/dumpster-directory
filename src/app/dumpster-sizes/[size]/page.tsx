@@ -370,7 +370,7 @@ export async function generateMetadata({
   const data = SIZE_DATA[yards]
   if (!data) return { title: 'Not Found' }
 
-  const title = `${yards} Yard Dumpster Rental — Size Guide, Dimensions & Pricing (2025)`
+  const title = `${yards} Yard Dumpster Rental — Size Guide, Dimensions & Pricing (2026)`
   const description = `${yards}-yard roll-off dumpster: ${data.dimensions}, capacity ${data.equivalent}, avg cost ${formatPrice(data.avgPriceLow)}–${formatPrice(data.avgPriceHigh)}. See what fits, best uses, and how to rent one.`
 
   return {

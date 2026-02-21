@@ -19,7 +19,7 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'roll-off',
     primaryKeyword: 'roll off dumpster rental',
     h1: 'Roll-Off Dumpster Rental — How It Works & What to Expect',
-    metaTitle: 'Roll-Off Dumpster Rental Guide (2025) — Sizes, Pricing & How to Rent',
+    metaTitle: 'Roll-Off Dumpster Rental Guide (2026) — Sizes, Pricing & How to Rent',
     metaDescription:
       'Everything about roll-off dumpster rental: how it works, sizes (10–40 yard), pricing, what you can dump, and how to find the best local company.',
     intro: `A roll-off dumpster is the large, rectangular open-top container you see parked in driveways and job sites across the US. It gets its name from the way it's delivered — the container rolls off the back of a specialized truck onto your property. Roll-off dumpsters are the go-to choice for any project generating significant waste: home cleanouts, renovations, roofing, construction, and landscaping. Unlike the smaller front-load bins used for regular trash service, roll-offs are rented for a specific project and hauled away when you're done.`,
@@ -96,7 +96,7 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'construction',
     primaryKeyword: 'construction dumpster rental',
     h1: 'Construction Dumpster Rental — Sizes, Pricing & What to Know',
-    metaTitle: 'Construction Dumpster Rental (2025) — Sizes, Pricing & Best Practices',
+    metaTitle: 'Construction Dumpster Rental (2026) — Sizes, Pricing & Best Practices',
     metaDescription:
       'Rent a dumpster for your construction project. Compare sizes, pricing, and weight limits for residential and commercial construction waste disposal.',
     intro: `Construction projects generate enormous amounts of debris fast — lumber, drywall, concrete, roofing materials, metal, packaging, and mixed waste all pile up simultaneously. A construction dumpster rental keeps your job site clean, compliant with waste management regulations, and moving efficiently. Whether you're framing a new home, doing a gut renovation, or managing a commercial build, having the right container on site from day one is non-negotiable. Construction dumpsters differ from standard residential rentals in capacity, weight tolerance, and sometimes material restrictions — here's what you need to know before you book.`,
@@ -172,7 +172,7 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'residential',
     primaryKeyword: 'residential dumpster rental',
     h1: 'Residential Dumpster Rental — For Homeowners Who Mean Business',
-    metaTitle: 'Residential Dumpster Rental (2025) — Sizes, Cost & What You Can Dump',
+    metaTitle: 'Residential Dumpster Rental (2026) — Sizes, Cost & What You Can Dump',
     metaDescription:
       'Renting a dumpster for your home project? Compare sizes, costs, and tips for residential roll-off dumpster rental. Find the right container for cleanouts, renovations, and more.',
     intro: `Residential dumpster rental gives homeowners the same professional waste disposal tool that contractors have used for decades. Whether you're clearing out decades of accumulated stuff, knocking out a basement renovation, replacing a roof, or doing major landscaping, a roll-off dumpster dropped in your driveway is dramatically more efficient than multiple trips to the transfer station. Most homeowners are surprised at how easy it is — you call, they deliver, you fill it at your own pace, they haul it away. No renting a truck, no dump fees, no multiple trips.`,
@@ -248,7 +248,7 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'commercial',
     primaryKeyword: 'commercial dumpster rental',
     h1: 'Commercial Dumpster Rental — Bulk Waste Solutions for Businesses',
-    metaTitle: 'Commercial Dumpster Rental (2025) — For Businesses, Contractors & Property Managers',
+    metaTitle: 'Commercial Dumpster Rental (2026) — For Businesses, Contractors & Property Managers',
     metaDescription:
       'Commercial dumpster rental for businesses, contractors, and property managers. Compare sizes, pricing, and ongoing service options for commercial waste disposal needs.',
     intro: `Commercial dumpster rental covers a wide range of business needs — from a retail store clearing out old inventory to a property management company handling ongoing waste for a multi-unit complex. Unlike residential one-time rentals, commercial clients often need scheduled pickups, swap services, or long-term container placement. The right commercial provider understands job site timelines, volume pricing, and the regulatory requirements that come with business waste disposal. Here's what to know before you rent.`,
@@ -324,7 +324,7 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'concrete',
     primaryKeyword: 'concrete dumpster rental',
     h1: 'Concrete Dumpster Rental — Heavy Material Disposal Done Right',
-    metaTitle: 'Concrete Dumpster Rental (2025) — Heavy Debris Disposal, Pricing & Sizes',
+    metaTitle: 'Concrete Dumpster Rental (2026) — Heavy Debris Disposal, Pricing & Sizes',
     metaDescription:
       'Renting a dumpster for concrete, dirt, or masonry? Learn about weight limits, specialty containers, and pricing for heavy material disposal.',
     intro: `Concrete, dirt, brick, asphalt, and stone are among the heaviest materials you can dispose of — and they require special handling when renting a dumpster. Standard roll-off containers have weight limits of 2–6 tons, and a half-full container of broken concrete can easily max that out. For heavy debris like concrete and masonry, most rental companies offer smaller, reinforced "heavy material" dumpsters — typically 4–12 cubic yards — specifically engineered for dense loads. Renting the wrong container can result in overage fees of $80–$100 per extra ton, so getting this right at booking matters.`,
@@ -392,7 +392,7 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'yard-waste',
     primaryKeyword: 'yard waste dumpster rental',
     h1: 'Yard Waste Dumpster Rental — Landscaping & Garden Debris Disposal',
-    metaTitle: 'Yard Waste Dumpster Rental (2025) — Landscaping Debris, Brush & Tree Removal',
+    metaTitle: 'Yard Waste Dumpster Rental (2026) — Landscaping Debris, Brush & Tree Removal',
     metaDescription:
       'Renting a dumpster for yard waste, landscaping, or tree removal? Learn what\'s accepted, best sizes, and pricing for organic debris disposal.',
     intro: `Major landscaping projects generate more debris than most homeowners expect. A tree removal, overgrown shrub removal, sod replacement, or large-scale yard cleanup can quickly fill several pickup truck loads with branches, brush, grass, mulch, and soil. A yard waste dumpster rental eliminates the multiple trips to the green waste facility and lets you work efficiently across days. Most providers accept organic yard debris alongside regular waste in standard containers, though some municipalities require separate disposal. Understanding what's accepted — and what isn't — saves you time and avoids extra charges.`,
@@ -460,7 +460,7 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'roofing',
     primaryKeyword: 'roofing dumpster rental',
     h1: 'Roofing Dumpster Rental — The Right Container for Shingle Tear-Off',
-    metaTitle: 'Roofing Dumpster Rental (2025) — Shingles, Weight Limits & Best Sizes',
+    metaTitle: 'Roofing Dumpster Rental (2026) — Shingles, Weight Limits & Best Sizes',
     metaDescription:
       'Renting a dumpster for a roofing project? Compare sizes and pricing for roofing shingle disposal, weight limits, and what roofing contractors need to know.',
     intro: `Asphalt shingles are heavier than they look. A single layer of standard 3-tab shingles weighs about 2–4 lbs per square foot — meaning a 1,500 sq ft roof tear-off generates 3,000–6,000 lbs of debris before you account for underlayment, nails, and flashing. Multiple layers multiply that weight fast. Getting the right dumpster for a roofing job is less about volume than it is about weight — choose too small, or without confirming the weight allowance, and you'll pay significant overage fees. Here's how to get it right.`,

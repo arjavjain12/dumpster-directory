@@ -5,12 +5,12 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { formatPrice } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Sizes & Dimensions Guide (2025) — 10, 15, 20, 30, 40 Yard',
+  title: 'Dumpster Sizes & Dimensions Guide (2026) — 10, 15, 20, 30, 40 Yard',
   description:
     'Not sure what size dumpster you need? Compare 10, 15, 20, 30, and 40 yard dumpsters — dimensions, capacity, pricing, and what each size is best for.',
   alternates: { canonical: '/dumpster-sizes' },
   openGraph: {
-    title: 'Dumpster Sizes & Dimensions Guide (2025)',
+    title: 'Dumpster Sizes & Dimensions Guide (2026)',
     description: 'Compare 10–40 yard roll-off dumpster sizes, pricing, and use cases.',
   },
 }

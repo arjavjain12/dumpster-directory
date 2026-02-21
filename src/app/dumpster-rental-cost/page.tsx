@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'Dumpster rental prices range from $275–$750 depending on size and location. See 2026 national averages by size, what affects price, and how to get the best rate.',
   alternates: { canonical: '/dumpster-rental-cost' },
   openGraph: {
-    title: 'Dumpster Rental Cost Guide (2025)',
+    title: 'Dumpster Rental Cost Guide (2026)',
     description: 'National average prices by size, cost factors, and money-saving tips.',
   },
 }
@@ -156,7 +156,7 @@ export default function CostGuidePage() {
             { label: 'Dumpster Rental Cost Guide' },
           ]} />
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold text-gray-900">
-            How Much Does Dumpster Rental Cost? (2025)
+            How Much Does Dumpster Rental Cost? (2026)
           </h1>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             Dumpster rental in the US costs{' '}

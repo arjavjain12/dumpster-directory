@@ -41,7 +41,7 @@ export async function generateMetadata({
 
   const { city: c, businesses } = data
   const stateName = STATE_NAMES[state] ?? titleCase(state)
-  const title = `Dumpster Rental in ${c.city_name}, ${c.state} (2025) | Compare Local Companies`
+  const title = `Dumpster Rental in ${c.city_name}, ${c.state} (February 2026) | Compare Local Companies`
   const description = `Find and compare dumpster rental companies in ${c.city_name}, ${stateName}. Get free quotes on 10–40 yard roll-off dumpsters. Serving ${c.county}.`
 
   return {
