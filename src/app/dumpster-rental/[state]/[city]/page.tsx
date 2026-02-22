@@ -13,6 +13,7 @@ import { titleCase, formatNumber, STATE_NAMES } from '@/lib/utils'
 import { getCityFAQs } from '@/lib/faq'
 import { getCityBySlug, getBusinessesByCity, getCityPricing, getNearbyCities } from '@/lib/supabase'
 import { getAllCitySlugs } from '@/lib/supabase'
+import WhatFitsInfographic from '@/components/infographics/WhatFitsInfographic'
 
 // --- Data fetching (live Supabase) ---
 async function getCityData(stateSlug: string, citySlug: string) {
@@ -220,6 +221,9 @@ export default async function CityPage({
                 </div>
               )}
             </div>
+
+            {/* What fits infographic */}
+            <WhatFitsInfographic />
 
             {/* FAQ */}
             <FAQ items={faqs} cityName={city.city_name} />

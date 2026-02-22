@@ -10,6 +10,8 @@ import {
   AlertTriangle,
 } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import PricingBreakdownInfographic from '@/components/infographics/PricingBreakdownInfographic'
+import WhatFitsInfographic from '@/components/infographics/WhatFitsInfographic'
 
 export const metadata: Metadata = {
   title: 'How Much Does Dumpster Rental Cost? (2026 Price Guide)',
@@ -264,6 +266,11 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
           </p>
         </section>
 
+        {/* Pricing Breakdown Infographic */}
+        <section>
+          <PricingBreakdownInfographic />
+        </section>
+
         {/* What's Included */}
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">What&apos;s Included in the Price?</h2>
@@ -400,6 +407,11 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
             </Link>
             .
           </p>
+        </section>
+
+        {/* What Fits Infographic */}
+        <section>
+          <WhatFitsInfographic />
         </section>
 
         {/* FAQ */}

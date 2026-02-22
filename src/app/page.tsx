@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Search, Star, FileText, Truck, Shield, Clock, MapPin, ArrowRight, CheckCircle } from 'lucide-react'
 import { STATE_NAMES } from '@/lib/utils'
 import { getPopularCities } from '@/lib/supabase'
+import HowItWorksInfographic from '@/components/infographics/HowItWorksInfographic'
 
 export default async function Home() {
   const popularCities = await getPopularCities(10)
@@ -90,52 +91,9 @@ export default async function Home() {
       </section>
 
       {/* ───────── How It Works ───────── */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            How It Works
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-gray-500">
-            Getting a dumpster rental quote takes less than 2 minutes.
-          </p>
-
-          <div className="mt-14 grid gap-10 sm:grid-cols-3">
-            {[
-              {
-                icon: Search,
-                step: '1',
-                title: 'Search Your City',
-                desc: 'Enter your city or zip code to see dumpster rental companies that service your area.',
-              },
-              {
-                icon: Star,
-                step: '2',
-                title: 'Compare Local Companies',
-                desc: 'Review ratings, pricing, available sizes, and service details side by side.',
-              },
-              {
-                icon: FileText,
-                step: '3',
-                title: 'Get Free Quotes',
-                desc: 'Request no-obligation quotes directly from top-rated local haulers.',
-              },
-            ].map(({ icon: Icon, step, title, desc }) => (
-              <div key={step} className="relative text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-600">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <span className="absolute -top-2 left-1/2 -translate-x-1/2 flex h-6 w-6 items-center justify-center rounded-full bg-green-600 text-xs font-bold text-white">
-                  {step}
-                </span>
-                <h3 className="mt-5 text-lg font-semibold text-gray-900">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-500">
-                  {desc}
-                </p>
-              </div>
-            ))}
-          </div>
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <HowItWorksInfographic />
         </div>
       </section>
 

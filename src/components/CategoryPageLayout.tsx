@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle, Info } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { formatPrice, DEFAULT_PRICING } from '@/lib/utils'
 import type { CategoryData } from '@/lib/category-data'
+import WeightLimitsInfographic from '@/components/infographics/WeightLimitsInfographic'
+import WhatFitsInfographic from '@/components/infographics/WhatFitsInfographic'
 
 const TOP_CITIES = [
   { city: 'Houston', state: 'Texas', stateSlug: 'texas', citySlug: 'houston' },
@@ -142,6 +144,18 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                 ))}
               </ul>
             </section>
+
+            {/* Contextual infographics */}
+            {(data.slug === 'roofing' || data.slug === 'construction' || data.slug === 'concrete') && (
+              <section>
+                <WeightLimitsInfographic />
+              </section>
+            )}
+            {(data.slug === 'residential' || data.slug === 'yard-waste' || data.slug === 'roll-off') && (
+              <section>
+                <WhatFitsInfographic />
+              </section>
+            )}
 
             {/* FAQ */}
             <section>

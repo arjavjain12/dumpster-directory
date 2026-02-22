@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { formatPrice } from '@/lib/utils'
+import SizeComparisonInfographic from '@/components/infographics/SizeComparisonInfographic'
+import WeightLimitsInfographic from '@/components/infographics/WeightLimitsInfographic'
 
 export const metadata: Metadata = {
   title: 'Dumpster Sizes & Dimensions Guide (2026) — 10, 15, 20, 30, 40 Yard',
@@ -121,6 +123,11 @@ export default function DumpsterSizesPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
 
+        {/* Size comparison infographic */}
+        <section>
+          <SizeComparisonInfographic />
+        </section>
+
         {/* Size cards */}
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Compare All Dumpster Sizes</h2>
@@ -223,6 +230,11 @@ export default function DumpsterSizesPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Weight limits infographic */}
+        <section>
+          <WeightLimitsInfographic />
         </section>
 
         {/* Tips */}
