@@ -7,6 +7,8 @@ export interface CategoryData {
   metaTitle: string
   metaDescription: string
   intro: string
+  image?: string
+  imageAlt?: string
   stats: { label: string; value: string }[]
   why: { title: string; desc: string }[]
   sizes: { yards: number; reason: string }[]
@@ -100,6 +102,8 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     metaDescription:
       'Rent a dumpster for your construction project. Compare sizes, pricing, and weight limits for residential and commercial construction waste disposal.',
     intro: `Construction projects generate enormous amounts of debris fast — lumber, drywall, concrete, roofing materials, metal, packaging, and mixed waste all pile up simultaneously. A construction dumpster rental keeps your job site clean, compliant with waste management regulations, and moving efficiently. Whether you're framing a new home, doing a gut renovation, or managing a commercial build, having the right container on site from day one is non-negotiable. Construction dumpsters differ from standard residential rentals in capacity, weight tolerance, and sometimes material restrictions — here's what you need to know before you book.`,
+    image: '/images/construction-dumpster.jpg',
+    imageAlt: 'Large roll-off dumpster on an active construction site',
     stats: [
       { label: 'Recommended sizes', value: '20–40 cubic yards' },
       { label: 'Avg. weight limit', value: '3–10 tons' },
@@ -176,6 +180,8 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     metaDescription:
       'Renting a dumpster for your home project? Compare sizes, costs, and tips for residential roll-off dumpster rental. Find the right container for cleanouts, renovations, and more.',
     intro: `Residential dumpster rental gives homeowners the same professional waste disposal tool that contractors have used for decades. Whether you're clearing out decades of accumulated stuff, knocking out a basement renovation, replacing a roof, or doing major landscaping, a roll-off dumpster dropped in your driveway is dramatically more efficient than multiple trips to the transfer station. Most homeowners are surprised at how easy it is — you call, they deliver, you fill it at your own pace, they haul it away. No renting a truck, no dump fees, no multiple trips.`,
+    image: '/images/small-dumpster-residential.jpg',
+    imageAlt: 'Residential roll-off dumpster rental in a suburban driveway',
     stats: [
       { label: 'Most popular size', value: '10–20 cubic yards' },
       { label: 'Avg. rental period', value: '7–10 days' },
@@ -396,6 +402,8 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     metaDescription:
       'Renting a dumpster for yard waste, landscaping, or tree removal? Learn what\'s accepted, best sizes, and pricing for organic debris disposal.',
     intro: `Major landscaping projects generate more debris than most homeowners expect. A tree removal, overgrown shrub removal, sod replacement, or large-scale yard cleanup can quickly fill several pickup truck loads with branches, brush, grass, mulch, and soil. A yard waste dumpster rental eliminates the multiple trips to the green waste facility and lets you work efficiently across days. Most providers accept organic yard debris alongside regular waste in standard containers, though some municipalities require separate disposal. Understanding what's accepted — and what isn't — saves you time and avoids extra charges.`,
+    image: '/images/yard-waste-dumpster.jpg',
+    imageAlt: 'Dumpster filled with yard waste and tree branches for landscaping disposal',
     stats: [
       { label: 'Popular sizes', value: '10–20 cubic yards' },
       { label: 'Brush/branches', value: 'Accepted (confirm locally)' },
@@ -464,6 +472,8 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     metaDescription:
       'Renting a dumpster for a roofing project? Compare sizes and pricing for roofing shingle disposal, weight limits, and what roofing contractors need to know.',
     intro: `Asphalt shingles are heavier than they look. A single layer of standard 3-tab shingles weighs about 2–4 lbs per square foot — meaning a 1,500 sq ft roof tear-off generates 3,000–6,000 lbs of debris before you account for underlayment, nails, and flashing. Multiple layers multiply that weight fast. Getting the right dumpster for a roofing job is less about volume than it is about weight — choose too small, or without confirming the weight allowance, and you'll pay significant overage fees. Here's how to get it right.`,
+    image: '/images/roofing-dumpster.jpg',
+    imageAlt: 'Dumpster filled with old roofing shingles during residential roof replacement',
     stats: [
       { label: 'Shingle weight', value: '2–4 lbs/sq ft per layer' },
       { label: 'Recommended size', value: '20–30 cubic yards' },

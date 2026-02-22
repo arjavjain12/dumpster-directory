@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Search, Star, FileText, Truck, Shield, Clock, MapPin, ArrowRight, CheckCircle } from 'lucide-react'
 import { STATE_NAMES } from '@/lib/utils'
 import { getPopularCities } from '@/lib/supabase'
@@ -15,52 +16,75 @@ export default async function Home() {
       <section className="relative overflow-hidden bg-gradient-to-b from-green-50 to-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(22,163,74,0.12),transparent)]" />
 
-        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-24 text-center sm:px-6 lg:px-8 lg:pt-32">
-          <span className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-3 py-1 text-sm font-medium text-green-700">
-            <Truck className="h-3.5 w-3.5" />
-            The #1 dumpster rental directory
-          </span>
-
-          <h1 className="mx-auto mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            Find Dumpster Rental Companies{' '}
-            <span className="text-green-600">Near You</span>
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 sm:text-xl">
-            Compare prices, read reviews, and get free quotes from local
-            roll-off dumpster companies in your city.
-          </p>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/dumpster-rental"
-              className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-8 py-3.5 text-base font-semibold text-white shadow-md transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-            >
-              <Search className="h-5 w-5" />
-              Find My City
-            </Link>
-            <Link
-              href="/dumpster-sizes"
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 px-8 py-3.5 text-base font-semibold text-green-700 transition hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-            >
-              <FileText className="h-5 w-5" />
-              View Size Guide
-            </Link>
-          </div>
-
-          {/* Trust bar */}
-          <div className="mx-auto mt-12 flex max-w-2xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-gray-500">
-            {[
-              '5,000+ cities covered',
-              'Free quotes',
-              'No spam',
-              'Local companies',
-            ].map((item) => (
-              <span key={item} className="flex items-center gap-1.5">
-                <CheckCircle className="h-4 w-4 text-green-500" />
-                {item}
+        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+            {/* Text */}
+            <div>
+              <span className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-3 py-1 text-sm font-medium text-green-700">
+                <Truck className="h-3.5 w-3.5" />
+                The #1 dumpster rental directory
               </span>
-            ))}
+
+              <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                Find Dumpster Rental Companies{' '}
+                <span className="text-green-600">Near You</span>
+              </h1>
+
+              <p className="mt-6 text-lg leading-relaxed text-gray-600">
+                Compare prices, read reviews, and get free quotes from local
+                roll-off dumpster companies in your city.
+              </p>
+
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/dumpster-rental"
+                  className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-8 py-3.5 text-base font-semibold text-white shadow-md transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                >
+                  <Search className="h-5 w-5" />
+                  Find My City
+                </Link>
+                <Link
+                  href="/dumpster-sizes"
+                  className="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 px-8 py-3.5 text-base font-semibold text-green-700 transition hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                >
+                  <FileText className="h-5 w-5" />
+                  View Size Guide
+                </Link>
+              </div>
+
+              {/* Trust bar */}
+              <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-gray-500">
+                {[
+                  '5,000+ cities covered',
+                  'Free quotes',
+                  'No spam',
+                  'Local companies',
+                ].map((item) => (
+                  <span key={item} className="flex items-center gap-1.5">
+                    <CheckCircle className="h-4 w-4 text-green-500" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Hero image */}
+            <div className="relative hidden lg:block">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <Image
+                  src="/images/hero-dumpster-rental.jpg"
+                  alt="Roll-off dumpster rental delivered to a residential driveway"
+                  width={700}
+                  height={467}
+                  className="w-full object-cover"
+                  priority
+                />
+                <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-white/90 backdrop-blur-sm p-4 shadow-lg">
+                  <p className="text-sm font-semibold text-gray-900">Ready for delivery in your city</p>
+                  <p className="text-xs text-gray-500 mt-0.5">10, 15, 20, 30 & 40 yard dumpsters available</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

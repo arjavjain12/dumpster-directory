@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Search, BarChart2, MessageSquare, MapPin, Building2 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -151,13 +152,23 @@ export default function AboutPage() {
 
         {/* Team */}
         <section>
-          <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-extrabold text-gray-900 mb-4">The Team</h2>
-            <p className="text-gray-600 leading-relaxed">
-              DumpsterListing is built by a small team passionate about making local service discovery easier.
-              We believe that finding a reliable local business should be simple, transparent, and fast —
-              and we're committed to continuously improving the directory to deliver exactly that.
-            </p>
+          <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+            <div className="relative w-full h-64 sm:h-80">
+              <Image
+                src="/images/about-team.jpg"
+                alt="DumpsterListing customer support team"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-8">
+              <h2 className="text-2xl font-extrabold text-gray-900 mb-4">The Team</h2>
+              <p className="text-gray-600 leading-relaxed">
+                DumpsterListing is built by a small team passionate about making local service discovery easier.
+                We believe that finding a reliable local business should be simple, transparent, and fast —
+                and we're committed to continuously improving the directory to deliver exactly that.
+              </p>
+            </div>
           </div>
         </section>
 

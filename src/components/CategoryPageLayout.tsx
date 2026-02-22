@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, CheckCircle, Info } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { formatPrice, DEFAULT_PRICING } from '@/lib/utils'
@@ -66,6 +67,17 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
             {/* Intro */}
             <section>
               <p className="text-lg text-gray-700 leading-relaxed">{data.intro}</p>
+              {data.image && (
+                <div className="mt-6 relative overflow-hidden rounded-xl shadow-md">
+                  <Image
+                    src={data.image}
+                    alt={data.imageAlt ?? ''}
+                    width={900}
+                    height={500}
+                    className="w-full h-64 sm:h-80 object-cover"
+                  />
+                </div>
+              )}
             </section>
 
             {/* Why section */}

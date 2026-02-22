@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   ArrowRight,
   CheckCircle,
@@ -179,6 +180,23 @@ export default function LargeDumpsterRentalPage() {
             >
               Find a Large Dumpster Near Me <ArrowRight className="h-5 w-5" />
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Hero image */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="relative overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src="/images/construction-dumpster.jpg"
+            alt="Large 40-yard roll-off dumpster on a construction site"
+            width={1400}
+            height={600}
+            className="w-full h-72 sm:h-96 object-cover"
+            priority
+          />
+          <div className="absolute bottom-4 left-4 bg-black/60 text-white text-sm font-medium px-3 py-1.5 rounded-lg backdrop-blur-sm">
+            Large roll-off dumpsters for construction and major projects
           </div>
         </div>
       </div>
