@@ -102,6 +102,10 @@ export default function Footer() {
                 { label: 'Small Dumpster Rental', href: '/small-dumpster-rental' },
                 { label: 'Cheap Dumpster Rental', href: '/cheap-dumpster-rental' },
                 { label: 'How Much Does It Cost?', href: '/how-much-does-dumpster-rental-cost' },
+                { label: 'Dumpster Size Estimator', href: '/dumpster-size-estimator' },
+                { label: 'Cubic Yard Calculator', href: '/cubic-yard-calculator' },
+                { label: 'Concrete Weight Calculator', href: '/concrete-weight-calculator' },
+                { label: 'Drywall Weight Calculator', href: '/drywall-weight-calculator' },
                 { label: 'About Us', href: '/about' },
                 { label: 'List Your Business', href: '/list-your-business' },
               ].map((link) => (
