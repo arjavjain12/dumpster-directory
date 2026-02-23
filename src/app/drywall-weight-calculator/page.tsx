@@ -58,6 +58,17 @@ export default function DrywallWeightCalculatorPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Drywall Weight Calculator',
+        applicationCategory: 'UtilitiesApplication',
+        operatingSystem: 'Web',
+        url: 'https://dumpsterlisting.com/drywall-weight-calculator',
+        description: 'Calculate drywall weight by room dimensions or square footage. Get weight in lbs, tons, sheet count, and dumpster size.',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: 'Drywall weight by room or sq footage. Multiple thickness options. Sheet count. Dumpster recommendation.',
+      }) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

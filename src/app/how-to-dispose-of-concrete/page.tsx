@@ -151,10 +151,45 @@ const badgeMap: Record<string, string> = {
   orange: 'bg-orange-100 text-orange-700',
 }
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Dispose of Concrete',
+  description: 'Step-by-step guide to disposing of broken concrete from patios, driveways, and demolition projects.',
+  totalTime: 'P1D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Calculate the weight',
+      text: 'Estimate how much concrete you have. Standard concrete weighs approximately 4,050 lbs per cubic yard (150 lbs per cubic foot). A 10×10 ft patio at 4 inches deep weighs roughly 5,000 lbs.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Break concrete into manageable chunks',
+      text: 'Use a sledgehammer or jackhammer to break concrete into pieces under 2 feet. Smaller chunks are easier to haul and pack more efficiently into disposal containers.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Choose your disposal method',
+      text: 'For the cheapest option, haul to a concrete recycling or C&D facility ($5–$25 per ton). For job-site convenience, rent a concrete-only dumpster ($275–$500). For small amounts without hauling, hire a junk removal service ($100–$600).',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Watch weight limits if using a dumpster',
+      text: 'Never fill a concrete dumpster more than 1/3 full by volume. Most dumpsters have 2–4 ton weight limits. Exceeding limits results in overage fees of $50–$100+ per ton.',
+    },
+  ],
+}
+
 export default function HowToDisposeOfConcretePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

@@ -58,6 +58,17 @@ export default function CubicYardCalculatorPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Cubic Yard Calculator',
+        applicationCategory: 'UtilitiesApplication',
+        operatingSystem: 'Web',
+        url: 'https://dumpsterlisting.com/cubic-yard-calculator',
+        description: 'Calculate cubic yards from length, width, and depth in feet, inches, or yards. Add multiple areas and get pickup truck load count.',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: 'Multi-area cubic yard calculation. Feet, inches, or yards input. Pickup truck load conversion. Dumpster size recommendation.',
+      }) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

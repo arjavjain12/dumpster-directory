@@ -22,8 +22,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DumpsterListing — Find Dumpster Rental Companies Near You',
-    description: 'Compare dumpster rental companies in your city. Free quotes from local roll-off providers.',
     images: ['/api/og'],
   },
   robots: {

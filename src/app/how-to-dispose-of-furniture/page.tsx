@@ -156,10 +156,45 @@ const badgeMap: Record<string, string> = {
   purple: 'bg-purple-100 text-purple-700',
 }
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Dispose of Old Furniture',
+  description: 'Step-by-step guide to getting rid of old furniture — from free donation to dumpster rental.',
+  totalTime: 'PT1D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Assess the condition',
+      text: 'Determine if your furniture is in good condition (donate/sell) or damaged (dispose). Clean, undamaged furniture can be donated to Habitat for Humanity ReStore, Salvation Army, or Goodwill for free pickup.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Try free options first',
+      text: 'List furniture on Facebook Marketplace or Craigslist as free. Many people will haul it away themselves within hours. Check if your municipality offers free bulk item pickup.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Choose a paid option for remaining items',
+      text: 'For items that cannot be donated or sold, choose between junk removal ($75–$600+) for convenience or dumpster rental ($275–$450 for a 10-yard) if you have multiple pieces to dispose of at once.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Schedule pickup or delivery',
+      text: 'Book your chosen service. Junk removal typically offers same-day or next-day service. Dumpster rental delivers within 24–48 hours and you keep it for 7–14 days to load at your own pace.',
+    },
+  ],
+}
+
 export default function HowToDisposeOfFurniturePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

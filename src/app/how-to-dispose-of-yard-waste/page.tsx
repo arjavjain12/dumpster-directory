@@ -165,10 +165,45 @@ const YARD_WASTE_TYPES = [
   { type: 'Full yard cleanout', bestOption: 'Dumpster rental', note: 'Most cost-effective for large mixed yard debris' },
 ]
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Dispose of Yard Waste',
+  description: 'Step-by-step guide to getting rid of grass clippings, branches, sod, and other yard debris.',
+  totalTime: 'P1D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Check free options in your area',
+      text: 'Most municipalities offer free curbside yard waste pickup — check your city waste management schedule. Many areas also have free green waste drop-off at composting facilities.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Compost what you can',
+      text: 'Grass clippings, leaves, and small plant trimmings are excellent compost materials. Start a backyard compost pile or use a bin. Grass clippings break down in 2–4 weeks.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Chip or shred large branches',
+      text: 'Rent a wood chipper ($150–$300/day) to reduce branches and brush by up to 90% in volume. Use chips as mulch or compost material on site.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Rent a dumpster for large cleanouts',
+      text: 'For major landscaping — tree removal, sod tearout, full yard cleanups — rent a 10-yard roll-off dumpster ($275–$450). Confirm your hauler accepts yard waste and watch weight limits for heavy sod.',
+    },
+  ],
+}
+
 export default function HowToDisposeOfYardWastePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

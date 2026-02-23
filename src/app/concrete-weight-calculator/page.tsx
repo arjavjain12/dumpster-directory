@@ -66,6 +66,17 @@ export default function ConcreteWeightCalculatorPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Concrete Weight Calculator',
+        applicationCategory: 'UtilitiesApplication',
+        operatingSystem: 'Web',
+        url: 'https://dumpsterlisting.com/concrete-weight-calculator',
+        description: 'Calculate the weight of concrete by shape and dimensions. Get weight in lbs, tons, and cubic yards instantly.',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: 'Concrete weight by slab, wall, cylinder, or steps. Weight in lbs and tons. Dumpster size recommendation.',
+      }) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

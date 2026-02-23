@@ -99,6 +99,17 @@ export default function DumpsterSizeEstimatorPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Dumpster Size Estimator',
+        applicationCategory: 'UtilitiesApplication',
+        operatingSystem: 'Web',
+        url: 'https://dumpsterlisting.com/dumpster-size-estimator',
+        description: 'Find the right dumpster size for your project. Select project type, add specific items, and get a recommendation with 20% packing buffer.',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: 'Project type selector. Item checklist with quantities. 20% packing buffer. Recommended dumpster size.',
+      }) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
