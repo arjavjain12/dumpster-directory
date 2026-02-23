@@ -135,10 +135,23 @@ const DEPENDS_ON_LOCATION = [
   { item: 'Refrigerators / AC units', note: 'Accepted after freon removal; may require certification' },
 ]
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'What Can You Put in a Dumpster? Allowed & Prohibited Items',
+  description: 'Complete list of items accepted and prohibited in rental dumpsters — furniture, appliances, construction debris, hazardous materials.',
+  datePublished: '2026-02-23',
+  dateModified: '2026-02-23',
+  author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/what-can-you-put-in-a-dumpster' },
+}
+
 export default function WhatCanYouPutInADumpsterPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

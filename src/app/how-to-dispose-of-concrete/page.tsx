@@ -23,7 +23,7 @@ const faqSchema = {
       name: 'How do you dispose of concrete?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You can dispose of concrete by taking it to a concrete recycling or C&D (construction and demolition) facility, renting a dumpster (checking weight limits carefully), hiring a junk removal service, or listing it free on Craigslist/Facebook Marketplace. Concrete is heavy — 1 cubic yard weighs about 4,000 lbs — so weight charges are a major cost factor.',
+        text: 'You can dispose of concrete by taking it to a concrete recycling or C&D (construction and demolition) facility, renting a dumpster, hiring a junk removal service, or listing it free on Craigslist/Facebook Marketplace. According to the Portland Cement Association, standard concrete weighs approximately 4,050 lbs per cubic yard (150 lbs per cubic foot) — making it one of the heaviest materials in construction. Weight surcharges are a major cost factor when using dumpsters.',
       },
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       name: 'How heavy is concrete?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Standard concrete weighs approximately 4,050 lbs (about 2 tons) per cubic yard. A typical 10x10 foot concrete patio at 4 inches deep is about 1.23 cubic yards, or roughly 5,000 lbs. Concrete is one of the heaviest materials you\'ll ever put in a dumpster — always plan for weight limits.',
+        text: 'According to ASTM C138 (Standard Test Method for Density of Concrete), standard concrete weighs approximately 4,050 lbs (about 2 tons) per cubic yard, or 150 lbs per cubic foot. A typical 10×10 foot concrete patio at 4 inches deep is about 1.23 cubic yards — roughly 5,000 lbs. For comparison, the same volume of drywall weighs only about 570 lbs, making concrete roughly 9x heavier by volume.',
       },
     },
   ],
@@ -185,11 +185,24 @@ const howToSchema = {
   ],
 }
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How to Dispose of Concrete: Recycling, Dumpster & Haul-Away',
+  description: 'Complete guide to concrete disposal — recycling centers, dumpster rental with weight limits, junk removal, and free giveaway options.',
+  datePublished: '2026-02-23',
+  dateModified: '2026-02-23',
+  author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/how-to-dispose-of-concrete' },
+}
+
 export default function HowToDisposeOfConcretePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

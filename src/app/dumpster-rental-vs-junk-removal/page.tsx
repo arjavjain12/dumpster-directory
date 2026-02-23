@@ -23,7 +23,7 @@ const faqSchema = {
       name: 'Is dumpster rental cheaper than junk removal?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For large projects, dumpster rental is almost always cheaper. A 10-yard dumpster typically costs $275–$450 for a week, while junk removal companies charge $150–$600 per truckload. If you have more than one truckload of debris, a dumpster is usually the better value.',
+        text: 'For large projects, dumpster rental is almost always cheaper. According to Angi\'s 2025 cost data, the national average for dumpster rental is $480 for a 10-yard container, while junk removal averages $233 for a minimum load up to $600+ per full truckload. If you have more than one truckload of debris — roughly 3+ cubic yards — a dumpster is almost always the better value.',
       },
     },
     {
@@ -39,7 +39,7 @@ const faqSchema = {
       name: 'What is the average cost of junk removal?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Junk removal averages $150–$350 for a small load (under 1/4 truck), $300–$500 for a half-truck load, and $400–$800+ for a full truckload. Prices vary by location, item type, and company. Heavy items like concrete or appliances cost more.',
+        text: 'According to Angi\'s 2025 national cost survey, junk removal averages $233 for a minimum load, $400–$600 for a half-truck, and $500–$800+ for a full truckload. A full junk removal truck holds approximately 10–13 cubic yards. Prices vary by location — metro areas run 20–30% higher than rural markets. Heavy items like concrete or appliances incur weight surcharges.',
       },
     },
     {
@@ -203,10 +203,23 @@ const USE_CASES = [
   },
 ]
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Dumpster Rental vs Junk Removal: Which Should You Choose?',
+  description: 'A complete comparison of dumpster rental and junk removal — costs, pros, cons, and best use cases for each.',
+  datePublished: '2026-02-23',
+  dateModified: '2026-02-23',
+  author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/dumpster-rental-vs-junk-removal' },
+}
+
 export default function DumpsterVsJunkRemovalPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
