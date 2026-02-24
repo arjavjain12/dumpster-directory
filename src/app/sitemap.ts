@@ -159,6 +159,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // New disposal guides
+    {
+      url: `${BASE_URL}/how-to-dispose-of-electronics`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/how-to-dispose-of-mattress`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/how-to-dispose-of-paint`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    // New concept pages
+    {
+      url: `${BASE_URL}/same-day-dumpster-rental`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/dumpster-rental-for-contractors`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 
   // ── Dumpster-size detail pages ───────────────────────────────────────────────
