@@ -76,16 +76,15 @@ export default function ListingForm() {
     if (Object.keys(v).length) return
     setLoading(true)
     try {
-      await fetch('/api/list-business', {
+      const res = await fetch('https://formspree.io/f/xrearzdn', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(form),
       })
-      // Show success regardless of API availability — the endpoint is not yet implemented.
+      if (!res.ok) throw new Error('Failed to submit.')
       setSuccess(true)
-    } catch {
-      // Still show success client-side; API is not yet implemented.
-      setSuccess(true)
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Failed to submit. Please try again.')
     } finally {
       setLoading(false)
     }
