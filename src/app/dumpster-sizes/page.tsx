@@ -258,6 +258,27 @@ export default function DumpsterSizesPage() {
           </ul>
         </section>
 
+        {/* Related tools & guides */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Calculators & Guides</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              { label: '20 Yard vs 30 Yard: Full Comparison', href: '/20-yard-dumpster-vs-30-yard-dumpster' },
+              { label: 'Dumpster Weight Limit Calculator', href: '/dumpster-weight-limit-calculator' },
+              { label: 'Dumpster Size Estimator', href: '/dumpster-size-estimator' },
+              { label: 'Do You Need a Permit?', href: '/dumpster-rental-permit' },
+              { label: 'How Long Can You Keep a Dumpster?', href: '/how-long-can-you-keep-a-rental-dumpster' },
+              { label: 'What Can You Put in a Dumpster?', href: '/what-can-you-put-in-a-dumpster' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href}
+                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition">
+                <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="rounded-xl border border-gray-200 bg-white p-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Ready to Rent a Dumpster?</h2>
