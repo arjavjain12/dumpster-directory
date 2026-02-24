@@ -72,10 +72,21 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
     if (Object.keys(v).length) return
     setLoading(true)
     try {
-      const res = await fetch('/api/leads', {
+      const res = await fetch('https://formspree.io/f/maqdawaj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, city_id: cityId }),
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          zip_code: form.zip_code,
+          project_type: form.project_type,
+          dumpster_size_needed: form.dumpster_size_needed,
+          project_start: form.project_start,
+          message: form.message,
+          city: cityName,
+          state: stateAbbr,
+        }),
       })
       if (!res.ok) throw new Error('Failed to submit. Please try again.')
       setSuccess(true)
