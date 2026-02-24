@@ -131,6 +131,18 @@ const COMPARISON_ROWS = [
   },
 ]
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Large Dumpster Rental — 20, 30 & 40 Yard Options Near You (2026)',
+  description: 'Compare 20-yard, 30-yard, and 40-yard large dumpster rentals. Pricing, dimensions, use cases, and how to find one near you.',
+  datePublished: '2026-02-24',
+  dateModified: '2026-02-24',
+  author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/large-dumpster-rental' },
+}
+
 export default function LargeDumpsterRentalPage() {
   return (
     <>
@@ -138,6 +150,7 @@ export default function LargeDumpsterRentalPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       {/* Hero */}
       <div className="bg-white border-b border-gray-100">
@@ -566,6 +579,27 @@ export default function LargeDumpsterRentalPage() {
                 <h3 className="font-semibold text-gray-900 mb-2 text-base">{faq.name}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{faq.acceptedAnswer.text}</p>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Related guides */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Related Guides & Calculators</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Dumpster Size Guide (All Sizes)', href: '/dumpster-sizes' },
+              { label: '20-Yard Dumpster Guide', href: '/dumpster-sizes/20-yard' },
+              { label: '30-Yard Dumpster Guide', href: '/dumpster-sizes/30-yard' },
+              { label: '20 Yard vs 30 Yard — Full Comparison', href: '/20-yard-dumpster-vs-30-yard-dumpster' },
+              { label: 'Weight Limit Calculator', href: '/dumpster-weight-limit-calculator' },
+              { label: 'Do You Need a Permit?', href: '/dumpster-rental-permit' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href}
+                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition">
+                <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
+                {link.label}
+              </Link>
             ))}
           </div>
         </section>

@@ -244,6 +244,18 @@ const faqSchema = {
   ],
 }
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Cheap Dumpster Rental Near Me — Affordable Prices (2026)',
+  description: 'Find the cheapest dumpster rental near you. Compare affordable options and see 8 money-saving tips.',
+  datePublished: '2026-02-24',
+  dateModified: '2026-02-24',
+  author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/cheap-dumpster-rental' },
+}
+
 export default function CheapDumpsterRentalPage() {
   return (
     <>
@@ -251,6 +263,7 @@ export default function CheapDumpsterRentalPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       {/* Hero */}
       <div className="bg-white border-b border-gray-100">
@@ -609,27 +622,20 @@ export default function CheapDumpsterRentalPage() {
             <div className="rounded-xl border border-gray-200 bg-white p-5">
               <h3 className="font-bold text-gray-900 mb-3">Related Guides</h3>
               <div className="space-y-2 text-sm">
-                <Link
-                  href="/dumpster-rental-cost"
-                  className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition group"
-                >
-                  <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-500" />
-                  Full Dumpster Rental Cost Guide
-                </Link>
-                <Link
-                  href="/dumpster-rental-near-me"
-                  className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition group"
-                >
-                  <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-500" />
-                  Dumpster Rental Near Me
-                </Link>
-                <Link
-                  href="/dumpster-sizes"
-                  className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition group"
-                >
-                  <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-500" />
-                  Compare Dumpster Sizes
-                </Link>
+                {[
+                  { label: 'Full Dumpster Rental Cost Guide', href: '/dumpster-rental-cost' },
+                  { label: 'Dumpster Rental Near Me', href: '/dumpster-rental-near-me' },
+                  { label: 'Compare Dumpster Sizes', href: '/dumpster-sizes' },
+                  { label: 'Weight Limit Calculator', href: '/dumpster-weight-limit-calculator' },
+                  { label: 'Do You Need a Permit?', href: '/dumpster-rental-permit' },
+                  { label: 'How Long Can You Keep a Dumpster?', href: '/how-long-can-you-keep-a-rental-dumpster' },
+                ].map((link) => (
+                  <Link key={link.href} href={link.href}
+                    className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition group">
+                    <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-500" />
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
 
