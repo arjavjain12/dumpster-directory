@@ -74,7 +74,7 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
     try {
       const res = await fetch('https://formspree.io/f/maqdawaj', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
           name: form.name,
           email: form.email,
