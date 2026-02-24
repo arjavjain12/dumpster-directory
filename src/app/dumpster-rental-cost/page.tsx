@@ -338,6 +338,88 @@ export default function CostGuidePage() {
               </ul>
             </section>
 
+            {/* Dumpster Rental vs. Junk Removal */}
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-5">
+                Dumpster Rental vs. Junk Removal
+              </h2>
+              <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700 w-1/3"></th>
+                      <th className="text-left px-4 py-3 font-semibold text-green-700">Dumpster Rental</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700">Junk Removal</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {[
+                      { label: 'Best for', dumpster: 'Large volumes, multi-day projects', junk: 'Single items, one-time haul' },
+                      { label: 'Avg cost', dumpster: '$275–$750', junk: '$150–$650 per load' },
+                      { label: 'You do the work', dumpster: 'Yes', junk: 'No' },
+                      { label: 'Time flexibility', dumpster: '7–14 day rental', junk: 'Same-day service' },
+                      { label: 'Companies', dumpster: 'WM, Republic Services, local haulers', junk: '1-800-GOT-JUNK, College Hunks, Junk King' },
+                      { label: 'Max volume', dumpster: '40 cubic yards', junk: '~1 truck load (~15 yards)' },
+                    ].map((row) => (
+                      <tr key={row.label} className="hover:bg-gray-50 transition-colors">
+                        <td className="px-4 py-3 font-semibold text-gray-700">{row.label}</td>
+                        <td className="px-4 py-3 text-gray-800">{row.dumpster}</td>
+                        <td className="px-4 py-3 text-gray-600">{row.junk}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800">
+                <strong>Rule of thumb:</strong> if your project takes more than one day or fills more than half a pickup truck, dumpster rental is usually cheaper.
+              </div>
+            </section>
+
+            {/* Seasonal Pricing Patterns */}
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-5">
+                Seasonal Pricing Patterns
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  {
+                    season: 'Spring (March–May)',
+                    badge: 'Peak',
+                    badgeColor: 'bg-red-100 text-red-700',
+                    detail: 'Busiest season — contractors ramp up, spring cleanouts spike demand. Prices 10–20% higher. Book 1–2 weeks ahead.',
+                  },
+                  {
+                    season: 'Summer (June–August)',
+                    badge: 'High',
+                    badgeColor: 'bg-orange-100 text-orange-700',
+                    detail: 'High demand, especially for roofing and construction. Availability tightest in July/August.',
+                  },
+                  {
+                    season: 'Fall (September–November)',
+                    badge: 'Moderate',
+                    badgeColor: 'bg-amber-100 text-amber-700',
+                    detail: 'Prices soften slightly after summer peak. Good window for renovation projects.',
+                  },
+                  {
+                    season: 'Winter (December–February)',
+                    badge: 'Best Prices',
+                    badgeColor: 'bg-green-100 text-green-700',
+                    detail: 'Lowest demand, best prices (often 15–25% below peak). Some northern markets have limited availability due to ground conditions.',
+                  },
+                ].map((item) => (
+                  <div key={item.season} className="rounded-xl border border-gray-200 bg-white p-5">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-semibold text-gray-900">{item.season}</h3>
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${item.badgeColor}`}>
+                        {item.badge}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">{item.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
             {/* FAQ */}
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-5">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { MapPin, ArrowRight } from 'lucide-react'
+import { MapPin, ArrowRight, CheckCircle, Star, Shield, Clock, DollarSign, Phone } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { getPopularCities } from '@/lib/supabase'
@@ -38,6 +38,30 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Most local dumpster rental companies offer next-day delivery if you book before noon. Same-day delivery is available with some providers for an additional $25–$75 rush fee. Booking 2–3 days ahead guarantees better availability and pricing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "What's the difference between national and local dumpster companies?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'National chains like Waste Management, Republic Services, and Waste Connections offer consistent pricing and large fleets but may cost more than local operators. Local companies often have lower overhead, more flexible terms, and personalized service — but availability varies by region.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I know if a company is reputable?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Check Google reviews (aim for 4.0+), verify they\'re licensed in your state, and confirm they carry liability insurance. Ask if they handle permits for street placement.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I change my pickup date?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most companies allow extensions for a daily fee ($5–$15/day). Contact them at least 24 hours before your scheduled pickup.',
       },
     },
   ],
@@ -101,6 +125,92 @@ export default async function NearMePage() {
               <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
               {link.label}
             </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* How to Evaluate a Local Dumpster Rental Company */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">How to Evaluate a Local Dumpster Rental Company</h2>
+        <p className="text-gray-500 text-sm mb-6">Use these six criteria before you book to avoid surprises on your bill.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            {
+              icon: <Star className="h-6 w-6 text-green-600" />,
+              title: 'Check Reviews',
+              body: 'Look for Google/BBB ratings. National chains like Waste Management and Republic Services have consistent service; local operators often offer better pricing but vary in reliability.',
+            },
+            {
+              icon: <DollarSign className="h-6 w-6 text-green-600" />,
+              title: 'Verify Included Weight',
+              body: 'Always ask what\'s included in the base price. Standard is 1–2 tons; overages average $75–$120/ton.',
+            },
+            {
+              icon: <Clock className="h-6 w-6 text-green-600" />,
+              title: 'Confirm Delivery Windows',
+              body: 'Most companies offer morning (7–11am) or afternoon (12–4pm) windows. Ask if same-day is available.',
+            },
+            {
+              icon: <Shield className="h-6 w-6 text-green-600" />,
+              title: 'Ask About Prohibited Items',
+              body: 'Policies vary. A good company proactively tells you what they won\'t take.',
+            },
+            {
+              icon: <CheckCircle className="h-6 w-6 text-green-600" />,
+              title: 'Get the Total Price in Writing',
+              body: 'Quotes should include delivery, pickup, weight allowance, rental period, and overage rates.',
+            },
+            {
+              icon: <Phone className="h-6 w-6 text-green-600" />,
+              title: 'Check Their Service Area',
+              body: 'Local operators may have tighter service radii (15–20 miles). National chains (Waste Connections, Clean Harbors) cover more ground.',
+            },
+          ].map((card) => (
+            <div key={card.title} className="rounded-xl border border-gray-200 bg-white p-5 flex flex-col gap-3">
+              <div className="h-10 w-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
+                {card.icon}
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">{card.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{card.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* What to Expect on Delivery Day */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">What to Expect on Delivery Day</h2>
+        <p className="text-gray-500 text-sm mb-6">Most deliveries are quick and straightforward — here's how the day typically goes.</p>
+        <div className="rounded-xl border border-gray-200 bg-white p-6">
+          <ol className="space-y-5">
+            {[
+              "You'll receive a call 30–60 minutes before delivery.",
+              "Driver places dumpster on a flat, accessible surface (driveway preferred — no overhead wires).",
+              "Fill at your own pace during your rental period (standard 7–14 days).",
+              "Call or schedule online for pickup; most companies retrieve within 24–48 hours.",
+            ].map((step, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <div className="h-8 w-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0 mt-0.5">
+                  {i + 1}
+                </div>
+                <p className="text-gray-700 leading-relaxed pt-1">{step}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-5">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {faqSchema.mainEntity.map((faq) => (
+            <div key={faq.name} className="rounded-xl border border-gray-200 bg-white p-5">
+              <h3 className="font-semibold text-gray-900 mb-2">{faq.name}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{faq.acceptedAnswer.text}</p>
+            </div>
           ))}
         </div>
       </div>

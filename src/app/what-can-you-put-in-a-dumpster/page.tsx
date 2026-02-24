@@ -237,6 +237,63 @@ export default function WhatCanYouPutInADumpsterPage() {
           </div>
         </section>
 
+        {/* Where to Take Prohibited Items */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <ArrowRight className="h-6 w-6 text-green-600" /> Where to Take Prohibited Items
+          </h2>
+          <p className="text-gray-500 text-sm mb-6">
+            Can't throw it in the dumpster? Here's where each item type can be properly disposed of or recycled.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+            {[
+              {
+                title: 'Paint & Stains',
+                body: 'PaintCare drop-off locations (paintcare.org) accept latex and oil-based paint in most states. Home Depot and Sherwin-Williams locations also participate. Latex paint can sometimes be dried out and disposed with regular trash.',
+              },
+              {
+                title: 'Electronics (E-Waste)',
+                body: 'Best Buy accepts most electronics for free recycling. Staples takes computers, monitors, and small devices. Look for e-Stewards or R2-certified recyclers at earth911.com.',
+              },
+              {
+                title: 'Mattresses',
+                body: 'The Bye Bye Mattress program (byebyemattress.com) has free drop-off locations in participating states. Some municipalities offer bulk pickup. Retailers like Purple, Casper, and Saatva offer take-back with new mattress delivery.',
+              },
+              {
+                title: 'Household Hazardous Waste (HHW)',
+                body: "Chemicals, pesticides, pool chemicals, and automotive fluids go to your county's HHW facility. Find locations at earth911.com or your county's public works website.",
+              },
+              {
+                title: 'Batteries',
+                body: 'Call2Recycle (call2recycle.org) has 16,000+ drop-off locations including Home Depot, Lowe\'s, and Staples. Car batteries accepted at AutoZone and O\'Reilly for free.',
+              },
+              {
+                title: 'Propane Tanks',
+                body: 'Blue Rhino and AmeriGas exchange programs at most hardware stores. Empty tanks can go to local hazardous waste facilities.',
+              },
+              {
+                title: 'Fluorescent Bulbs (CFL/Tubes)',
+                body: "Home Depot and IKEA accept CFLs. For fluorescent tubes, search earth911.com. The EPA's Lamp Recycle program has additional resources.",
+              },
+              {
+                title: 'Tires',
+                body: 'Auto parts stores (AutoZone, O\'Reilly) and tire shops accept old tires, often for a small fee ($1–$3/tire). Many municipalities have annual tire collection events.',
+              },
+            ].map((card) => (
+              <div key={card.title} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+                <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-green-500 shrink-0 mt-0.5 inline-block" />
+                  {card.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{card.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+            <strong>Note:</strong> Can't take these items individually? If you have large quantities from a renovation or cleanout, a separate hazardous waste contractor may be your best option.
+          </div>
+        </section>
+
         {/* Depends on location */}
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
