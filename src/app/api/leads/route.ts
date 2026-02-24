@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getClient } from '@/lib/supabase'
+import { createClient } from '@supabase/supabase-js'
+
+function getServiceClient() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY!
+  return createClient(url, key)
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,7 +23,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
     }
 
-    const { data, error } = await getClient()
+    const { data, error } = await getServiceClient()
       .from('leads')
       .insert({
         name: name.trim(),
