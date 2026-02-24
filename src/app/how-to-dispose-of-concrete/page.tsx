@@ -4,9 +4,9 @@ import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Dispose of Concrete: Recycling, Dumpster & Haul-Away (2026)',
+  title: 'How to Dispose of Concrete: 6 Methods + Cost & Weight Guide | DumpsterListing',
   description:
-    'Learn the best ways to dispose of concrete, including concrete recycling centers, dumpster rental, and junk removal. Compare costs and avoid weight limit surcharges.',
+    'Learn the best ways to dispose of concrete, including concrete weight guide, recycling options, inert dumpster rental, and free disposal methods.',
   alternates: { canonical: '/how-to-dispose-of-concrete' },
   openGraph: {
     title: 'How to Dispose of Old Concrete: All Options Compared',
@@ -56,6 +56,22 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'According to ASTM C138 (Standard Test Method for Density of Concrete), standard concrete weighs approximately 4,050 lbs (about 2 tons) per cubic yard, or 150 lbs per cubic foot. A typical 10×10 foot concrete patio at 4 inches deep is about 1.23 cubic yards — roughly 5,000 lbs. For comparison, the same volume of drywall weighs only about 570 lbs, making concrete roughly 9x heavier by volume.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can wet concrete go in a dumpster?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Wet concrete (slurry) hardens inside the container, damaging it and causing serious disposal problems. It must be handled by a licensed concrete contractor who can contain and properly dispose of the slurry. Only broken, cured concrete pieces may go in a dumpster.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does concrete weigh per cubic yard?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Broken concrete weighs approximately 2,025 lbs per cubic yard. A 10-yard dumpster filled completely with concrete would weigh roughly 10 tons — far exceeding most weight limits of 2–4 tons. Fill only to the recommended level (about 1/4 to 1/3 capacity by volume) and confirm weight limits with your rental company upfront.',
       },
     },
   ],
@@ -188,7 +204,7 @@ const howToSchema = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'How to Dispose of Concrete: Recycling, Dumpster & Haul-Away',
+  headline: 'How to Dispose of Concrete: 6 Methods + Cost & Weight Guide',
   description: 'Complete guide to concrete disposal — recycling centers, dumpster rental with weight limits, junk removal, and free giveaway options.',
   datePublished: '2026-02-23',
   dateModified: '2026-02-23',
@@ -248,9 +264,86 @@ export default function HowToDisposeOfConcretePage() {
           </div>
         </div>
 
+        {/* Concrete Weight Reference */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-5">Concrete Weight Reference</h2>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Concrete Type</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Weight per Cubic Yard</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700 hidden sm:table-cell">Notes</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { type: 'Broken concrete slabs', weight: '~2,025 lbs', notes: 'Most common residential' },
+                  { type: 'Reinforced concrete (with rebar)', weight: '~2,500 lbs', notes: 'Heavier; harder to recycle' },
+                  { type: 'Concrete blocks/pavers', weight: '~2,200 lbs', notes: 'Dense; use heavy debris dumpster' },
+                  { type: 'Wet concrete/slurry', weight: 'Not accepted', notes: 'Cannot go in any dumpster' },
+                ].map((row) => (
+                  <tr key={row.type} className="hover:bg-gray-50">
+                    <td className="px-4 py-3 font-medium text-gray-800">{row.type}</td>
+                    <td className={`px-4 py-3 font-semibold ${row.weight === 'Not accepted' ? 'text-red-600' : 'text-green-700'}`}>{row.weight}</td>
+                    <td className="px-4 py-3 text-gray-600 hidden sm:table-cell">{row.notes}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 flex items-start gap-3">
+            <span className="text-xl shrink-0">⚠️</span>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>Wet concrete (slurry) cannot go in a roll-off dumpster.</strong> It must be contained and disposed of by a concrete contractor.
+            </p>
+          </div>
+        </section>
+
+        {/* Types of Concrete */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-5">Types of Concrete: What Matters for Disposal</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              {
+                title: 'Clean Concrete Slabs',
+                color: 'green',
+                cardColor: 'border-green-200 bg-green-50',
+                badgeColor: 'bg-green-100 text-green-700',
+                badge: 'Easiest',
+                detail: 'Easiest to recycle. C&D recycling centers accept it readily. Can also be sold or given away free on Craigslist or Facebook Marketplace to landscapers and builders.',
+              },
+              {
+                title: 'Concrete with Rebar/Steel',
+                color: 'blue',
+                cardColor: 'border-blue-200 bg-blue-50',
+                badgeColor: 'bg-blue-100 text-blue-700',
+                badge: 'More Complex',
+                detail: 'Requires sorting at the recycling facility. Some haulers charge more due to processing difficulty. Metal recyclers may take the rebar separately — call ahead to ask.',
+              },
+              {
+                title: 'Wet Concrete/Slurry',
+                color: 'red',
+                cardColor: 'border-red-200 bg-red-50',
+                badgeColor: 'bg-red-100 text-red-700',
+                badge: 'Hazardous',
+                detail: 'Cannot go in any dumpster. Needs specialized contractor disposal. Wet slurry hardens inside containers, damaging them and causing costly disposal problems.',
+              },
+            ].map((card) => (
+              <div key={card.title} className={`rounded-2xl border p-5 ${card.cardColor}`}>
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <h3 className="font-bold text-gray-900 text-base">{card.title}</h3>
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full shrink-0 ${card.badgeColor}`}>{card.badge}</span>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed">{card.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Options */}
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-900">5 Ways to Dispose of Concrete</h2>
+          <h2 className="text-2xl font-bold text-gray-900">6 Ways to Dispose of Concrete</h2>
           {OPTIONS.map((opt, i) => (
             <div key={opt.title} className={`rounded-2xl border p-6 ${colorMap[opt.color]}`}>
               <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
@@ -280,6 +373,89 @@ export default function HowToDisposeOfConcretePage() {
             </div>
           ))}
         </section>
+
+        {/* Cost of Concrete Disposal */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-5">Cost of Concrete Disposal</h2>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Average Cost</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700 hidden sm:table-cell">Best For</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { method: 'Rent a dumpster (10-yard)', cost: '$300–$795', best: 'Large volumes, multi-day projects' },
+                  { method: 'Hire junk removal', cost: '$60–$600', best: 'Small amounts, single haul' },
+                  { method: 'Self-haul to landfill', cost: '$35–$100/ton', best: 'You have a truck + time' },
+                  { method: 'Professional removal service', cost: '$2–$6 per sq ft', best: 'Full demo + disposal' },
+                ].map((row) => (
+                  <tr key={row.method} className="hover:bg-gray-50">
+                    <td className="px-4 py-3 font-medium text-gray-800">{row.method}</td>
+                    <td className="px-4 py-3 font-semibold text-green-700">{row.cost}</td>
+                    <td className="px-4 py-3 text-gray-600 hidden sm:table-cell">{row.best}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed rounded-xl border border-gray-200 bg-gray-50 p-4">
+            <strong>Note:</strong> Concrete is classified as heavy debris — always confirm weight limits with your rental company. Most 10-yard dumpsters include a 1–2 ton limit; concrete fills this fast.
+          </p>
+        </section>
+
+        {/* Free & Low-Cost Concrete Disposal Options */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-5">Free &amp; Low-Cost Concrete Disposal Options</h2>
+          <div className="space-y-3">
+            {[
+              {
+                title: 'Facebook Marketplace / Craigslist',
+                detail: 'List broken concrete as "free for pickup." Landscapers and DIYers building retaining walls or pathways actively seek free concrete.',
+              },
+              {
+                title: 'Freecycle / Nextdoor',
+                detail: 'Same concept as Craigslist; local community networks make it easy to connect with neighbors who want free fill material.',
+              },
+              {
+                title: 'Concrete Recycling Centers (C&D Facilities)',
+                detail: 'Many accept clean concrete for free or a low fee. They crush it into recycled aggregate used in road base and new construction. Find locations at earth911.com.',
+              },
+              {
+                title: 'Local Concrete Suppliers',
+                detail: 'Some grinding facilities buy back broken concrete to reprocess into base material. Call local suppliers and ready-mix companies to ask.',
+              },
+              {
+                title: 'County Free Dump Days',
+                detail: 'Many municipalities offer annual free C&D disposal events. Check your county public works website for dates and accepted materials.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex gap-3 rounded-xl border border-gray-200 bg-white p-4">
+                <div className="h-6 w-6 rounded-full bg-green-100 text-green-700 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">$</div>
+                <div>
+                  <div className="text-sm font-semibold text-gray-900">{item.title}</div>
+                  <div className="text-sm text-gray-600 mt-0.5">{item.detail}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Inert/Heavy Debris Dumpster Callout */}
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <span className="text-2xl">⚠️</span> Use an Inert or Heavy Debris Dumpster for Concrete
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Standard roll-off dumpsters are designed for mixed household waste. For concrete, you need a{' '}
+            <strong>heavy debris or inert dumpster</strong> — these are reinforced to handle dense materials
+            and route directly to C&amp;D processing facilities. Always tell your rental company you&apos;re
+            disposing of concrete so they send the right container.
+          </p>
+        </div>
 
         {/* Cost comparison table */}
         <section>

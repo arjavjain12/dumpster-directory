@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { MapPin, ArrowRight, CheckCircle, Star, Shield, Clock, DollarSign, Phone } from 'lucide-react'
+import { MapPin, ArrowRight, CheckCircle, Star, Shield, Clock, DollarSign, Phone, Search, Truck, Package } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { getPopularCities } from '@/lib/supabase'
@@ -106,6 +106,165 @@ export default async function NearMePage() {
       {/* Lead form — uses city_id 1 as placeholder until we detect location */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <LeadForm cityId={1} cityName="your area" stateAbbr="US" />
+      </div>
+
+      {/* How It Works */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">How It Works</h2>
+        <p className="text-gray-500 text-sm mb-6">From search to pickup — here&apos;s the full process in four steps.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            {
+              icon: <Search className="h-6 w-6 text-green-600" />,
+              step: 1,
+              title: 'Find local companies',
+              body: 'Enter your city or zip code to see dumpster rental companies near you. Compare prices, sizes, and availability.',
+            },
+            {
+              icon: <Package className="h-6 w-6 text-green-600" />,
+              step: 2,
+              title: 'Choose your size',
+              body: 'Select from 10, 20, 30, or 40-yard roll-offs based on your project. Not sure? Use our size estimator.',
+            },
+            {
+              icon: <Truck className="h-6 w-6 text-green-600" />,
+              step: 3,
+              title: 'Schedule delivery',
+              body: 'Most companies deliver within 24–72 hours. Same-day delivery available in many areas.',
+            },
+            {
+              icon: <CheckCircle className="h-6 w-6 text-green-600" />,
+              step: 4,
+              title: 'Fill & schedule pickup',
+              body: 'Fill at your own pace during your rental period (typically 7–14 days), then call or book online for pickup.',
+            },
+          ].map((card) => (
+            <div key={card.step} className="rounded-xl border border-gray-200 bg-white p-5 flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">
+                  {card.step}
+                </div>
+                <div className="h-10 w-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
+                  {card.icon}
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">{card.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{card.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* What Space Do You Need for Delivery? */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">What Space Do You Need for Delivery?</h2>
+        <p className="text-gray-500 text-sm mb-5">Before you order, confirm your drop zone meets these basic requirements.</p>
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-6">
+          <ul className="space-y-3">
+            {[
+              { label: 'Flat, paved surface preferred', detail: 'Driveway or parking area works best; gravel is OK with plywood protection under the dumpster.' },
+              { label: '3 feet of clearance on each side', detail: 'The truck needs room to maneuver and the driver needs clearance to position the container.' },
+              { label: '22 feet of vertical clearance', detail: 'Check for overhead power lines, tree branches, and garage overhangs before scheduling delivery.' },
+              { label: '34 feet of unobstructed space in front', detail: 'The roll-off truck needs a straight run to back in and drop the container safely.' },
+              { label: 'No parking on steep slopes', detail: 'The dumpster must sit level to load safely and to avoid shifting during transport.' },
+            ].map((item) => (
+              <li key={item.label} className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-semibold text-gray-900">{item.label}</span>
+                  <span className="text-gray-600"> — {item.detail}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm text-gray-600 border-t border-amber-200 pt-4">
+            No driveway? Street placement is possible in most cities but requires a permit.{' '}
+            <Link href="/dumpster-rental-permit" className="text-green-700 font-medium hover:underline">
+              See our dumpster rental permit guide
+            </Link>.
+          </p>
+        </div>
+      </div>
+
+      {/* What Size Do You Need? */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">What Size Do You Need?</h2>
+        <p className="text-gray-500 text-sm mb-5">Quick reference — match your project to the right container size.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            {
+              size: '10-yard',
+              emoji: '🏠',
+              uses: 'Single room cleanout, small bathroom remodel',
+              weight: '1–2 tons of debris',
+              popular: false,
+            },
+            {
+              size: '20-yard',
+              emoji: '🔨',
+              uses: 'Full home renovation, roofing project, garage cleanout',
+              weight: 'Most popular',
+              popular: true,
+            },
+            {
+              size: '30-yard',
+              emoji: '🏗️',
+              uses: 'Large construction project, whole-home cleanout, major remodel',
+              weight: '3–5 tons of debris',
+              popular: false,
+            },
+            {
+              size: '40-yard',
+              emoji: '🏢',
+              uses: 'Commercial demolition, new construction, large estate cleanout',
+              weight: '5–8 tons of debris',
+              popular: false,
+            },
+          ].map((card) => (
+            <div
+              key={card.size}
+              className={`rounded-xl border p-5 flex flex-col gap-2 ${card.popular ? 'border-green-300 bg-green-50' : 'border-gray-200 bg-white'}`}
+            >
+              <div className="text-2xl">{card.emoji}</div>
+              <div className="flex items-center gap-2">
+                <span className="text-lg font-bold text-gray-900">{card.size}</span>
+                {card.popular && (
+                  <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-semibold text-green-700">Most Popular</span>
+                )}
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">{card.uses}</p>
+              <p className="text-xs text-gray-500">{card.weight}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4">
+          <Link href="/roll-off-dumpster-sizes" className="inline-flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700">
+            See full size guide <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Typical Rental Periods & Costs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Typical Rental Periods &amp; Costs</h2>
+        <p className="text-gray-500 text-sm mb-5">What to expect before you get a quote.</p>
+        <div className="rounded-xl border border-gray-200 bg-white p-6">
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {[
+              { term: 'Standard rental period', detail: '7–14 days (most companies)' },
+              { term: 'Average cost', detail: '$275–$750 depending on size and location' },
+              { term: 'Extensions', detail: '$5–$15/day beyond standard period' },
+              { term: 'Same-day delivery', detail: 'Available in most metro areas (may include rush surcharge of $25–$75)' },
+            ].map((item) => (
+              <div key={item.term} className="flex flex-col gap-1">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">{item.term}</dt>
+                <dd className="text-base font-semibold text-gray-900">{item.detail}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
 
       {/* Related guides */}

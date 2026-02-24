@@ -5,9 +5,9 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { formatPrice, DEFAULT_PRICING } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Prices & Cost Guide (2026) — What to Expect',
+  title: 'Dumpster Rental Cost [2026]: Prices by Size, City & Project Type | DumpsterListing',
   description:
-    'Dumpster rental prices range from $275–$750 depending on size and location. See 2026 national averages by size, what affects price, and how to get the best rate.',
+    '2026 dumpster rental prices by size, city, debris type, and duration. Includes overage fees, permit costs, and a junk removal comparison.',
   alternates: { canonical: '/dumpster-rental-cost' },
   openGraph: {
     title: 'Dumpster Rental Cost Guide (2026)',
@@ -99,7 +99,7 @@ const COST_FACTORS = [
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'How Much Does Dumpster Rental Cost? (2026)',
+  headline: 'Dumpster Rental Cost [2026]: Prices by Size, City & Project Type',
   description: 'Dumpster rental costs $275–$750 nationally. This guide breaks down pricing by size, cost factors, and money-saving tips.',
   datePublished: '2026-02-24',
   dateModified: '2026-02-24',
@@ -259,6 +259,204 @@ export default function CostGuidePage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </section>
+
+            {/* Pricing by Rental Duration */}
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-5">
+                Pricing by Rental Duration
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+                {[
+                  {
+                    period: 'Daily Rental',
+                    price: '$40–$100/day',
+                    badge: 'Rare',
+                    badgeColor: 'bg-gray-100 text-gray-600',
+                    detail: 'Rare; usually only for urgent 1-day jobs. Most companies prefer weekly minimums.',
+                  },
+                  {
+                    period: 'Weekly Rental',
+                    price: '$275–$750',
+                    badge: 'Most Common',
+                    badgeColor: 'bg-green-100 text-green-700',
+                    detail: 'Standard 7–10 day rental period. The most common booking. Most companies quote a flat weekly rate.',
+                  },
+                  {
+                    period: 'Monthly Rental',
+                    price: '$500–$1,200/mo',
+                    badge: 'Long-Term',
+                    badgeColor: 'bg-blue-100 text-blue-700',
+                    detail: 'Best for long construction projects or ongoing cleanouts. Ask about monthly discounts.',
+                  },
+                ].map((item) => (
+                  <div key={item.period} className="rounded-xl border border-gray-200 bg-white p-5">
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <h3 className="font-bold text-gray-900">{item.period}</h3>
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full shrink-0 ${item.badgeColor}`}>{item.badge}</span>
+                    </div>
+                    <div className="text-xl font-extrabold text-green-700 mb-2">{item.price}</div>
+                    <p className="text-sm text-gray-600 leading-relaxed">{item.detail}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-gray-600 rounded-xl border border-gray-200 bg-gray-50 p-4">
+                <strong>Note:</strong> Most companies quote a flat weekly rate. Extensions typically cost <strong>$5–$15/day</strong> beyond the standard rental period.
+              </p>
+            </section>
+
+            {/* Average Cost by City */}
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-5">
+                Average Dumpster Rental Cost by City
+              </h2>
+              <div className="overflow-x-auto rounded-xl border border-gray-200 mb-3">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700">City</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700">10 Yard</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700 hidden sm:table-cell">20 Yard</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700 hidden md:table-cell">30 Yard</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700 hidden lg:table-cell">Permit (if needed)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {[
+                      { city: 'New York City, NY', y10: '$440–$600', y20: '$600–$900', y30: '$800–$1,085', permit: '$135–$385' },
+                      { city: 'Los Angeles, CA', y10: '$350–$550', y20: '$450–$700', y30: '$600–$850', permit: '$50–$150' },
+                      { city: 'Chicago, IL', y10: '$300–$500', y20: '$400–$650', y30: '$550–$800', permit: '$25–$60/day' },
+                      { city: 'Houston, TX', y10: '$275–$450', y20: '$375–$600', y30: '$500–$750', permit: '$20–$150' },
+                      { city: 'Phoenix, AZ', y10: '$280–$460', y20: '$380–$580', y30: '$500–$720', permit: '$30–$100' },
+                      { city: 'Philadelphia, PA', y10: '$320–$520', y20: '$420–$680', y30: '$580–$830', permit: '$40–$120' },
+                      { city: 'Denver, CO', y10: '$290–$480', y20: '$390–$620', y30: '$520–$760', permit: '$25–$90' },
+                      { city: 'Atlanta, GA', y10: '$280–$460', y20: '$375–$590', y30: '$500–$730', permit: '$20–$80' },
+                      { city: 'National Average', y10: '$275–$480', y20: '$375–$650', y30: '$500–$800', permit: '$10–$100' },
+                    ].map((row, i) => (
+                      <tr key={row.city} className={`hover:bg-gray-50 ${i === 8 ? 'font-semibold bg-green-50' : ''}`}>
+                        <td className="px-4 py-3 font-medium text-gray-800">{row.city}</td>
+                        <td className="px-4 py-3 text-gray-700">{row.y10}</td>
+                        <td className="px-4 py-3 text-gray-700 hidden sm:table-cell">{row.y20}</td>
+                        <td className="px-4 py-3 text-gray-700 hidden md:table-cell">{row.y30}</td>
+                        <td className="px-4 py-3 text-gray-600 hidden lg:table-cell">{row.permit}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-400">* Prices are estimates. Local rates vary by company, season, and debris type. Always get quotes from 3+ local providers.</p>
+            </section>
+
+            {/* Overage & Overweight Fees */}
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                What Happens If You Go Over the Weight Limit?
+              </h2>
+              <p className="text-sm text-gray-600 leading-relaxed mb-5">
+                Every rental includes a weight allowance (typically 1–4 tons depending on size). If your debris exceeds that limit,
+                you&apos;ll be charged an overweight fee after the dumpster is weighed at the facility.
+              </p>
+              <div className="overflow-x-auto rounded-xl border border-gray-200 mb-5">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700">City / Region</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700">Overage Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {[
+                      { region: 'National average', rate: '$40–$100/ton' },
+                      { region: 'New York City', rate: '$200–$250/ton' },
+                      { region: 'Chicago', rate: '$60–$90/ton' },
+                      { region: 'Most metro areas', rate: '$65–$120/ton' },
+                    ].map((row) => (
+                      <tr key={row.region} className="hover:bg-gray-50">
+                        <td className="px-4 py-3 font-medium text-gray-800">{row.region}</td>
+                        <td className="px-4 py-3 font-semibold text-red-600">{row.rate}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="rounded-xl border border-green-200 bg-green-50 p-5">
+                <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">Tips to Avoid Overweight Fees</h3>
+                <ul className="space-y-2">
+                  {[
+                    'Ask for the exact weight allowance before renting',
+                    'Mix heavy debris (concrete, dirt) with lighter items to distribute weight',
+                    'For concrete-heavy jobs, rent a heavy-debris dumpster with higher weight limits',
+                    'Break up large concrete pieces to pack more efficiently',
+                  ].map((tip) => (
+                    <li key={tip} className="flex items-start gap-2 text-sm text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                      {tip}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+
+            {/* Pricing by Debris Type */}
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-5">
+                Pricing by Debris Type
+              </h2>
+              <div className="overflow-x-auto rounded-xl border border-gray-200 mb-5">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700">Debris Type</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700">Relative Cost</th>
+                      <th className="text-left px-4 py-3 font-semibold text-gray-700 hidden sm:table-cell">Why</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {[
+                      { type: 'Household junk / furniture', cost: 'Standard rate', why: 'Routes to standard landfill', highlight: false },
+                      { type: 'Construction/demolition debris', cost: 'Standard–10% higher', why: 'Mixed C&D facility', highlight: false },
+                      { type: 'Heavy debris (concrete, brick, asphalt)', cost: '15–30% higher', why: 'Requires inert/heavy-debris container', highlight: true },
+                      { type: 'Yard waste / clean wood', cost: 'Often lower', why: 'Routes to composting/recycling facility', highlight: false },
+                      { type: 'Roofing materials (shingles)', cost: 'Standard–15% higher', why: 'Heavy; asphalt shingles weigh 2,000–3,000 lbs/sq', highlight: false },
+                      { type: 'Mixed hazardous items', cost: '+$50–$500 surcharge', why: 'Appliances, mattresses, electronics, paint', highlight: true },
+                    ].map((row) => (
+                      <tr key={row.type} className={`hover:bg-gray-50 ${row.highlight ? 'bg-amber-50' : ''}`}>
+                        <td className="px-4 py-3 font-medium text-gray-800">{row.type}</td>
+                        <td className={`px-4 py-3 font-semibold ${row.highlight ? 'text-amber-700' : 'text-gray-700'}`}>{row.cost}</td>
+                        <td className="px-4 py-3 text-gray-600 hidden sm:table-cell">{row.why}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Special Item Surcharges Callout */}
+              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-xl">⚠️</span> Special Item Surcharges
+                </h3>
+                <div className="space-y-2 mb-4">
+                  {[
+                    { item: 'Appliances (fridges, AC units)', surcharge: '+$25–$75 each', note: 'Freon removal required' },
+                    { item: 'Mattresses', surcharge: '+$25–$75 each', note: '' },
+                    { item: 'Tires', surcharge: '+$10–$35 each', note: '' },
+                    { item: 'Electronics (TVs, computers)', surcharge: '+$15–$50 each', note: '' },
+                    { item: 'Paint cans (liquid)', surcharge: 'Not accepted', note: 'Must go to HHW facility' },
+                  ].map((row) => (
+                    <div key={row.item} className="flex items-start gap-2 text-sm">
+                      <span className="text-amber-600 font-bold shrink-0 mt-0.5">!</span>
+                      <div>
+                        <span className="font-semibold text-gray-900">{row.item}: </span>
+                        <span className={`font-semibold ${row.surcharge === 'Not accepted' ? 'text-red-600' : 'text-amber-700'}`}>{row.surcharge}</span>
+                        {row.note && <span className="text-gray-600"> — {row.note}</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed border-t border-amber-200 pt-3">
+                  <strong>Always disclose special items when booking.</strong> Undisclosed items found at the facility can result in the full load being rejected or charged at hazmat rates.
+                </p>
               </div>
             </section>
 
