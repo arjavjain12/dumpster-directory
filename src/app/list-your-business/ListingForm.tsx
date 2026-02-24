@@ -82,6 +82,12 @@ export default function ListingForm() {
         body: JSON.stringify(form),
       })
       if (!res.ok) throw new Error('Failed to submit.')
+      if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+        ;(window as any).gtag('event', 'business_listing_request', {
+          event_category: 'listing_form',
+          plan: form.plan,
+        })
+      }
       setSuccess(true)
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Failed to submit. Please try again.')

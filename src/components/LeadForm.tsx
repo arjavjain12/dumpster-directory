@@ -89,6 +89,14 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
         }),
       })
       if (!res.ok) throw new Error('Failed to submit. Please try again.')
+      if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+        ;(window as any).gtag('event', 'generate_lead', {
+          event_category: 'lead_form',
+          city: cityName,
+          state: stateAbbr,
+          project_type: form.project_type,
+        })
+      }
       setSuccess(true)
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong.')
