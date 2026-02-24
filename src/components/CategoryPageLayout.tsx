@@ -31,9 +31,25 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
     })),
   }
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: data.primaryKeyword.replace(/\b\w/g, (c) => c.toUpperCase()),
+    serviceType: 'Dumpster Rental',
+    description: data.intro.slice(0, 300),
+    provider: {
+      '@type': 'Organization',
+      name: 'DumpsterListing',
+      url: 'https://dumpsterlisting.com',
+    },
+    areaServed: { '@type': 'Country', name: 'United States' },
+    url: `https://dumpsterlisting.com/dumpster-rental/${data.slug}`,
+  }
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Hero */}
       <div className="bg-white border-b border-gray-100">

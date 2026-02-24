@@ -111,6 +111,11 @@ export default function Footer() {
                 { label: 'Cubic Yard Calculator', href: '/cubic-yard-calculator' },
                 { label: 'Concrete Weight Calculator', href: '/concrete-weight-calculator' },
                 { label: 'Drywall Weight Calculator', href: '/drywall-weight-calculator' },
+                { label: 'Weight Limit Calculator', href: '/dumpster-weight-limit-calculator' },
+                { label: '20 Yard vs 30 Yard Dumpster', href: '/20-yard-dumpster-vs-30-yard-dumpster' },
+                { label: 'Roll-Off Dumpster Sizes', href: '/roll-off-dumpster-sizes' },
+                { label: 'Do You Need a Permit?', href: '/dumpster-rental-permit' },
+                { label: 'How Long Can You Keep a Dumpster?', href: '/how-long-can-you-keep-a-rental-dumpster' },
                 { label: 'About Us', href: '/about' },
                 { label: 'List Your Business', href: '/list-your-business' },
               ].map((link) => (
