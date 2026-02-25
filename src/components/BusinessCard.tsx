@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Globe, MapPin, Award, CheckCircle2 } from 'lucide-react'
 import { formatPhone } from '@/lib/utils'
 import type { Business } from '@/types'
@@ -29,6 +30,19 @@ export default function BusinessCard({ business, stateSlug, citySlug }: Business
       {isBasic && (
         <div className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-600">
           <CheckCircle2 className="h-3.5 w-3.5" /> Verified
+        </div>
+      )}
+
+      {business.photos?.length > 0 && (
+        <div className="relative h-36 w-full overflow-hidden rounded-t-xl">
+          <Image
+            src={business.photos[0]}
+            alt={`${business.name} dumpster rental`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 400px"
+            unoptimized
+          />
         </div>
       )}
 
