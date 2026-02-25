@@ -81,6 +81,7 @@ export const SEED_BUSINESSES: Business[] = [
     sizes_available: ['10', '20', '30', '40'],
     service_area_miles: 30,
     description: 'Family-owned dumpster rental serving Austin and surrounding areas since 2008.',
+    photos: [],
     created_at: new Date().toISOString(),
   },
   {
@@ -99,6 +100,7 @@ export const SEED_BUSINESSES: Business[] = [
     sizes_available: ['10', '15', '20', '30'],
     service_area_miles: 25,
     description: 'Fast, affordable roll-off dumpster rental in Austin TX.',
+    photos: [],
     created_at: new Date().toISOString(),
   },
   {
@@ -117,6 +119,7 @@ export const SEED_BUSINESSES: Business[] = [
     sizes_available: ['10', '20'],
     service_area_miles: 20,
     description: null,
+    photos: [],
     created_at: new Date().toISOString(),
   },
 ]
