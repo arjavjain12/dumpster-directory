@@ -12,7 +12,12 @@ export function getClient(): SupabaseClient {
   if (!url || !key || url.startsWith('your_')) {
     throw new Error('Supabase credentials not configured. Add them to .env.local')
   }
-  _client = createClient(url, key)
+  _client = createClient(url, key, {
+    global: {
+      // Bypass Next.js fetch cache so ISR regenerations always get fresh data
+      fetch: (input, init) => fetch(input, { ...init, cache: 'no-store' }),
+    },
+  })
   return _client
 }
 
