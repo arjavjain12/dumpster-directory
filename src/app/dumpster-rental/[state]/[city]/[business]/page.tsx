@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
+import PhotoGallery from '@/components/PhotoGallery'
 import { MapPin, Phone, Globe, Star, ArrowLeft, ArrowRight, Award, CheckCircle2, Truck } from 'lucide-react'
 
 import Breadcrumbs from '@/components/Breadcrumbs'
@@ -186,38 +186,7 @@ export default async function BusinessPage({
           <div className="xl:col-span-2 space-y-8">
 
             {/* Photo gallery */}
-            {biz.photos && biz.photos.length > 0 && (
-              <div className={`grid gap-2 rounded-xl overflow-hidden ${
-                biz.photos.length === 1 ? 'grid-cols-1' :
-                biz.photos.length === 2 ? 'grid-cols-2' :
-                'grid-cols-2'
-              }`}>
-                {/* Main / first image — always full height */}
-                <div className={`relative ${biz.photos.length === 1 ? 'h-64' : 'h-64 row-span-2'}`}>
-                  <Image
-                    src={biz.photos[0]}
-                    alt={`${biz.name} — photo 1`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 600px"
-                    unoptimized
-                  />
-                </div>
-                {/* Additional images stacked on the right */}
-                {biz.photos.slice(1).map((src: string, i: number) => (
-                  <div key={i} className="relative h-32">
-                    <Image
-                      src={src}
-                      alt={`${biz.name} — photo ${i + 2}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 50vw, 300px"
-                      unoptimized
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
+            <PhotoGallery photos={biz.photos ?? []} businessName={biz.name} />
 
             {/* About */}
             <div className="rounded-xl border border-gray-200 bg-white p-6">
