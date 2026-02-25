@@ -27,6 +27,7 @@ export interface Business {
   sizes_available: string[]
   service_area_miles: number
   description: string | null
+  photos: string[]
   created_at: string
   // joined from cities table
   city?: City
