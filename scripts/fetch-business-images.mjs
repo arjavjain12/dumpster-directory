@@ -48,6 +48,17 @@ async function fetchOgImage(website) {
       || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i)
     if (twitterMatch?.[1]) return resolveUrl(twitterMatch[1], url)
 
+    // Fallback: find first large image in body (skip icons, logos, tracking pixels)
+    const imgMatches = [...html.matchAll(/<img[^>]+src=["']([^"']+\.(?:jpg|jpeg|png|webp))["'][^>]*>/gi)]
+    for (const match of imgMatches) {
+      const src = match[1]
+      // Skip small images, icons, common noise
+      if (src.match(/logo|icon|pixel|spacer|tracking|banner-\d+x\d+|sprite/i)) continue
+      if (src.match(/\b(1x1|2x2|10x10)\b/)) continue
+      const resolved = resolveUrl(src, url)
+      if (resolved) return resolved
+    }
+
     return null
   } catch {
     return null
