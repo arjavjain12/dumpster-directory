@@ -204,7 +204,7 @@ export default async function BusinessPage({
                   />
                 </div>
                 {/* Additional images stacked on the right */}
-                {biz.photos.slice(1).map((src, i) => (
+                {biz.photos.slice(1).map((src: string, i: number) => (
                   <div key={i} className="relative h-32">
                     <Image
                       src={src}
