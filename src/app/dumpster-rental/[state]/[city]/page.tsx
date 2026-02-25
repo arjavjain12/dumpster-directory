@@ -15,6 +15,8 @@ import { getCityBySlug, getBusinessesByCity, getCityPricing, getNearbyCities } f
 import { getAllCitySlugs } from '@/lib/supabase'
 import WhatFitsInfographic from '@/components/infographics/WhatFitsInfographic'
 
+export const revalidate = 86400 // Re-fetch from Supabase every 24 hours
+
 // --- Data fetching (live Supabase) ---
 async function getCityData(stateSlug: string, citySlug: string) {
   const city = await getCityBySlug(stateSlug, citySlug)
