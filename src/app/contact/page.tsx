@@ -37,7 +37,7 @@ export default function ContactPage() {
         <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
             <div className="rounded-lg bg-green-100 p-2">
-              <Search className="h-5 w-5 text-green-600" />
+              <Search className="h-5 w-5 text-green-700" />
             </div>
             <h2 className="text-xl font-bold text-gray-900">Looking to Rent a Dumpster?</h2>
           </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
           </p>
           <a
             href="/dumpster-rental"
-            className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-sm font-bold text-white hover:bg-green-700 transition shadow-sm"
+            className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3 text-sm font-bold text-white hover:bg-green-800 transition shadow-sm"
           >
             <Search className="h-4 w-4" />
             Browse the Directory
@@ -59,7 +59,7 @@ export default function ContactPage() {
         <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
             <div className="rounded-lg bg-green-100 p-2">
-              <Building2 className="h-5 w-5 text-green-600" />
+              <Building2 className="h-5 w-5 text-green-700" />
             </div>
             <h2 className="text-xl font-bold text-gray-900">Want to List Your Business?</h2>
           </div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
           </p>
           <a
             href="/list-your-business"
-            className="inline-flex items-center gap-2 rounded-xl border border-green-600 px-6 py-3 text-sm font-bold text-green-600 hover:bg-green-50 transition"
+            className="inline-flex items-center gap-2 rounded-xl border border-green-600 px-6 py-3 text-sm font-bold text-green-700 hover:bg-green-50 transition"
           >
             <Building2 className="h-4 w-4" />
             List Your Business
@@ -81,7 +81,7 @@ export default function ContactPage() {
         <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
             <div className="rounded-lg bg-green-100 p-2">
-              <Mail className="h-5 w-5 text-green-600" />
+              <Mail className="h-5 w-5 text-green-700" />
             </div>
             <h2 className="text-xl font-bold text-gray-900">General Inquiries</h2>
           </div>

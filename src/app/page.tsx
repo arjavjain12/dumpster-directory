@@ -28,7 +28,7 @@ export default async function Home() {
 
               <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
                 Find Dumpster Rental Companies{' '}
-                <span className="text-green-600">Near You</span>
+                <span className="text-green-700">Near You</span>
               </h1>
 
               <p className="mt-6 text-lg leading-relaxed text-gray-600">
@@ -39,7 +39,7 @@ export default async function Home() {
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/dumpster-rental"
-                  className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-8 py-3.5 text-base font-semibold text-white shadow-md transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                  className="inline-flex items-center gap-2 rounded-lg bg-green-700 px-8 py-3.5 text-base font-semibold text-white shadow-md transition hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                 >
                   <Search className="h-5 w-5" />
                   Find My City
@@ -114,7 +114,7 @@ export default async function Home() {
                 href={`/dumpster-rental/${city.state_slug}/${city.city_slug}`}
                 className="group flex flex-col items-center rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:border-green-300 hover:shadow-md"
               >
-                <MapPin className="h-6 w-6 text-green-600 transition group-hover:scale-110" />
+                <MapPin className="h-6 w-6 text-green-700 transition group-hover:scale-110" />
                 <span className="mt-3 text-sm font-semibold text-gray-900">
                   {city.city_name}
                 </span>
@@ -128,7 +128,7 @@ export default async function Home() {
           <div className="mt-8 text-center">
             <Link
               href="/dumpster-rental"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-green-600 transition hover:text-green-700"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-green-700 transition hover:text-green-700"
             >
               View all cities
               <ArrowRight className="h-4 w-4" />
@@ -197,7 +197,7 @@ export default async function Home() {
                 key={title}
                 className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 text-green-600">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 text-green-700">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-gray-900">
@@ -213,7 +213,7 @@ export default async function Home() {
       </section>
 
       {/* ───────── Bottom CTA ───────── */}
-      <section className="bg-green-600 py-16">
+      <section className="bg-green-700 py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to Find a Dumpster Rental Company?

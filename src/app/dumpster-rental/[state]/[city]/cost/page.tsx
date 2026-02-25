@@ -117,7 +117,7 @@ export default async function CostPage({
               <div className="space-y-4">
                 {COST_FACTORS.map((f) => (
                   <div key={f.title} className="flex gap-3 rounded-xl border border-gray-200 bg-white p-4">
-                    <Info className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                    <Info className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-semibold text-gray-900">{f.title}</h3>
                       <p className="mt-0.5 text-sm text-gray-600">{f.desc}</p>
@@ -142,7 +142,7 @@ export default async function CostPage({
                   'Avoid overloading — materials above the fill line incur extra fees.',
                 ].map((tip, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold shrink-0">✓</span>
+                    <span className="text-green-700 font-bold shrink-0">✓</span>
                     {tip}
                   </li>
                 ))}
@@ -156,7 +156,7 @@ export default async function CostPage({
                 <p className="text-sm text-gray-600 mt-1">View listings, ratings, and get free quotes.</p>
               </div>
               <Link href={`/dumpster-rental/${stateSlug}/${citySlug}`}
-                className="shrink-0 flex items-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 font-semibold text-white hover:bg-green-700 transition">
+                className="shrink-0 flex items-center gap-2 rounded-lg bg-green-700 px-5 py-2.5 font-semibold text-white hover:bg-green-800 transition">
                 See {city.city_name} Listings <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -170,7 +170,7 @@ export default async function CostPage({
                 Stop guessing. Get real prices from {city.city_name} dumpster companies in minutes.
               </p>
               <Link href="#quote"
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition">
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition">
                 Get Free Quotes
               </Link>
             </div>
@@ -182,7 +182,7 @@ export default async function CostPage({
                   const p = DEFAULT_PRICING[size]
                   return (
                     <Link key={size} href={`/dumpster-sizes/${size}-yard`}
-                      className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition">
+                      className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition">
                       <span>{size} Yard ({formatPrice(p.low)}–{formatPrice(p.high)})</span>
                       <ArrowRight className="h-3.5 w-3.5" />
                     </Link>

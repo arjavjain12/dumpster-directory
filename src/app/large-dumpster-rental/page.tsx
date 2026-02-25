@@ -167,20 +167,20 @@ export default function LargeDumpsterRentalPage() {
           </h1>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             Large dumpsters — the{' '}
-            <Link href="/dumpster-sizes/20-yard" className="text-green-600 font-medium hover:underline">
+            <Link href="/dumpster-sizes/20-yard" className="text-green-700 font-medium hover:underline">
               20-yard
             </Link>
             ,{' '}
-            <Link href="/dumpster-sizes/30-yard" className="text-green-600 font-medium hover:underline">
+            <Link href="/dumpster-sizes/30-yard" className="text-green-700 font-medium hover:underline">
               30-yard
             </Link>
             , and{' '}
-            <Link href="/dumpster-sizes/40-yard" className="text-green-600 font-medium hover:underline">
+            <Link href="/dumpster-sizes/40-yard" className="text-green-700 font-medium hover:underline">
               40-yard
             </Link>{' '}
             roll-off containers — are built for projects that produce serious volume: whole-home renovations,
             new construction, large roofing jobs, commercial cleanouts, and demolition work. If a{' '}
-            <Link href="/small-dumpster-rental" className="text-green-600 font-medium hover:underline">
+            <Link href="/small-dumpster-rental" className="text-green-700 font-medium hover:underline">
               small dumpster
             </Link>{' '}
             isn&apos;t going to cut it, this guide covers everything you need to choose the right large container,
@@ -189,7 +189,7 @@ export default function LargeDumpsterRentalPage() {
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"
-              className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-7 py-3.5 font-bold text-white hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-7 py-3.5 font-bold text-white hover:bg-green-800 transition"
             >
               Find a Large Dumpster Near Me <ArrowRight className="h-5 w-5" />
             </Link>
@@ -223,7 +223,7 @@ export default function LargeDumpsterRentalPage() {
             <p>
               In the roll-off dumpster industry, &ldquo;large&rdquo; refers to containers in the 20 to 40-yard range.
               A{' '}
-              <Link href="/dumpster-sizes/20-yard" className="text-green-600 font-medium hover:underline">
+              <Link href="/dumpster-sizes/20-yard" className="text-green-700 font-medium hover:underline">
                 20-yard dumpster
               </Link>{' '}
               is the most commonly rented large container — measuring approximately{' '}
@@ -233,13 +233,13 @@ export default function LargeDumpsterRentalPage() {
             </p>
             <p>
               A{' '}
-              <Link href="/dumpster-sizes/30-yard" className="text-green-600 font-medium hover:underline">
+              <Link href="/dumpster-sizes/30-yard" className="text-green-700 font-medium hover:underline">
                 30-yard dumpster
               </Link>{' '}
               steps up to <strong>22 ft long × 7.5 ft wide × 6 ft tall</strong> and holds 9–12 pickup truck
               loads, with weight limits typically between 4–8 tons. It&apos;s the go-to for new construction,
               commercial cleanouts, and large roofing jobs over 3,000 sq ft. The{' '}
-              <Link href="/dumpster-sizes/40-yard" className="text-green-600 font-medium hover:underline">
+              <Link href="/dumpster-sizes/40-yard" className="text-green-700 font-medium hover:underline">
                 40-yard dumpster
               </Link>{' '}
               — at <strong>22 ft long × 8 ft wide × 8 ft tall</strong> and 12–16 pickup truck loads of
@@ -312,7 +312,7 @@ export default function LargeDumpsterRentalPage() {
 
                 <Link
                   href="/dumpster-sizes/20-yard"
-                  className="flex items-center gap-1.5 text-sm font-semibold text-green-600 hover:text-green-700 hover:gap-2.5 transition-all"
+                  className="flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-700 hover:gap-2.5 transition-all"
                 >
                   Full 20-yard dumpster guide <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -378,7 +378,7 @@ export default function LargeDumpsterRentalPage() {
 
                 <Link
                   href="/dumpster-sizes/30-yard"
-                  className="flex items-center gap-1.5 text-sm font-semibold text-green-600 hover:text-green-700 hover:gap-2.5 transition-all"
+                  className="flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-700 hover:gap-2.5 transition-all"
                 >
                   Full 30-yard dumpster guide <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -392,7 +392,7 @@ export default function LargeDumpsterRentalPage() {
             <div>
               <p className="font-bold text-gray-900 text-lg">
                 Need even more capacity? Consider a{' '}
-                <Link href="/dumpster-sizes/40-yard" className="text-green-600 hover:underline">
+                <Link href="/dumpster-sizes/40-yard" className="text-green-700 hover:underline">
                   40-yard dumpster
                 </Link>{' '}
                 ($550–$750)
@@ -407,7 +407,7 @@ export default function LargeDumpsterRentalPage() {
             </div>
             <Link
               href="/dumpster-sizes/40-yard"
-              className="shrink-0 inline-flex items-center gap-1.5 text-sm font-semibold text-green-600 hover:text-green-700 hover:gap-2.5 transition-all"
+              className="shrink-0 inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-700 hover:gap-2.5 transition-all"
             >
               40-yard guide <ArrowRight className="h-4 w-4" />
             </Link>
@@ -428,7 +428,7 @@ export default function LargeDumpsterRentalPage() {
                 className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-5 hover:border-green-200 hover:shadow-sm transition-all"
               >
                 <div className="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                  <Icon className="h-5 w-5 text-green-600" />
+                  <Icon className="h-5 w-5 text-green-700" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{title}</h3>
@@ -468,7 +468,7 @@ export default function LargeDumpsterRentalPage() {
           </div>
           <p className="mt-3 text-xs text-gray-400">
             * Prices are national averages. See the full{' '}
-            <Link href="/dumpster-rental-cost" className="text-green-600 hover:underline">
+            <Link href="/dumpster-rental-cost" className="text-green-700 hover:underline">
               dumpster rental cost guide
             </Link>{' '}
             for city-specific pricing.
@@ -477,7 +477,7 @@ export default function LargeDumpsterRentalPage() {
             As a general rule: if your project spans multiple rooms, involves structural materials, or covers
             a large square footage, a large dumpster is the right call. For focused single-room work or
             smaller cleanouts, a{' '}
-            <Link href="/small-dumpster-rental" className="text-green-600 font-medium hover:underline">
+            <Link href="/small-dumpster-rental" className="text-green-700 font-medium hover:underline">
               small dumpster
             </Link>{' '}
             will save you money without sacrificing capacity.
@@ -543,7 +543,7 @@ export default function LargeDumpsterRentalPage() {
               },
             ].map((item) => (
               <li key={item.factor} className="flex gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                 <div className="text-sm text-gray-700">
                   <strong className="text-gray-900">{item.factor}: </strong>
                   {item.detail}
@@ -563,7 +563,7 @@ export default function LargeDumpsterRentalPage() {
               'Book mid-week for better scheduling flexibility. Large roll-offs have tighter fleet availability than small containers, so earlier booking wins.',
             ].map((tip, i) => (
               <li key={i} className="flex gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-700">{tip}</span>
               </li>
             ))}
@@ -596,7 +596,7 @@ export default function LargeDumpsterRentalPage() {
               { label: 'Do You Need a Permit?', href: '/dumpster-rental-permit' },
             ].map((link) => (
               <Link key={link.href} href={link.href}
-                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition">
+                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">
                 <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
                 {link.label}
               </Link>
@@ -615,13 +615,13 @@ export default function LargeDumpsterRentalPage() {
           </p>
           <Link
             href="/dumpster-rental-near-me"
-            className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-8 py-3.5 font-bold text-white hover:bg-green-700 transition"
+            className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-8 py-3.5 font-bold text-white hover:bg-green-800 transition"
           >
             Find Local Companies Near Me <ArrowRight className="h-5 w-5" />
           </Link>
           <p className="mt-4 text-sm text-gray-500">
             Working on a smaller project?{' '}
-            <Link href="/small-dumpster-rental" className="text-green-600 hover:underline font-medium">
+            <Link href="/small-dumpster-rental" className="text-green-700 hover:underline font-medium">
               See small dumpster rental options (10 &amp; 15 yard)
             </Link>
             .

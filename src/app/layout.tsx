@@ -73,12 +73,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased bg-gray-50 text-gray-900`}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        >
+          Skip to main content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <Header />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
         {/* Google Analytics 4 */}
         <Script

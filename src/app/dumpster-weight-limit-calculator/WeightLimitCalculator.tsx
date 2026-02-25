@@ -105,7 +105,7 @@ export default function WeightLimitCalculator() {
         <div className="flex items-start gap-3 mb-4">
           {isOver
             ? <AlertTriangle className="h-6 w-6 text-red-500 shrink-0 mt-0.5" />
-            : <CheckCircle className="h-6 w-6 text-green-600 shrink-0 mt-0.5" />}
+            : <CheckCircle className="h-6 w-6 text-green-700 shrink-0 mt-0.5" />}
           <div>
             <div className={`font-bold text-lg ${isOver ? 'text-red-700' : isClose ? 'text-amber-700' : 'text-green-700'}`}>
               {isOver
@@ -164,7 +164,7 @@ export default function WeightLimitCalculator() {
             <div>Limit lbs</div>
           </div>
           <div className="rounded bg-white border border-gray-100 p-2">
-            <div className={`font-semibold ${isOver ? 'text-red-600' : 'text-green-600'}`}>
+            <div className={`font-semibold ${isOver ? 'text-red-600' : 'text-green-700'}`}>
               {isOver ? `+${overLbs.toLocaleString()}` : `-${(limit.limitLbs - estimatedLbs).toLocaleString()}`}
             </div>
             <div>{isOver ? 'lbs over' : 'lbs remaining'}</div>

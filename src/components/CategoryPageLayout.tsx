@@ -129,7 +129,7 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                     >
                       <div className="shrink-0 h-14 w-14 rounded-full bg-green-50 flex flex-col items-center justify-center">
                         <span className="text-xl font-extrabold text-green-700">{s.yards}</span>
-                        <span className="text-xs text-green-600 font-medium">yard</span>
+                        <span className="text-xs text-green-700 font-medium">yard</span>
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="font-semibold text-gray-900">{s.yards} Yard Dumpster</p>
@@ -139,7 +139,7 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                         <p className="text-sm font-semibold text-gray-900">{formatPrice(p.low)}–{formatPrice(p.high)}</p>
                         <p className="text-xs text-gray-400">avg. price</p>
                       </div>
-                      <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-green-600 shrink-0 transition" />
+                      <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-green-700 shrink-0 transition" />
                     </Link>
                   )
                 })}
@@ -154,7 +154,7 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
               <ul className="space-y-3">
                 {data.tips.map((tip, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700">{tip}</span>
                   </li>
                 ))}
@@ -198,7 +198,7 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                   <Link
                     key={c.citySlug}
                     href={`/dumpster-rental/${c.stateSlug}/${c.citySlug}`}
-                    className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-600 transition rounded-lg border border-gray-100 bg-white px-3 py-2"
+                    className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-700 transition rounded-lg border border-gray-100 bg-white px-3 py-2"
                   >
                     <ArrowRight className="h-3 w-3 text-gray-400 shrink-0" />
                     {c.city}
@@ -206,7 +206,7 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                 ))}
                 <Link
                   href="/dumpster-rental"
-                  className="flex items-center gap-1.5 text-sm font-medium text-green-600 hover:text-green-700 transition rounded-lg border border-green-100 bg-green-50 px-3 py-2"
+                  className="flex items-center gap-1.5 text-sm font-medium text-green-700 hover:text-green-700 transition rounded-lg border border-green-100 bg-green-50 px-3 py-2"
                 >
                   <ArrowRight className="h-3 w-3 shrink-0" />
                   All cities →
@@ -227,7 +227,7 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
               </p>
               <Link
                 href="/dumpster-rental"
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition"
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition"
               >
                 Find Local Companies
               </Link>
@@ -243,10 +243,10 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                     <Link
                       key={size}
                       href={`/dumpster-sizes/${size}-yard`}
-                      className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition group"
+                      className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition group"
                     >
                       <span>{size} Yard — {formatPrice(p.low)}–{formatPrice(p.high)}</span>
-                      <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-600 transition" />
+                      <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-700 transition" />
                     </Link>
                   )
                 })}
@@ -285,10 +285,10 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition group"
+                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition group"
                   >
                     <span>{link.label}</span>
-                    <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-600 transition shrink-0" />
+                    <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-700 transition shrink-0" />
                   </Link>
                 ))}
               </div>

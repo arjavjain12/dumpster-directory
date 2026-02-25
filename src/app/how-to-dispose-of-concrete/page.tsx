@@ -562,7 +562,7 @@ export default function HowToDisposeOfConcretePage() {
               { label: 'How to Dispose of Furniture', href: '/how-to-dispose-of-furniture' },
             ].map((link) => (
               <Link key={link.href} href={link.href}
-                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition">
+                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">
                 <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
                 {link.label}
               </Link>
@@ -570,7 +570,7 @@ export default function HowToDisposeOfConcretePage() {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Need a Concrete Dumpster?</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Find local companies that specialize in heavy material and concrete disposal.</p>
           <Link href="/dumpster-rental"

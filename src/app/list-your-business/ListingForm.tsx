@@ -99,7 +99,7 @@ export default function ListingForm() {
   if (success) {
     return (
       <div className="mx-auto max-w-2xl rounded-2xl border border-green-200 bg-green-50 p-10 text-center">
-        <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-600" />
+        <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-700" />
         <h3 className="mb-2 text-2xl font-bold text-green-800">We received your request!</h3>
         <p className="text-lg text-green-700">
           Our team will review your information and reach out within 1–2 business days to get your listing live.
@@ -115,7 +115,7 @@ export default function ListingForm() {
 
   return (
     <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl bg-white shadow-xl">
-      <div className="bg-gradient-to-r from-green-600 to-green-700 px-8 py-10 text-center text-white">
+      <div className="bg-gradient-to-r from-green-700 to-green-700 px-8 py-10 text-center text-white">
         <h2 className="mb-2 text-3xl font-extrabold md:text-4xl">
           Get Listed Today
         </h2>
@@ -272,7 +272,7 @@ export default function ListingForm() {
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-10 py-4 text-lg font-bold text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 disabled:opacity-60 disabled:cursor-not-allowed transition"
+            className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-10 py-4 text-lg font-bold text-white shadow-lg hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 disabled:opacity-60 disabled:cursor-not-allowed transition"
           >
             {loading ? (
               <>

@@ -240,7 +240,7 @@ export default function WhatCanYouPutInADumpsterPage() {
         {/* Where to Take Prohibited Items */}
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-            <ArrowRight className="h-6 w-6 text-green-600" /> Where to Take Prohibited Items
+            <ArrowRight className="h-6 w-6 text-green-700" /> Where to Take Prohibited Items
           </h2>
           <p className="text-gray-500 text-sm mb-6">
             Can't throw it in the dumpster? Here's where each item type can be properly disposed of or recycled.
@@ -368,7 +368,7 @@ export default function WhatCanYouPutInADumpsterPage() {
               { label: 'Dumpster Rental vs Junk Removal', href: '/dumpster-rental-vs-junk-removal' },
             ].map((link) => (
               <Link key={link.href} href={link.href}
-                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition">
+                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">
                 <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
                 {link.label}
               </Link>
@@ -376,7 +376,7 @@ export default function WhatCanYouPutInADumpsterPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Find a Dumpster in Your Area</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Compare local dumpster rental companies and get free quotes — fast.</p>
           <Link href="/dumpster-rental"

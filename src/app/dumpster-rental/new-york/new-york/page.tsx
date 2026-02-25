@@ -275,7 +275,7 @@ export default async function NYCDumpsterRentalPage() {
             </div>
             <Link
               href="#quote"
-              className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-3 font-bold text-white hover:bg-green-700 transition"
+              className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3 font-bold text-white hover:bg-green-800 transition"
             >
               <Truck className="h-5 w-5" /> Get Free Quotes
             </Link>
@@ -386,19 +386,19 @@ export default async function NYCDumpsterRentalPage() {
                     </p>
                     <ul className="mt-3 space-y-1.5 text-sm text-gray-600">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-green-700 shrink-0 mt-0.5" />
                         Apply online at <Link href="https://portal.311.nyc.gov" target="_blank" rel="noopener noreferrer" className="text-green-700 font-medium hover:underline">portal.311.nyc.gov</Link>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-green-700 shrink-0 mt-0.5" />
                         Cost: <strong>$135–$385</strong> depending on duration and borough
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-green-700 shrink-0 mt-0.5" />
                         Valid for <strong>5 days</strong>; can be renewed if your project runs longer
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-green-700 shrink-0 mt-0.5" />
                         Your rental company can often handle the permit application — ask when booking
                       </li>
                     </ul>
@@ -406,7 +406,7 @@ export default async function NYCDumpsterRentalPage() {
                 </div>
                 <div className="p-5 flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <CheckCircle className="h-5 w-5 text-green-700" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">No permit required: Private property</h3>
@@ -437,7 +437,7 @@ export default async function NYCDumpsterRentalPage() {
                 {BOROUGHS.map((b) => (
                   <div key={b.name} className="rounded-xl border border-gray-200 bg-white p-5">
                     <div className="flex items-center gap-2 mb-2">
-                      <Building2 className="h-5 w-5 text-green-600 shrink-0" />
+                      <Building2 className="h-5 w-5 text-green-700 shrink-0" />
                       <h3 className="font-bold text-gray-900">{b.name}</h3>
                     </div>
                     <p className="text-sm text-gray-600 leading-relaxed">{b.description}</p>
@@ -496,7 +496,7 @@ export default async function NYCDumpsterRentalPage() {
               <div className="mt-3">
                 <Link
                   href="/roll-off-dumpster-sizes"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-green-700 hover:text-green-700"
                 >
                   See full national size guide <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -560,7 +560,7 @@ export default async function NYCDumpsterRentalPage() {
                 Compare prices from NYC dumpster rental companies across all 5 boroughs. Fast, free, no obligation.
               </p>
               <Link href="#quote"
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition">
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition">
                 Get Quotes Now
               </Link>
             </div>
@@ -589,7 +589,7 @@ export default async function NYCDumpsterRentalPage() {
               </p>
               <Link
                 href="/dumpster-rental/new-york/new-york/cost"
-                className="flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700"
+                className="flex items-center gap-1 text-sm font-medium text-green-700 hover:text-green-700"
               >
                 View NYC Cost Guide <ArrowRight className="h-4 w-4" />
               </Link>
@@ -602,7 +602,7 @@ export default async function NYCDumpsterRentalPage() {
                 {[10, 15, 20, 30, 40].map((size) => (
                   <Link key={size}
                     href={`/dumpster-sizes/${size}-yard`}
-                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition">
+                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition">
                     <span>{size} Yard Dumpster</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
@@ -618,7 +618,7 @@ export default async function NYCDumpsterRentalPage() {
                   {nearby.slice(0, 5).map((c: { id: number; state_slug: string; city_slug: string; city_name: string }) => (
                     <Link key={c.id}
                       href={`/dumpster-rental/${c.state_slug}/${c.city_slug}`}
-                      className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-600 transition">
+                      className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-700 transition">
                       <MapPin className="h-3.5 w-3.5 text-gray-400" />
                       {c.city_name} Dumpster Rental
                     </Link>

@@ -88,7 +88,7 @@ export default function AboutPage() {
                 key={stat.label}
                 className="rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm"
               >
-                <div className="text-4xl font-extrabold text-green-600 mb-2">{stat.value}</div>
+                <div className="text-4xl font-extrabold text-green-700 mb-2">{stat.value}</div>
                 <div className="text-sm font-medium text-gray-600">{stat.label}</div>
               </div>
             ))}
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 <div key={step.step} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="rounded-lg bg-green-100 p-2">
-                      <Icon className="h-5 w-5 text-green-600" />
+                      <Icon className="h-5 w-5 text-green-700" />
                     </div>
                     <span className="text-xs font-bold text-green-700 uppercase tracking-widest">
                       Step {step.step}
@@ -173,7 +173,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 px-8 py-12 text-center text-white shadow-lg">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 px-8 py-12 text-center text-white shadow-lg">
           <h2 className="text-2xl font-extrabold mb-3">Ready to Find a Dumpster?</h2>
           <p className="text-green-100 mb-8 max-w-xl mx-auto">
             Browse our directory and get connected with local dumpster rental companies in your city today.

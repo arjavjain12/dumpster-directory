@@ -171,7 +171,7 @@ export default function DumpsterSizeEstimatorPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Know Your Size? Find a Dumpster Near You.</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Browse local dumpster rental companies and get free quotes — takes less than 2 minutes.</p>
           <Link href="/dumpster-rental"

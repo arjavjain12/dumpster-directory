@@ -90,7 +90,7 @@ export default function ConcreteCalculator() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-              <Calculator className="h-5 w-5 text-green-600" />
+              <Calculator className="h-5 w-5 text-green-700" />
               Enter Your Measurements
             </h2>
             <button onClick={reset} className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 transition">
@@ -136,7 +136,7 @@ export default function ConcreteCalculator() {
                 key={u}
                 onClick={() => setUnit(u)}
                 className={`rounded-full px-4 py-1 text-sm font-medium transition ${
-                  unit === u ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  unit === u ? 'bg-green-700 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
                 {u === 'ft' ? 'Feet' : 'Inches'}
@@ -223,7 +223,7 @@ export default function ConcreteCalculator() {
               </div>
               <Link
                 href="/dumpster-rental"
-                className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-green-600 py-3 font-bold text-white hover:bg-green-700 transition"
+                className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-green-700 py-3 font-bold text-white hover:bg-green-800 transition"
               >
                 Find Local Dumpster Companies <ArrowRight className="h-4 w-4" />
               </Link>

@@ -505,7 +505,7 @@ export default async function SizePage({
                   <ul className="space-y-2">
                     {data.whatFits.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                        <CheckCircle className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-green-700 shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -631,7 +631,7 @@ export default async function SizePage({
               </p>
               <Link
                 href="/dumpster-rental"
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition"
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition"
               >
                 Find Local Companies
               </Link>
@@ -667,16 +667,16 @@ export default async function SizePage({
                     <Link
                       key={size}
                       href={`/dumpster-sizes/${size}-yard`}
-                      className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition group"
+                      className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition group"
                     >
                       <span>{size} Yard — {formatPrice(s.avgPriceLow)}–{formatPrice(s.avgPriceHigh)}</span>
-                      <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-600 transition" />
+                      <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-700 transition" />
                     </Link>
                   )
                 })}
                 <Link
                   href="/dumpster-sizes"
-                  className="flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700 transition mt-1 pt-1 border-t border-gray-100"
+                  className="flex items-center gap-1 text-sm font-medium text-green-700 hover:text-green-700 transition mt-1 pt-1 border-t border-gray-100"
                 >
                   Full size guide <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -700,10 +700,10 @@ export default async function SizePage({
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition group"
+                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition group"
                   >
                     <span>{link.label}</span>
-                    <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-600 transition shrink-0" />
+                    <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-700 transition shrink-0" />
                   </Link>
                 ))}
               </div>

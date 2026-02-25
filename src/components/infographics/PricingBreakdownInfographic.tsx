@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const BREAKDOWN = [
-  { label: 'Disposal / Tipping Fees', pct: 40, color: 'bg-green-600', desc: 'Landfill charges passed through by the hauler' },
+  { label: 'Disposal / Tipping Fees', pct: 40, color: 'bg-green-700', desc: 'Landfill charges passed through by the hauler' },
   { label: 'Delivery & Pickup', pct: 25, color: 'bg-blue-500', desc: 'Truck fuel, driver time, equipment wear' },
   { label: 'Container Rental', pct: 20, color: 'bg-yellow-500', desc: 'Daily rate for keeping the bin on your property' },
   { label: 'Overhead & Profit', pct: 15, color: 'bg-orange-400', desc: 'Insurance, permits, business operating costs' },

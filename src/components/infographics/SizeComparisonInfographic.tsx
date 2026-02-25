@@ -40,7 +40,7 @@ export default function SizeComparisonInfographic() {
                   {s.price}
                 </span>
                 <div
-                  className="w-full rounded-t-lg bg-green-600 group-hover:bg-green-500 transition-colors relative"
+                  className="w-full rounded-t-lg bg-green-700 group-hover:bg-green-500 transition-colors relative"
                   style={{ height: `${s.height * 2}px` }}
                 >
                   <span className="absolute top-2 inset-x-0 text-center text-white font-extrabold text-xl leading-none">

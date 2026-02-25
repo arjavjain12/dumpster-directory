@@ -287,7 +287,7 @@ export default function CheapDumpsterRentalPage() {
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"
-              className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-bold text-white hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 rounded-lg bg-green-700 px-6 py-3 font-bold text-white hover:bg-green-800 transition"
             >
               Find Cheap Dumpsters Near Me
               <ArrowRight className="h-4 w-4" />
@@ -353,7 +353,7 @@ export default function CheapDumpsterRentalPage() {
                         <td className="px-4 py-3">
                           <Link
                             href={`/dumpster-sizes/${row.size.replace(' yd', '-yard')}`}
-                            className="font-bold text-green-600 hover:underline"
+                            className="font-bold text-green-700 hover:underline"
                           >
                             {row.size}
                           </Link>
@@ -369,7 +369,7 @@ export default function CheapDumpsterRentalPage() {
               <p className="mt-2 text-xs text-gray-400">
                 * Budget-range estimates from local companies. Includes delivery, 7–14 day rental, and standard weight allowance.
                 Prices vary by city. Get local quotes for accurate numbers.{' '}
-                <Link href="/dumpster-rental-cost" className="text-green-600 hover:underline">
+                <Link href="/dumpster-rental-cost" className="text-green-700 hover:underline">
                   See full pricing guide.
                 </Link>
               </p>
@@ -403,7 +403,7 @@ export default function CheapDumpsterRentalPage() {
             {/* Section 3: 8 Tips */}
             <section className="rounded-xl border border-green-200 bg-green-50 p-6">
               <div className="flex items-center gap-2 mb-2">
-                <DollarSign className="h-5 w-5 text-green-600" />
+                <DollarSign className="h-5 w-5 text-green-700" />
                 <h2 className="text-2xl font-bold text-gray-900">
                   8 Tips to Get the Cheapest Dumpster Rental
                 </h2>
@@ -415,7 +415,7 @@ export default function CheapDumpsterRentalPage() {
               <ol className="space-y-4">
                 {TIPS.map((item, i) => (
                   <li key={i} className="flex gap-3">
-                    <div className="flex-shrink-0 h-7 w-7 rounded-full bg-green-600 text-white font-bold text-xs flex items-center justify-center">
+                    <div className="flex-shrink-0 h-7 w-7 rounded-full bg-green-700 text-white font-bold text-xs flex items-center justify-center">
                       {i + 1}
                     </div>
                     <div>
@@ -442,7 +442,7 @@ export default function CheapDumpsterRentalPage() {
                     key={inc.item}
                     className="flex gap-3 rounded-xl border border-gray-200 bg-white p-4"
                   >
-                    <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-semibold text-gray-900 text-sm">{inc.item}</h3>
                       <p className="text-sm text-gray-600 mt-0.5 leading-relaxed">{inc.detail}</p>
@@ -454,7 +454,7 @@ export default function CheapDumpsterRentalPage() {
                 <strong>Note:</strong> Some budget rentals advertise very low base prices but have short
                 rental windows (5 days) or minimal weight allowances (1 ton). Always confirm exactly what
                 your rental period and weight limit are before booking. See the{' '}
-                <Link href="/dumpster-rental-cost" className="text-green-600 hover:underline font-medium">
+                <Link href="/dumpster-rental-cost" className="text-green-700 hover:underline font-medium">
                   full dumpster rental cost guide
                 </Link>{' '}
                 for a breakdown of what each line item means.
@@ -545,7 +545,7 @@ export default function CheapDumpsterRentalPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/dumpster-rental-near-me"
-                  className="flex-1 rounded-lg bg-green-600 px-5 py-3 text-center font-bold text-white hover:bg-green-700 transition"
+                  className="flex-1 rounded-lg bg-green-700 px-5 py-3 text-center font-bold text-white hover:bg-green-800 transition"
                 >
                   Get Free Quotes Near Me
                 </Link>
@@ -572,7 +572,7 @@ export default function CheapDumpsterRentalPage() {
               </p>
               <Link
                 href="/dumpster-rental-near-me"
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition"
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition"
               >
                 Get Free Quotes
               </Link>
@@ -586,7 +586,7 @@ export default function CheapDumpsterRentalPage() {
                   <div key={row.size} className="flex items-center justify-between text-sm">
                     <Link
                       href={`/dumpster-sizes/${row.size.replace(' yd', '-yard')}`}
-                      className="text-gray-700 hover:text-green-600 transition"
+                      className="text-gray-700 hover:text-green-700 transition"
                     >
                       {row.size} dumpster
                     </Link>
@@ -631,7 +631,7 @@ export default function CheapDumpsterRentalPage() {
                   { label: 'How Long Can You Keep a Dumpster?', href: '/how-long-can-you-keep-a-rental-dumpster' },
                 ].map((link) => (
                   <Link key={link.href} href={link.href}
-                    className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition group">
+                    className="flex items-center gap-2 text-gray-700 hover:text-green-700 transition group">
                     <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-500" />
                     {link.label}
                   </Link>

@@ -157,7 +157,7 @@ export default function DumpsterPermitPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-xl border border-green-200 bg-green-50 p-6">
             <h2 className="font-bold text-gray-900 text-lg mb-3 flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-600" /> No Permit Needed
+              <CheckCircle className="h-5 w-5 text-green-700" /> No Permit Needed
             </h2>
             <p className="text-sm text-gray-600 mb-4">When the dumpster is placed on:</p>
             <ul className="space-y-2">
@@ -191,7 +191,7 @@ export default function DumpsterPermitPage() {
           <div className="space-y-4">
             {howToSchema.step.map((step, i) => (
               <div key={step.name} className="flex gap-4 rounded-xl border border-gray-200 bg-white p-5">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-sm font-bold">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-700 text-white text-sm font-bold">
                   {i + 1}
                 </div>
                 <div>
@@ -264,7 +264,7 @@ export default function DumpsterPermitPage() {
         </section>
 
         {/* CTA */}
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Find a Dumpster Rental Company Near You</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Many local companies handle permits on your behalf. Compare quotes and book today.</p>
           <Link href="/dumpster-rental"

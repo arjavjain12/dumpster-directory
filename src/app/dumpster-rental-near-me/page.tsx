@@ -115,25 +115,25 @@ export default async function NearMePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             {
-              icon: <Search className="h-6 w-6 text-green-600" />,
+              icon: <Search className="h-6 w-6 text-green-700" />,
               step: 1,
               title: 'Find local companies',
               body: 'Enter your city or zip code to see dumpster rental companies near you. Compare prices, sizes, and availability.',
             },
             {
-              icon: <Package className="h-6 w-6 text-green-600" />,
+              icon: <Package className="h-6 w-6 text-green-700" />,
               step: 2,
               title: 'Choose your size',
               body: 'Select from 10, 20, 30, or 40-yard roll-offs based on your project. Not sure? Use our size estimator.',
             },
             {
-              icon: <Truck className="h-6 w-6 text-green-600" />,
+              icon: <Truck className="h-6 w-6 text-green-700" />,
               step: 3,
               title: 'Schedule delivery',
               body: 'Most companies deliver within 24–72 hours. Same-day delivery available in many areas.',
             },
             {
-              icon: <CheckCircle className="h-6 w-6 text-green-600" />,
+              icon: <CheckCircle className="h-6 w-6 text-green-700" />,
               step: 4,
               title: 'Fill & schedule pickup',
               body: 'Fill at your own pace during your rental period (typically 7–14 days), then call or book online for pickup.',
@@ -141,7 +141,7 @@ export default async function NearMePage() {
           ].map((card) => (
             <div key={card.step} className="rounded-xl border border-gray-200 bg-white p-5 flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <div className="h-8 w-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">
+                <div className="h-8 w-8 rounded-full bg-green-700 text-white text-sm font-bold flex items-center justify-center shrink-0">
                   {card.step}
                 </div>
                 <div className="h-10 w-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
@@ -240,7 +240,7 @@ export default async function NearMePage() {
           ))}
         </div>
         <div className="mt-4">
-          <Link href="/roll-off-dumpster-sizes" className="inline-flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700">
+          <Link href="/roll-off-dumpster-sizes" className="inline-flex items-center gap-1 text-sm font-medium text-green-700 hover:text-green-700">
             See full size guide <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -280,7 +280,7 @@ export default async function NearMePage() {
             { label: 'What Can You Put in a Dumpster?', href: '/what-can-you-put-in-a-dumpster' },
           ].map((link) => (
             <Link key={link.href} href={link.href}
-              className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition">
+              className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">
               <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
               {link.label}
             </Link>
@@ -295,32 +295,32 @@ export default async function NearMePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
             {
-              icon: <Star className="h-6 w-6 text-green-600" />,
+              icon: <Star className="h-6 w-6 text-green-700" />,
               title: 'Check Reviews',
               body: 'Look for Google/BBB ratings. National chains like Waste Management and Republic Services have consistent service; local operators often offer better pricing but vary in reliability.',
             },
             {
-              icon: <DollarSign className="h-6 w-6 text-green-600" />,
+              icon: <DollarSign className="h-6 w-6 text-green-700" />,
               title: 'Verify Included Weight',
               body: 'Always ask what\'s included in the base price. Standard is 1–2 tons; overages average $75–$120/ton.',
             },
             {
-              icon: <Clock className="h-6 w-6 text-green-600" />,
+              icon: <Clock className="h-6 w-6 text-green-700" />,
               title: 'Confirm Delivery Windows',
               body: 'Most companies offer morning (7–11am) or afternoon (12–4pm) windows. Ask if same-day is available.',
             },
             {
-              icon: <Shield className="h-6 w-6 text-green-600" />,
+              icon: <Shield className="h-6 w-6 text-green-700" />,
               title: 'Ask About Prohibited Items',
               body: 'Policies vary. A good company proactively tells you what they won\'t take.',
             },
             {
-              icon: <CheckCircle className="h-6 w-6 text-green-600" />,
+              icon: <CheckCircle className="h-6 w-6 text-green-700" />,
               title: 'Get the Total Price in Writing',
               body: 'Quotes should include delivery, pickup, weight allowance, rental period, and overage rates.',
             },
             {
-              icon: <Phone className="h-6 w-6 text-green-600" />,
+              icon: <Phone className="h-6 w-6 text-green-700" />,
               title: 'Check Their Service Area',
               body: 'Local operators may have tighter service radii (15–20 miles). National chains (Waste Connections, Clean Harbors) cover more ground.',
             },
@@ -351,7 +351,7 @@ export default async function NearMePage() {
               "Call or schedule online for pickup; most companies retrieve within 24–48 hours.",
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
-                <div className="h-8 w-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0 mt-0.5">
+                <div className="h-8 w-8 rounded-full bg-green-700 text-white text-sm font-bold flex items-center justify-center shrink-0 mt-0.5">
                   {i + 1}
                 </div>
                 <p className="text-gray-700 leading-relaxed pt-1">{step}</p>

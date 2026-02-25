@@ -266,7 +266,7 @@ export default function DumpsterRentalForContractorsPage() {
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"
-              className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-bold text-white hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 rounded-lg bg-green-700 px-6 py-3 font-bold text-white hover:bg-green-800 transition"
             >
               Find Contractor Dumpster Rental Near You
               <ArrowRight className="h-4 w-4" />
@@ -282,7 +282,7 @@ export default function DumpsterRentalForContractorsPage() {
             {/* Section 1: Why Contractor Rental Is Different */}
             <section>
               <div className="flex items-center gap-2 mb-2">
-                <HardHat className="h-5 w-5 text-green-600" />
+                <HardHat className="h-5 w-5 text-green-700" />
                 <h2 className="text-2xl font-bold text-gray-900">
                   Why Contractor Dumpster Rental Is Different
                 </h2>
@@ -317,7 +317,7 @@ export default function DumpsterRentalForContractorsPage() {
                     },
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                       <div className="text-sm">
                         <strong className="text-gray-900">{item.point}: </strong>
                         <span className="text-gray-600">{item.detail}</span>
@@ -331,7 +331,7 @@ export default function DumpsterRentalForContractorsPage() {
             {/* Section 2: Right Size by Project */}
             <section>
               <div className="flex items-center gap-2 mb-2">
-                <Wrench className="h-5 w-5 text-green-600" />
+                <Wrench className="h-5 w-5 text-green-700" />
                 <h2 className="text-2xl font-bold text-gray-900">
                   Best Dumpster Sizes by Project Type
                 </h2>
@@ -436,7 +436,7 @@ export default function DumpsterRentalForContractorsPage() {
                 <p className="mt-3 text-xs text-gray-400">
                   Overage fees of $60–$100 per ton apply when you exceed the included weight limit.
                   On a concrete-heavy job, this adds up fast.{' '}
-                  <Link href="/dumpster-weight-limit-calculator" className="text-green-600 hover:underline">
+                  <Link href="/dumpster-weight-limit-calculator" className="text-green-700 hover:underline">
                     Use the weight limit calculator.
                   </Link>
                 </p>
@@ -460,7 +460,7 @@ export default function DumpsterRentalForContractorsPage() {
                     key={item.benefit}
                     className="flex gap-3 rounded-xl border border-gray-200 bg-white p-4"
                   >
-                    <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-semibold text-gray-900 text-sm">{item.benefit}</h3>
                       <p className="text-sm text-gray-600 mt-0.5 leading-relaxed">{item.detail}</p>
@@ -502,7 +502,7 @@ export default function DumpsterRentalForContractorsPage() {
                     <h3 className="font-semibold text-gray-900 mb-1">{item.type}</h3>
                     <p className="text-sm text-gray-600 leading-relaxed mb-2">{item.description}</p>
                     <div className="flex items-start gap-2">
-                      <span className="text-green-600 font-bold text-xs mt-0.5">TIP</span>
+                      <span className="text-green-700 font-bold text-xs mt-0.5">TIP</span>
                       <p className="text-xs text-gray-500 leading-relaxed">{item.tip}</p>
                     </div>
                   </div>
@@ -520,7 +520,7 @@ export default function DumpsterRentalForContractorsPage() {
             {/* Section 6: Tax */}
             <section className="rounded-xl border border-green-200 bg-green-50 p-6">
               <div className="flex items-center gap-2 mb-2">
-                <DollarSign className="h-5 w-5 text-green-600" />
+                <DollarSign className="h-5 w-5 text-green-700" />
                 <h2 className="text-xl font-bold text-gray-900">
                   Tax Deductibility for Contractors
                 </h2>
@@ -552,7 +552,7 @@ export default function DumpsterRentalForContractorsPage() {
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold text-gray-900">{item.point}</p>
                       <p className="text-sm text-gray-600 mt-0.5 leading-relaxed">{item.detail}</p>
@@ -678,7 +678,7 @@ export default function DumpsterRentalForContractorsPage() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition"
+                    className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition"
                   >
                     <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
                     {link.label}
@@ -698,7 +698,7 @@ export default function DumpsterRentalForContractorsPage() {
               </p>
               <Link
                 href="/dumpster-rental-near-me"
-                className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-8 py-3.5 font-bold text-white hover:bg-green-700 transition"
+                className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-8 py-3.5 font-bold text-white hover:bg-green-800 transition"
               >
                 Find Local Commercial Options <ArrowRight className="h-5 w-5" />
               </Link>
@@ -718,7 +718,7 @@ export default function DumpsterRentalForContractorsPage() {
               </p>
               <Link
                 href="/dumpster-rental-near-me"
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition"
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition"
               >
                 Find Commercial Haulers
               </Link>
@@ -770,7 +770,7 @@ export default function DumpsterRentalForContractorsPage() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition group"
+                    className="flex items-center gap-2 text-gray-700 hover:text-green-700 transition group"
                   >
                     <ArrowRight className="h-3.5 w-3.5 text-gray-400 group-hover:text-green-500" />
                     {link.label}

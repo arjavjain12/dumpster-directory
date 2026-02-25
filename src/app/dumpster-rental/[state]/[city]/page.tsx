@@ -169,7 +169,7 @@ export default async function CityPage({
             </div>
             <Link
               href="#quote"
-              className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-3 font-bold text-white hover:bg-green-700 transition"
+              className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3 font-bold text-white hover:bg-green-800 transition"
             >
               <Truck className="h-5 w-5" /> Get Free Quotes
             </Link>
@@ -240,7 +240,7 @@ export default async function CityPage({
                 Compare prices from {city.city_name} dumpster rental companies. Fast, free, no obligation.
               </p>
               <Link href="#quote"
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition">
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition">
                 Get Quotes Now
               </Link>
             </div>
@@ -253,7 +253,7 @@ export default async function CityPage({
               </p>
               <Link
                 href={`/dumpster-rental/${stateSlug}/${citySlug}/cost`}
-                className="flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700"
+                className="flex items-center gap-1 text-sm font-medium text-green-700 hover:text-green-700"
               >
                 View {city.city_name} Cost Guide <ArrowRight className="h-4 w-4" />
               </Link>
@@ -266,7 +266,7 @@ export default async function CityPage({
                 {[10, 15, 20, 30, 40].map((size) => (
                   <Link key={size}
                     href={`/dumpster-sizes/${size}-yard`}
-                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition">
+                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition">
                     <span>{size} Yard Dumpster</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
@@ -281,7 +281,7 @@ export default async function CityPage({
                 {nearby.slice(0, 5).map((c: { id: number; state_slug: string; city_slug: string; city_name: string }) => (
                   <Link key={c.id}
                     href={`/dumpster-rental/${c.state_slug}/${c.city_slug}`}
-                    className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-600 transition">
+                    className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-700 transition">
                     <MapPin className="h-3.5 w-3.5 text-gray-400" />
                     {c.city_name} Dumpster Rental
                   </Link>

@@ -82,7 +82,7 @@ export default function CubicYardCalculator() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-              <Calculator className="h-5 w-5 text-green-600" />
+              <Calculator className="h-5 w-5 text-green-700" />
               Enter Dimensions
             </h2>
             <button onClick={reset} className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 transition">
@@ -140,7 +140,7 @@ export default function CubicYardCalculator() {
           </div>
 
           <button onClick={addArea}
-            className="mt-4 flex items-center gap-2 text-sm font-medium text-green-600 hover:text-green-700 transition">
+            className="mt-4 flex items-center gap-2 text-sm font-medium text-green-700 hover:text-green-700 transition">
             <Plus className="h-4 w-4" /> Add another area
           </button>
         </div>
@@ -180,7 +180,7 @@ export default function CubicYardCalculator() {
                 ))}
               </div>
               <Link href="/dumpster-rental"
-                className="flex items-center justify-center gap-2 rounded-xl bg-green-600 py-3 font-bold text-white hover:bg-green-700 transition">
+                className="flex items-center justify-center gap-2 rounded-xl bg-green-700 py-3 font-bold text-white hover:bg-green-800 transition">
                 Get Free Quotes <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

@@ -8,26 +8,26 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="bg-green-600 rounded-lg p-1.5 group-hover:bg-green-700 transition-colors">
+            <div className="bg-green-700 rounded-lg p-1.5 group-hover:bg-green-800 transition-colors">
               <Truck className="w-5 h-5 text-white" />
             </div>
             <span className="font-bold text-xl text-gray-900">
-              Dumpster<span className="text-green-600">Listing</span>
+              Dumpster<span className="text-green-700">Listing</span>
             </span>
           </Link>
 
           {/* Nav */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-            <Link href="/dumpster-rental" className="hover:text-green-600 transition-colors">
+            <Link href="/dumpster-rental" className="hover:text-green-700 transition-colors">
               Find by City
             </Link>
-            <Link href="/dumpster-sizes" className="hover:text-green-600 transition-colors">
+            <Link href="/dumpster-sizes" className="hover:text-green-700 transition-colors">
               Size Guide
             </Link>
-            <Link href="/dumpster-rental-cost" className="hover:text-green-600 transition-colors">
+            <Link href="/dumpster-rental-cost" className="hover:text-green-700 transition-colors">
               Pricing
             </Link>
-            <Link href="/dumpster-rental-near-me" className="hover:text-green-600 transition-colors">
+            <Link href="/dumpster-rental-near-me" className="hover:text-green-700 transition-colors">
               Near Me
             </Link>
           </nav>
@@ -36,7 +36,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/dumpster-rental-near-me"
-              className="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+              className="bg-green-700 hover:bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
             >
               Get Quotes
             </Link>

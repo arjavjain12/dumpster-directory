@@ -52,7 +52,7 @@ export default function WhatFitsInfographic() {
         <div className="p-5 border-b sm:border-b-0 sm:border-r border-gray-100">
           <div className="flex items-center gap-2 mb-3">
             <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center">
-              <CheckCircle className="h-4 w-4 text-green-600" />
+              <CheckCircle className="h-4 w-4 text-green-700" />
             </div>
             <h4 className="font-bold text-green-800 text-sm uppercase tracking-wide">Accepted Items</h4>
           </div>

@@ -15,7 +15,7 @@ const STEPS = [
     icon: BarChart2,
     title: 'Compare Prices',
     detail: 'See ratings, phone numbers, and pricing side by side. No switching tabs, no guesswork.',
-    color: 'bg-green-600',
+    color: 'bg-green-700',
   },
   {
     number: '3',
@@ -38,7 +38,7 @@ export default function HowItWorksInfographic() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/80 flex flex-col items-center justify-center text-center px-6">
-          <h3 className="text-white font-extrabold text-2xl sm:text-3xl">Get a Dumpster in 3 Steps</h3>
+          <h2 className="text-white font-extrabold text-2xl sm:text-3xl">Get a Dumpster in 3 Steps</h2>
           <p className="text-gray-300 text-sm mt-2 max-w-md">From your first search to dumpster delivery — takes less than 5 minutes</p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function HowItWorksInfographic() {
           <p className="text-sm font-medium text-gray-700">Ready to find companies near you?</p>
           <Link
             href="/dumpster-rental"
-            className="shrink-0 flex items-center gap-1.5 text-sm font-bold text-white bg-green-600 hover:bg-green-700 transition px-4 py-2 rounded-lg"
+            className="shrink-0 flex items-center gap-1.5 text-sm font-bold text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-lg"
           >
             Search Now <ArrowRight className="h-3.5 w-3.5" />
           </Link>

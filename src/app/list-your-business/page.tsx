@@ -31,7 +31,7 @@ const PLANS = [
       'Listed in city directory',
     ],
     cta: 'Get Free Listing',
-    ctaClass: 'border border-green-600 text-green-600 hover:bg-green-50',
+    ctaClass: 'border border-green-600 text-green-700 hover:bg-green-50',
     featured: false,
   },
   {
@@ -70,7 +70,7 @@ const PLANS = [
       'Maximum leads & exposure',
     ],
     cta: 'Go Premium',
-    ctaClass: 'bg-green-600 text-white hover:bg-green-700',
+    ctaClass: 'bg-green-700 text-white hover:bg-green-800',
     featured: true,
   },
 ]
@@ -147,7 +147,7 @@ export default function ListYourBusinessPage() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#get-listed"
-              className="rounded-xl bg-green-600 px-8 py-3.5 text-base font-bold text-white shadow-md hover:bg-green-700 transition"
+              className="rounded-xl bg-green-700 px-8 py-3.5 text-base font-bold text-white shadow-md hover:bg-green-800 transition"
             >
               Get Listed Free
             </a>
@@ -181,7 +181,7 @@ export default function ListYourBusinessPage() {
                 }`}
               >
                 {plan.featured && (
-                  <div className="bg-green-600 text-white text-xs font-bold text-center py-1.5 tracking-wide uppercase">
+                  <div className="bg-green-700 text-white text-xs font-bold text-center py-1.5 tracking-wide uppercase">
                     Most Popular
                   </div>
                 )}
@@ -203,7 +203,7 @@ export default function ListYourBusinessPage() {
                 <ul className="px-6 py-5 space-y-3 flex-1">
                   {plan.features.map((feat) => (
                     <li key={feat} className="flex items-start gap-2.5">
-                      <CheckCircle className="h-4.5 w-4.5 text-green-600 shrink-0 mt-0.5 h-5 w-5" />
+                      <CheckCircle className="h-4.5 w-4.5 text-green-700 shrink-0 mt-0.5 h-5 w-5" />
                       <span className="text-sm text-gray-700">{feat}</span>
                     </li>
                   ))}
@@ -239,7 +239,7 @@ export default function ListYourBusinessPage() {
                 <div key={b.title} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="rounded-lg bg-green-100 p-2">
-                      <Icon className="h-5 w-5 text-green-600" />
+                      <Icon className="h-5 w-5 text-green-700" />
                     </div>
                     <h3 className="font-semibold text-gray-900">{b.title}</h3>
                   </div>
@@ -257,7 +257,7 @@ export default function ListYourBusinessPage() {
                   { stat: 'No contract', label: 'cancel anytime' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-700 shrink-0" />
                     <div>
                       <span className="font-bold text-gray-900">{item.stat}</span>{' '}
                       <span className="text-sm text-gray-600">{item.label}</span>
@@ -296,7 +296,7 @@ export default function ListYourBusinessPage() {
         </section>
 
         {/* Bottom CTA strip */}
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 px-8 py-12 text-center text-white shadow-lg">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 px-8 py-12 text-center text-white shadow-lg">
           <Building2 className="mx-auto mb-4 h-10 w-10 text-green-200" />
           <h2 className="text-3xl font-extrabold mb-3">Ready to Grow Your Business?</h2>
           <p className="mx-auto mb-8 max-w-xl text-green-100 text-lg">

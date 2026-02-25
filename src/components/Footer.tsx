@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <div className="bg-green-600 rounded-lg p-1.5">
+              <div className="bg-green-700 rounded-lg p-1.5">
                 <Truck className="w-4 h-4 text-white" />
               </div>
               <span className="font-bold text-white text-lg">

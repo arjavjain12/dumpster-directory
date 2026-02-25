@@ -109,7 +109,7 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
     return (
       <section id="quote" className="py-16 px-4">
         <div className="mx-auto max-w-2xl rounded-2xl border border-green-200 bg-green-50 p-10 text-center">
-          <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-600" />
+          <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-700" />
           <h3 className="mb-2 text-2xl font-bold text-green-800">Your request has been sent!</h3>
           <p className="text-lg text-green-700">Local companies will contact you within 24 hours.</p>
         </div>
@@ -125,7 +125,7 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
   return (
     <section id="quote" className="py-16 px-4">
       <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl bg-white shadow-xl">
-        <div className="bg-gradient-to-r from-green-600 to-green-700 px-8 py-10 text-center text-white">
+        <div className="bg-gradient-to-r from-green-700 to-green-700 px-8 py-10 text-center text-white">
           <h2 className="mb-2 text-3xl font-extrabold md:text-4xl">
             Get Free Quotes from {cityName} Dumpster Rental Companies
           </h2>
@@ -137,34 +137,34 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
         <form onSubmit={handleSubmit} className="p-8" noValidate>
           <div className="grid grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
             <div>
-              <label className="mb-1 block text-sm font-semibold text-gray-700">Full Name <span className="text-red-500">*</span></label>
-              <input type="text" placeholder="John Smith" value={form.name} onChange={(e) => set('name', e.target.value)} className={inputClass('name')} />
+              <label htmlFor="lead-name" className="mb-1 block text-sm font-semibold text-gray-700">Full Name <span className="text-red-500">*</span></label>
+              <input id="lead-name" type="text" placeholder="John Smith" value={form.name} onChange={(e) => set('name', e.target.value)} className={inputClass('name')} />
               {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-semibold text-gray-700">Email <span className="text-red-500">*</span></label>
-              <input type="email" placeholder="john@example.com" value={form.email} onChange={(e) => set('email', e.target.value)} className={inputClass('email')} />
+              <label htmlFor="lead-email" className="mb-1 block text-sm font-semibold text-gray-700">Email <span className="text-red-500">*</span></label>
+              <input id="lead-email" type="email" placeholder="john@example.com" value={form.email} onChange={(e) => set('email', e.target.value)} className={inputClass('email')} />
               {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-semibold text-gray-700">Phone <span className="text-red-500">*</span></label>
-              <input type="tel" placeholder="(555) 123-4567" value={form.phone} onChange={(e) => set('phone', e.target.value)} className={inputClass('phone')} />
+              <label htmlFor="lead-phone" className="mb-1 block text-sm font-semibold text-gray-700">Phone <span className="text-red-500">*</span></label>
+              <input id="lead-phone" type="tel" placeholder="(555) 123-4567" value={form.phone} onChange={(e) => set('phone', e.target.value)} className={inputClass('phone')} />
               {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-semibold text-gray-700">Zip Code <span className="text-red-500">*</span></label>
-              <input type="text" placeholder="12345" maxLength={5} value={form.zip_code}
+              <label htmlFor="lead-zip" className="mb-1 block text-sm font-semibold text-gray-700">Zip Code <span className="text-red-500">*</span></label>
+              <input id="lead-zip" type="text" placeholder="12345" maxLength={5} value={form.zip_code}
                 onChange={(e) => set('zip_code', e.target.value.replace(/\D/g, '').slice(0, 5))}
                 className={inputClass('zip_code')} />
               {errors.zip_code && <p className="mt-1 text-sm text-red-600">{errors.zip_code}</p>}
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-semibold text-gray-700">Project Type <span className="text-red-500">*</span></label>
-              <select value={form.project_type} onChange={(e) => set('project_type', e.target.value)}
+              <label htmlFor="lead-project-type" className="mb-1 block text-sm font-semibold text-gray-700">Project Type <span className="text-red-500">*</span></label>
+              <select id="lead-project-type" value={form.project_type} onChange={(e) => set('project_type', e.target.value)}
                 className={`${inputClass('project_type')} bg-white`}>
                 <option value="">Select project type...</option>
                 {PROJECT_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
@@ -173,8 +173,8 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-semibold text-gray-700">Dumpster Size Needed</label>
-              <select value={form.dumpster_size_needed} onChange={(e) => set('dumpster_size_needed', e.target.value)}
+              <label htmlFor="lead-size" className="mb-1 block text-sm font-semibold text-gray-700">Dumpster Size Needed</label>
+              <select id="lead-size" value={form.dumpster_size_needed} onChange={(e) => set('dumpster_size_needed', e.target.value)}
                 className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
                 <option value="">Select a size...</option>
                 {DUMPSTER_SIZES.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -182,8 +182,8 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-semibold text-gray-700">When do you need it?</label>
-              <select value={form.project_start} onChange={(e) => set('project_start', e.target.value)}
+              <label htmlFor="lead-timeline" className="mb-1 block text-sm font-semibold text-gray-700">When do you need it?</label>
+              <select id="lead-timeline" value={form.project_start} onChange={(e) => set('project_start', e.target.value)}
                 className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
                 <option value="">Select timeline...</option>
                 {TIMELINES.map((t) => <option key={t} value={t}>{t}</option>)}
@@ -191,10 +191,10 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
             </div>
 
             <div className="md:col-span-2">
-              <label className="mb-1 block text-sm font-semibold text-gray-700">
-                Additional Details <span className="font-normal text-gray-400">(optional)</span>
+              <label htmlFor="lead-message" className="mb-1 block text-sm font-semibold text-gray-700">
+                Additional Details <span className="font-normal text-gray-500">(optional)</span>
               </label>
-              <textarea rows={3} placeholder={`Tell us about your project in ${cityName}, ${stateAbbr}...`}
+              <textarea id="lead-message" rows={3} placeholder={`Tell us about your project in ${cityName}, ${stateAbbr}...`}
                 value={form.message} onChange={(e) => set('message', e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 transition" />
             </div>
@@ -208,7 +208,7 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
 
           <div className="mt-8 text-center">
             <button type="submit" disabled={loading}
-              className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-10 py-4 text-lg font-bold text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 disabled:opacity-60 disabled:cursor-not-allowed transition">
+              className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-10 py-4 text-lg font-bold text-white shadow-lg hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 disabled:opacity-60 disabled:cursor-not-allowed transition">
               {loading ? <><Loader2 className="h-5 w-5 animate-spin" /> Submitting...</> : <><Send className="h-5 w-5" /> Get My Free Quotes →</>}
             </button>
           </div>

@@ -116,7 +116,7 @@ export default function ConcreteWeightCalculatorPage() {
                     <td className="px-5 py-3 font-medium text-gray-900">{p.project}</td>
                     <td className="px-5 py-3 text-gray-600">{p.weight}</td>
                     <td className="px-5 py-3">
-                      <Link href={`/dumpster-sizes/${p.size}-yard`} className="font-semibold text-green-600 hover:underline">
+                      <Link href={`/dumpster-sizes/${p.size}-yard`} className="font-semibold text-green-700 hover:underline">
                         {p.size}-yard dumpster
                       </Link>
                     </td>
@@ -141,7 +141,7 @@ export default function ConcreteWeightCalculatorPage() {
         </section>
 
         {/* CTA */}
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Ready to Rent a Dumpster for Your Concrete Project?</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">
             Find local dumpster rental companies that specialize in concrete and heavy debris. Get free quotes in minutes.

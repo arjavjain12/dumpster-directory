@@ -98,19 +98,38 @@ async function processBatch(businesses) {
   )
 }
 
+async function fetchAllBusinesses() {
+  const PAGE_SIZE = 1000
+  let allBusinesses = []
+  let from = 0
+
+  while (true) {
+    const { data, error } = await supabase
+      .from('businesses')
+      .select('id, name, website, photos')
+      .not('website', 'is', null)
+      .neq('website', '')
+      .order('id')
+      .range(from, from + PAGE_SIZE - 1)
+
+    if (error) { console.error(error); process.exit(1) }
+    if (!data || data.length === 0) break
+
+    allBusinesses = allBusinesses.concat(data)
+    if (data.length < PAGE_SIZE) break
+    from += PAGE_SIZE
+  }
+
+  return allBusinesses
+}
+
 async function main() {
-  console.log('Fetching businesses with websites...')
+  console.log('Fetching all businesses with websites...')
 
-  const { data: businesses, error } = await supabase
-    .from('businesses')
-    .select('id, name, website, photos')
-    .not('website', 'is', null)
-    .neq('website', '')
-    .order('id')
+  const businesses = await fetchAllBusinesses()
+  console.log(`Total with website: ${businesses.length}`)
 
-  if (error) { console.error(error); process.exit(1) }
-
-  // Process all businesses — update if they have fewer than MAX_IMAGES photos
+  // Process businesses that have fewer than MAX_IMAGES photos
   const toProcess = businesses.filter(b => (b.photos?.length ?? 0) < MAX_IMAGES)
   console.log(`${businesses.length} total with website. ${toProcess.length} need images (or more images).`)
 

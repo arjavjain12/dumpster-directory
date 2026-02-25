@@ -126,7 +126,7 @@ export default function DumpsterEstimator() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold text-gray-900">
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-green-600 text-white text-sm font-bold mr-2">1</span>
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-green-700 text-white text-sm font-bold mr-2">1</span>
               What type of project?
             </h2>
             {(projectType || totalItems > 0) && (
@@ -149,7 +149,7 @@ export default function DumpsterEstimator() {
         {/* Step 2: Add items */}
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-bold text-gray-900 mb-1">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-green-600 text-white text-sm font-bold mr-2">2</span>
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-green-700 text-white text-sm font-bold mr-2">2</span>
             Add specific items <span className="text-gray-400 font-normal text-sm">(optional — improves accuracy)</span>
           </h2>
           <p className="text-sm text-gray-500 mb-5 ml-9">Check off items you're disposing of to refine the estimate.</p>
@@ -171,7 +171,7 @@ export default function DumpsterEstimator() {
                           </button>
                           <span className={`w-5 text-center text-sm font-bold ${qty > 0 ? 'text-green-700' : 'text-gray-400'}`}>{qty}</span>
                           <button onClick={() => setQty(item.id, 1)}
-                            className="h-6 w-6 rounded-full border border-gray-300 bg-white text-gray-600 text-sm font-bold hover:border-green-400 hover:text-green-600 transition flex items-center justify-center">
+                            className="h-6 w-6 rounded-full border border-gray-300 bg-white text-gray-600 text-sm font-bold hover:border-green-400 hover:text-green-700 transition flex items-center justify-center">
                             +
                           </button>
                         </div>
@@ -229,17 +229,17 @@ export default function DumpsterEstimator() {
                     <span className={`font-medium ${s.yards === recommended ? 'text-green-800' : 'text-gray-600'}`}>
                       {s.yards} yd — {s.price}
                     </span>
-                    {s.yards === recommended && <CheckCircle className="h-4 w-4 text-green-600" />}
+                    {s.yards === recommended && <CheckCircle className="h-4 w-4 text-green-700" />}
                   </div>
                 ))}
               </div>
 
               <Link href="/dumpster-rental"
-                className="flex items-center justify-center gap-2 rounded-xl bg-green-600 py-3 font-bold text-white hover:bg-green-700 transition">
+                className="flex items-center justify-center gap-2 rounded-xl bg-green-700 py-3 font-bold text-white hover:bg-green-800 transition">
                 Find Local Companies <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href={`/dumpster-sizes/${recSize.slug}`}
-                className="mt-2 flex items-center justify-center gap-1 text-sm font-medium text-green-600 hover:text-green-700 transition">
+                className="mt-2 flex items-center justify-center gap-1 text-sm font-medium text-green-700 hover:text-green-700 transition">
                 Full {recSize.yards}-yard guide <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>

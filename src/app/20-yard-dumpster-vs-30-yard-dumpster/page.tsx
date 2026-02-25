@@ -144,7 +144,7 @@ export default function TwentyVsThirtyPage() {
           </div>
           <div className="rounded-2xl border-2 border-green-200 bg-green-50 p-6">
             <div className="text-4xl font-extrabold text-green-700 mb-1">30 Yard</div>
-            <div className="text-sm font-semibold text-green-600 mb-4">Best for large projects</div>
+            <div className="text-sm font-semibold text-green-700 mb-4">Best for large projects</div>
             <div className="space-y-2 text-sm text-gray-700">
               <div><span className="font-medium">Capacity:</span> 30 cubic yards (~9 pickup truck loads)</div>
               <div><span className="font-medium">Dimensions:</span> 22 ft × 7.5 ft × 6 ft high</div>
@@ -241,7 +241,7 @@ export default function TwentyVsThirtyPage() {
         </section>
 
         {/* CTA */}
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Find Local Dumpster Rentals</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Compare pricing for 20-yard and 30-yard dumpsters from local companies.</p>
           <Link href="/dumpster-rental"

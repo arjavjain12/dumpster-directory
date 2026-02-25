@@ -168,7 +168,7 @@ export default function DumpsterSizesPage() {
                   ))}
                 </ul>
 
-                <span className="flex items-center gap-1 text-sm font-semibold text-green-600 group-hover:gap-2 transition-all">
+                <span className="flex items-center gap-1 text-sm font-semibold text-green-700 group-hover:gap-2 transition-all">
                   Full {s.yards}-yard guide <ArrowRight className="h-4 w-4" />
                 </span>
               </Link>
@@ -194,7 +194,7 @@ export default function DumpsterSizesPage() {
                 {SIZES.map((s) => (
                   <tr key={s.yards} className="hover:bg-gray-50 transition-colors">
                     <td className="px-4 py-3">
-                      <Link href={`/dumpster-sizes/${s.slug}`} className="font-bold text-green-600 hover:underline">
+                      <Link href={`/dumpster-sizes/${s.slug}`} className="font-bold text-green-700 hover:underline">
                         {s.yards} yard
                       </Link>
                     </td>
@@ -248,7 +248,7 @@ export default function DumpsterSizesPage() {
               { tip: 'Ask about included tonnage', detail: 'Most rentals include 1–3 tons. Extra weight is billed at $60–$80 per ton overage.' },
             ].map((item) => (
               <li key={item.tip} className="flex gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-gray-900">{item.tip}: </span>
                   <span className="text-gray-700 text-sm">{item.detail}</span>
@@ -271,7 +271,7 @@ export default function DumpsterSizesPage() {
               { label: 'What Can You Put in a Dumpster?', href: '/what-can-you-put-in-a-dumpster' },
             ].map((link) => (
               <Link key={link.href} href={link.href}
-                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-600 hover:border-green-200 transition">
+                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">
                 <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
                 {link.label}
               </Link>
@@ -287,7 +287,7 @@ export default function DumpsterSizesPage() {
           </p>
           <Link
             href="/dumpster-rental"
-            className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-8 py-3.5 font-bold text-white hover:bg-green-700 transition"
+            className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-8 py-3.5 font-bold text-white hover:bg-green-800 transition"
           >
             Find Local Companies <ArrowRight className="h-5 w-5" />
           </Link>

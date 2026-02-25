@@ -181,7 +181,7 @@ export default function RollOffDumpsterSizesPage() {
               <div className="flex flex-wrap items-start gap-4 mb-5">
                 <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-full bg-green-50">
                   <span className="text-2xl font-extrabold text-green-700">{s.yards}</span>
-                  <span className="text-xs font-medium text-green-600">yard</span>
+                  <span className="text-xs font-medium text-green-700">yard</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-900">{s.yards}-Yard Dumpster</h3>
@@ -234,7 +234,7 @@ export default function RollOffDumpsterSizesPage() {
         </section>
 
         {/* CTA */}
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Ready to Rent?</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Find local dumpster rental companies and compare prices by size.</p>
           <Link href="/dumpster-rental"

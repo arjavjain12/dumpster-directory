@@ -571,7 +571,7 @@ export default function HowToDisposeOfElectronicsPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-8 text-center text-white">
+        <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Need a Dumpster for a Large Office or Estate Cleanout?</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Find local dumpster rental companies for your mixed-debris cleanout. Handle the electronics separately — we'll help with everything else.</p>
           <Link href="/dumpster-rental-near-me"

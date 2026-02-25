@@ -165,7 +165,7 @@ export default async function BusinessPage({
               <p className="text-sm font-medium text-gray-700 mb-4">Get a free quote from {biz.name}</p>
               {biz.phone && (
                 <a href={`tel:${biz.phone}`}
-                  className="flex items-center justify-center gap-2 w-full rounded-lg bg-green-600 hover:bg-green-700 text-white font-bold py-3 mb-3 transition-colors">
+                  className="flex items-center justify-center gap-2 w-full rounded-lg bg-green-700 hover:bg-green-800 text-white font-bold py-3 mb-3 transition-colors">
                   <Phone className="h-5 w-5" /> {biz.phone}
                 </a>
               )}
@@ -217,11 +217,11 @@ export default async function BusinessPage({
                 {biz.phone && (
                   <div className="flex items-start gap-3">
                     <div className="rounded-lg bg-green-50 p-2 shrink-0">
-                      <Phone className="h-5 w-5 text-green-600" />
+                      <Phone className="h-5 w-5 text-green-700" />
                     </div>
                     <div>
                       <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-0.5">Phone</p>
-                      <a href={`tel:${biz.phone}`} className="text-green-600 hover:text-green-700 font-semibold text-lg">
+                      <a href={`tel:${biz.phone}`} className="text-green-700 hover:text-green-700 font-semibold text-lg">
                         {biz.phone}
                       </a>
                     </div>
@@ -273,7 +273,7 @@ export default async function BusinessPage({
             {/* Back link */}
             <div>
               <Link href={`/dumpster-rental/${stateSlug}/${citySlug}`}
-                className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-green-600 transition-colors">
+                className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors">
                 <ArrowLeft className="h-4 w-4" />
                 Back to all {cityName} dumpster rental companies
               </Link>
@@ -289,7 +289,7 @@ export default async function BusinessPage({
                 Compare {biz.name} with other {cityName} companies. Free, no obligation.
               </p>
               <Link href={`/dumpster-rental/${stateSlug}/${citySlug}#quote`}
-                className="block w-full rounded-lg bg-green-600 py-3 text-center font-bold text-white hover:bg-green-700 transition">
+                className="block w-full rounded-lg bg-green-700 py-3 text-center font-bold text-white hover:bg-green-800 transition">
                 Compare All Companies
               </Link>
             </div>
@@ -306,7 +306,7 @@ export default async function BusinessPage({
                       href={`/dumpster-rental/${stateSlug}/${citySlug}/${b.slug}`}
                       className="flex items-start justify-between gap-2 group">
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-gray-800 group-hover:text-green-600 transition-colors truncate">
+                        <p className="text-sm font-medium text-gray-800 group-hover:text-green-700 transition-colors truncate">
                           {b.name}
                         </p>
                         {b.rating && (
@@ -321,7 +321,7 @@ export default async function BusinessPage({
                   ))}
                 </div>
                 <Link href={`/dumpster-rental/${stateSlug}/${citySlug}`}
-                  className="mt-4 flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700">
+                  className="mt-4 flex items-center gap-1 text-sm font-medium text-green-700 hover:text-green-700">
                   View all {cityName} listings <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
@@ -333,7 +333,7 @@ export default async function BusinessPage({
               <div className="space-y-2">
                 {[10, 15, 20, 30, 40].map((size: number) => (
                   <Link key={size} href={`/dumpster-sizes/${size}-yard`}
-                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-600 transition">
+                    className="flex items-center justify-between text-sm text-gray-700 hover:text-green-700 transition">
                     <span>{size} Yard Dumpster</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>

@@ -48,7 +48,7 @@ export default function BusinessCard({ business, stateSlug, citySlug }: Business
 
       <div className="p-5">
         <Link href={businessUrl} className="group">
-          <h3 className="text-lg font-bold text-gray-900 group-hover:text-green-600 transition-colors pr-24">
+          <h3 className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors pr-24">
             {business.name}
           </h3>
         </Link>
@@ -68,7 +68,7 @@ export default function BusinessCard({ business, stateSlug, citySlug }: Business
                 <span className="text-sm text-gray-500">({business.review_count.toLocaleString()} reviews)</span>
               </>
             ) : (
-              <span className="text-sm text-gray-400">No ratings yet</span>
+              <span className="text-sm text-gray-500">No ratings yet</span>
             )}
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function BusinessCard({ business, stateSlug, citySlug }: Business
           {business.phone && (
             <div className="flex items-center gap-2 text-sm">
               <Phone className="h-4 w-4 shrink-0 text-gray-400" />
-              <a href={`tel:${business.phone}`} className="text-gray-700 hover:text-green-600 transition-colors font-medium">
+              <a href={`tel:${business.phone}`} className="text-gray-700 hover:text-green-700 transition-colors font-medium">
                 {formatPhone(business.phone)}
               </a>
             </div>
@@ -115,12 +115,12 @@ export default function BusinessCard({ business, stateSlug, citySlug }: Business
           </div>
         )}
 
-        <p className="mt-3 text-xs text-gray-400">Serves areas within {business.service_area_miles} miles</p>
+        <p className="mt-3 text-xs text-gray-500">Serves areas within {business.service_area_miles} miles</p>
 
         <div className="mt-4">
           <Link href={quoteUrl}
             className={`block w-full rounded-lg py-2.5 text-center text-sm font-semibold transition-colors ${
-              isPremium ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-gray-900 text-white hover:bg-gray-800'
+              isPremium ? 'bg-green-700 text-white hover:bg-green-800' : 'bg-gray-900 text-white hover:bg-gray-800'
             }`}>
             Get Free Quote
           </Link>

@@ -212,7 +212,7 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"
-              className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-7 py-3.5 font-bold text-white hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-7 py-3.5 font-bold text-white hover:bg-green-800 transition"
             >
               Get Local Prices Near Me <ArrowRight className="h-5 w-5" />
             </Link>
@@ -256,11 +256,11 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
           <p className="mt-3 text-xs text-gray-400">
             Prices are national averages for a standard 7–14 day rental including delivery, pickup, and
             base tonnage. See the{' '}
-            <Link href="/dumpster-rental-cost" className="text-green-600 hover:underline">
+            <Link href="/dumpster-rental-cost" className="text-green-700 hover:underline">
               full pricing guide
             </Link>{' '}
             for city-by-city breakdowns. Not sure what size you need?{' '}
-            <Link href="/dumpster-sizes" className="text-green-600 hover:underline">
+            <Link href="/dumpster-sizes" className="text-green-700 hover:underline">
               Browse the dumpster size guide.
             </Link>
           </p>
@@ -285,7 +285,7 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
                 className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-5 hover:border-green-200 hover:shadow-sm transition-all"
               >
                 <div className="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                  <Icon className="h-5 w-5 text-green-600" />
+                  <Icon className="h-5 w-5 text-green-700" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{title}</h3>
@@ -322,7 +322,7 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
           </div>
           <p className="mt-5 text-sm text-gray-600">
             Want the full breakdown on saving money?{' '}
-            <Link href="/cheap-dumpster-rental" className="text-green-600 font-medium hover:underline">
+            <Link href="/cheap-dumpster-rental" className="text-green-700 font-medium hover:underline">
               See our cheap dumpster rental guide
             </Link>{' '}
             for more strategies.
@@ -367,7 +367,7 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
           </div>
           <p className="mt-4 text-sm text-gray-600 max-w-2xl">
             Looking for prices specific to your city?{' '}
-            <Link href="/dumpster-rental-near-me" className="text-green-600 font-medium hover:underline">
+            <Link href="/dumpster-rental-near-me" className="text-green-700 font-medium hover:underline">
               Search dumpster rental near me
             </Link>{' '}
             to find local companies and compare quotes in your area.
@@ -387,22 +387,22 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
                 key={i}
                 className="flex gap-4 rounded-xl border border-gray-200 bg-white p-4 hover:border-green-200 transition-colors"
               >
-                <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="h-5 w-5 text-green-700 shrink-0 mt-0.5" />
                 <p className="text-sm text-gray-700 leading-relaxed">{tip}</p>
               </div>
             ))}
           </div>
           <p className="mt-4 text-sm text-gray-600">
             For a deeper dive, see our guides on{' '}
-            <Link href="/cheap-dumpster-rental" className="text-green-600 font-medium hover:underline">
+            <Link href="/cheap-dumpster-rental" className="text-green-700 font-medium hover:underline">
               cheap dumpster rental
             </Link>
             ,{' '}
-            <Link href="/small-dumpster-rental" className="text-green-600 font-medium hover:underline">
+            <Link href="/small-dumpster-rental" className="text-green-700 font-medium hover:underline">
               small dumpster rental
             </Link>
             , and{' '}
-            <Link href="/large-dumpster-rental" className="text-green-600 font-medium hover:underline">
+            <Link href="/large-dumpster-rental" className="text-green-700 font-medium hover:underline">
               large dumpster rental
             </Link>
             .
@@ -440,7 +440,7 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/dumpster-rental-near-me"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 px-7 py-3.5 font-bold text-white hover:bg-green-700 transition"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-700 px-7 py-3.5 font-bold text-white hover:bg-green-800 transition"
             >
               Find Local Dumpster Rental <ArrowRight className="h-5 w-5" />
             </Link>
@@ -453,7 +453,7 @@ export default function HowMuchDoesDumpsterRentalCostPage() {
           </div>
           <p className="mt-4 text-sm text-gray-500">
             Not sure what size to order?{' '}
-            <Link href="/dumpster-sizes" className="text-green-600 hover:underline font-medium">
+            <Link href="/dumpster-sizes" className="text-green-700 hover:underline font-medium">
               Browse the dumpster size guide
             </Link>{' '}
             to find the right container for your project.
