@@ -4,13 +4,13 @@ import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Dispose of Concrete: 6 Methods + Cost & Weight Guide | DumpsterListing',
+  title: 'How to Dispose of Concrete: 6 Methods + Cost Guide (2026) | DumpsterListing',
   description:
-    'Learn the best ways to dispose of concrete, including concrete weight guide, recycling options, inert dumpster rental, and free disposal methods.',
+    'Learn the best ways to dispose of concrete in 2026. Includes city-by-city dumpster prices, weight limits, recycling options, overage fee warnings, and free disposal methods.',
   alternates: { canonical: '/how-to-dispose-of-concrete' },
   openGraph: {
-    title: 'How to Dispose of Old Concrete: All Options Compared',
-    description: 'Concrete is too heavy to casually toss. Learn how recycling centers, concrete dumpsters, and haulers handle disposal — and which saves the most money.',
+    title: 'How to Dispose of Concrete: All Options Compared (2026 Prices)',
+    description: 'Concrete is one of the heaviest materials you can rent a dumpster for. See 2026 city pricing, weight limits, recycling options, and which method saves the most money.',
   },
 }
 
@@ -71,7 +71,7 @@ const faqSchema = {
       name: 'How much does concrete weigh per cubic yard?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Broken concrete weighs approximately 2,025 lbs per cubic yard. A 10-yard dumpster filled completely with concrete would weigh roughly 10 tons — far exceeding most weight limits of 2–4 tons. Fill only to the recommended level (about 1/4 to 1/3 capacity by volume) and confirm weight limits with your rental company upfront.',
+        text: 'Solid/intact concrete weighs approximately 4,050 lbs per cubic yard (150 lbs per cubic foot). After breaking it up with a sledgehammer or jackhammer, broken concrete rubble weighs roughly 2,025 lbs per cubic yard — about half as much, due to air gaps between the chunks. A 10-yard dumpster filled with broken concrete would still weigh around 20,000 lbs, far exceeding the 4,000–8,000 lb weight limit on most rental dumpsters. Fill only to the recommended level (about 1/4 to 1/3 capacity by volume) and confirm weight limits with your rental company upfront.',
       },
     },
   ],
@@ -207,7 +207,7 @@ const articleSchema = {
   headline: 'How to Dispose of Concrete: 6 Methods + Cost & Weight Guide',
   description: 'Complete guide to concrete disposal — recycling centers, dumpster rental with weight limits, junk removal, and free giveaway options.',
   datePublished: '2026-02-23',
-  dateModified: '2026-02-23',
+  dateModified: '2026-02-26',
   author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
   publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/how-to-dispose-of-concrete' },
@@ -227,12 +227,13 @@ export default function HowToDisposeOfConcretePage() {
             { label: 'How to Dispose of Concrete' },
           ]} />
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold text-gray-900">
-            How to Dispose of Concrete: All Options Compared
+            How to Dispose of Concrete: All Options Compared (2026)
           </h1>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
-            Concrete is one of the heaviest materials you'll ever deal with — a single cubic yard
-            weighs about 4,000 lbs. Getting disposal wrong means expensive weight overages. Here's
-            everything you need to know.
+            Concrete is one of the heaviest materials you'll ever deal with — a solid slab weighs
+            4,050 lbs per cubic yard, while broken rubble weighs ~2,025 lbs. Getting disposal wrong
+            means expensive weight overages. Here's everything you need to know, including 2026
+            dumpster prices from cities across the US.
           </p>
         </div>
       </div>
@@ -245,9 +246,7 @@ export default function HowToDisposeOfConcretePage() {
             <span className="text-2xl">⚠️</span> The Weight Problem with Concrete
           </h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            Concrete weighs approximately <strong>4,050 lbs per cubic yard</strong> (about 150 lbs per cubic foot).
-            A standard 10-yard dumpster can only legally carry 2–4 tons total. That means a 10-yard dumpster
-            fully loaded with concrete could exceed 40,000 lbs — 10x the legal limit. Always plan for weight limits.
+            Solid concrete weighs <strong>4,050 lbs per cubic yard</strong> (150 lbs per cubic foot). After breaking it up, rubble weighs about <strong>2,025 lbs per cubic yard</strong> — still extremely heavy. A standard 10-yard dumpster typically allows only 2–4 tons of heavy material. Even with broken rubble, you'll hit the weight limit at roughly 4–5 yards of material — less than half the dumpster's volume.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             {[
@@ -278,8 +277,9 @@ export default function HowToDisposeOfConcretePage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { type: 'Broken concrete slabs', weight: '~2,025 lbs', notes: 'Most common residential' },
-                  { type: 'Reinforced concrete (with rebar)', weight: '~2,500 lbs', notes: 'Heavier; harder to recycle' },
+                  { type: 'Solid/intact concrete slab', weight: '~4,050 lbs', notes: 'Before demolition; use to estimate volume' },
+                  { type: 'Broken concrete rubble', weight: '~2,025 lbs', notes: 'After jackhammering — most common for disposal' },
+                  { type: 'Reinforced concrete (with rebar)', weight: '~2,500 lbs', notes: 'Broken; heavier + harder to recycle' },
                   { type: 'Concrete blocks/pavers', weight: '~2,200 lbs', notes: 'Dense; use heavy debris dumpster' },
                   { type: 'Wet concrete/slurry', weight: 'Not accepted', notes: 'Cannot go in any dumpster' },
                 ].map((row) => (
@@ -296,6 +296,33 @@ export default function HowToDisposeOfConcretePage() {
             <span className="text-xl shrink-0">⚠️</span>
             <p className="text-sm text-gray-700 leading-relaxed">
               <strong>Wet concrete (slurry) cannot go in a roll-off dumpster.</strong> It must be contained and disposed of by a concrete contractor.
+            </p>
+          </div>
+        </section>
+
+        {/* Broken vs Solid Distinction */}
+        <section className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Broken vs. Solid Concrete: A Critical Difference</h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Most online guides only list one concrete weight. In reality, there are two very different numbers depending on what you're dealing with — and confusing them leads to massive overage fees.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div className="rounded-xl bg-white border border-blue-200 p-4">
+              <div className="text-xs font-bold text-blue-600 uppercase tracking-wide mb-1">Intact / Solid Slab</div>
+              <div className="text-3xl font-extrabold text-gray-900 mb-1">4,050 lbs</div>
+              <div className="text-sm text-gray-600">per cubic yard (150 lbs/cubic ft)</div>
+              <div className="mt-2 text-xs text-gray-500">Freshly poured or unbroken slabs. Occurs when measuring a patio, driveway, or foundation before demolition.</div>
+            </div>
+            <div className="rounded-xl bg-white border border-blue-200 p-4">
+              <div className="text-xs font-bold text-green-600 uppercase tracking-wide mb-1">Broken / Rubble</div>
+              <div className="text-3xl font-extrabold text-gray-900 mb-1">2,025 lbs</div>
+              <div className="text-sm text-gray-600">per cubic yard (~50% less)</div>
+              <div className="mt-2 text-xs text-gray-500">After jackhammering or sledgehammering. Air gaps between chunks roughly halve the bulk density — but it still exceeds most dumpster weight limits.</div>
+            </div>
+          </div>
+          <div className="rounded-lg border border-blue-200 bg-white p-3">
+            <p className="text-sm text-gray-700">
+              <strong>Practical implication:</strong> A 10-yard dumpster filled with broken concrete (2,025 lbs/yd³) maxes out at around 5 yards of material before hitting a 4-ton weight limit. That's roughly <strong>half the dumpster's volume</strong>. Many homeowners fill the whole dumpster and face $300–$600 in overage charges.
             </p>
           </div>
         </section>
@@ -405,6 +432,56 @@ export default function HowToDisposeOfConcretePage() {
           <p className="text-sm text-gray-600 leading-relaxed rounded-xl border border-gray-200 bg-gray-50 p-4">
             <strong>Note:</strong> Concrete is classified as heavy debris — always confirm weight limits with your rental company. Most 10-yard dumpsters include a 1–2 ton limit; concrete fills this fast.
           </p>
+        </section>
+
+        {/* City-by-City Pricing Table */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">10-Yard Concrete Dumpster Prices by City (2026)</h2>
+          <p className="text-sm text-gray-600 mb-5">
+            Prices below are based on local listings from our directory. These represent typical ranges for a 10-yard heavy-material dumpster suitable for concrete. Prices vary by company, rental period, and included weight allowance — always call for an exact quote.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">City</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Price Range (10-yd)</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700 hidden sm:table-cell">Typical Weight Allowance</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { city: 'Birmingham, AL', range: '$235–$305', weight: '2 tons included' },
+                  { city: 'Charlotte, NC', range: '$270–$350', weight: '2–3 tons included' },
+                  { city: 'Detroit, MI', range: '$275–$355', weight: '2 tons included' },
+                  { city: 'Houston, TX', range: '$275–$360', weight: '2–3 tons included' },
+                  { city: 'Columbus, OH', range: '$280–$360', weight: '2 tons included' },
+                  { city: 'Phoenix, AZ', range: '$290–$370', weight: '2–3 tons included' },
+                  { city: 'Denver, CO', range: '$295–$380', weight: '2 tons included' },
+                  { city: 'Atlanta, GA', range: '$295–$385', weight: '2–3 tons included' },
+                  { city: 'Chicago, IL', range: '$305–$395', weight: '2 tons included' },
+                  { city: 'Minneapolis, MN', range: '$310–$400', weight: '2 tons included' },
+                  { city: 'Portland, OR', range: '$325–$420', weight: '2 tons included' },
+                  { city: 'Boston, MA', range: '$330–$430', weight: '1–2 tons included' },
+                  { city: 'Seattle, WA', range: '$340–$440', weight: '2 tons included' },
+                  { city: 'San Francisco, CA', range: '$360–$470', weight: '1–2 tons included' },
+                  { city: 'Brooklyn, NY', range: '$360–$470', weight: '1–2 tons included' },
+                ].map((row) => (
+                  <tr key={row.city} className="hover:bg-gray-50">
+                    <td className="px-4 py-3 font-medium text-gray-800">{row.city}</td>
+                    <td className="px-4 py-3 font-semibold text-green-700">{row.range}</td>
+                    <td className="px-4 py-3 text-gray-600 hidden sm:table-cell">{row.weight}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>Overage fees:</strong> Most companies charge <strong>$50–$100 per ton</strong> over the included weight allowance. If your concrete weighs 5 tons and you only had 2 tons included, you'll owe 3 × $75 = <strong>$225 in extra fees</strong> on top of the base rental price. Always ask what the overage rate is before signing.
+            </p>
+          </div>
+          <p className="text-xs text-gray-500 mt-2">* Prices sourced from local providers in each market. Call your local company for an exact quote.</p>
         </section>
 
         {/* Free & Low-Cost Concrete Disposal Options */}
@@ -535,6 +612,32 @@ export default function HowToDisposeOfConcretePage() {
               </Link>
             ))}
           </div>
+        </section>
+
+        {/* Environmental Stats */}
+        <section className="rounded-2xl border border-green-200 bg-green-50 p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <span className="text-2xl">♻️</span> Why Concrete Recycling Matters
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Concrete is not just heavy — it's one of the most recyclable materials in construction. Choosing recycling over landfill is better for the environment and almost always cheaper.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-4">
+            {[
+              { stat: '600M tons', label: 'C&D debris generated per year in the US' },
+              { stat: '85%', label: 'Of C&D debris that can be recycled' },
+              { stat: '$5–$25', label: 'Per ton at most recycling centers' },
+              { stat: '140M tons', label: 'Of concrete recycled annually' },
+            ].map((s) => (
+              <div key={s.label} className="rounded-lg bg-white border border-green-200 p-3">
+                <div className="text-lg font-extrabold text-green-700">{s.stat}</div>
+                <div className="text-xs text-gray-600 mt-0.5">{s.label}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-gray-600">
+            Recycled concrete aggregate (RCA) is used as road base, backfill, drainage aggregate, and in new concrete mixes. It reduces demand for virgin gravel and keeps hundreds of millions of tons out of landfills every year.
+          </p>
         </section>
 
         {/* FAQ */}

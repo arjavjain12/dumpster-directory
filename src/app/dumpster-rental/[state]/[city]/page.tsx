@@ -274,6 +274,26 @@ export default async function CityPage({
               </div>
             </div>
 
+            {/* Disposal Guides */}
+            <div className="rounded-xl border border-gray-200 bg-white p-6">
+              <h3 className="font-bold text-gray-900 mb-3">Disposal Guides</h3>
+              <div className="space-y-2">
+                {[
+                  { label: 'How to Dispose of Concrete', href: '/how-to-dispose-of-concrete' },
+                  { label: 'How to Dispose of Electronics', href: '/how-to-dispose-of-electronics' },
+                  { label: 'How to Dispose of a Mattress', href: '/how-to-dispose-of-a-mattress' },
+                  { label: 'How to Dispose of Paint', href: '/how-to-dispose-of-paint' },
+                ].map((guide) => (
+                  <Link key={guide.href}
+                    href={guide.href}
+                    className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-700 transition">
+                    <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
+                    {guide.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* Nearby cities */}
             <div className="rounded-xl border border-gray-200 bg-white p-6">
               <h3 className="font-bold text-gray-900 mb-3">Nearby Cities</h3>
