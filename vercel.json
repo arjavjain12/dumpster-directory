@@ -5,6 +5,16 @@
       "has": [{ "type": "host", "value": "www.dumpsterlisting.com" }],
       "destination": "https://dumpsterlisting.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/dumpster-rental/washington-dc",
+      "destination": "/dumpster-rental/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/dumpster-rental/washington-dc/:path*",
+      "destination": "/dumpster-rental/maryland",
+      "permanent": true
     }
   ]
 }
