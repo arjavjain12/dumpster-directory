@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.dumpsterlisting.com" }],
+      "destination": "https://dumpsterlisting.com/:path*",
+      "permanent": true
+    }
+  ]
+}
