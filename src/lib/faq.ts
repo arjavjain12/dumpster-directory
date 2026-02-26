@@ -3,7 +3,7 @@ export function getCityFAQs(cityName: string, state: string) {
   return [
     {
       question: `How much does dumpster rental cost in ${cityName}?`,
-      answer: `Dumpster rental in ${cityName}, ${state} typically ranges from $275 to $750 depending on the size you need. A 10-yard dumpster averages $275–$450, while a 40-yard container runs $475–$750. Prices vary by provider, rental duration, and how far the landfill is from your location. Use our quote form above to compare local prices.`,
+      answer: `Dumpster rental in ${cityName}, ${state} varies by size and provider — see the local pricing table above for current estimates. Generally, a 10-yard dumpster is the most affordable option, while a 40-yard container is the largest and most expensive. Prices also depend on rental duration and landfill distance. Use our free quote form to compare rates from local companies.`,
     },
     {
       question: `What size dumpster do I need for a home cleanout in ${cityName}?`,

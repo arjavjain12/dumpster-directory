@@ -295,19 +295,21 @@ export default async function CityPage({
             </div>
 
             {/* Nearby cities */}
-            <div className="rounded-xl border border-gray-200 bg-white p-6">
-              <h3 className="font-bold text-gray-900 mb-3">Nearby Cities</h3>
-              <div className="space-y-2">
-                {nearby.slice(0, 5).map((c: { id: number; state_slug: string; city_slug: string; city_name: string }) => (
-                  <Link key={c.id}
-                    href={`/dumpster-rental/${c.state_slug}/${c.city_slug}`}
-                    className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-700 transition">
-                    <MapPin className="h-3.5 w-3.5 text-gray-400" />
-                    {c.city_name} Dumpster Rental
-                  </Link>
-                ))}
+            {nearby.length > 0 && (
+              <div className="rounded-xl border border-gray-200 bg-white p-6">
+                <h3 className="font-bold text-gray-900 mb-3">Nearby Cities</h3>
+                <div className="space-y-2">
+                  {nearby.slice(0, 5).map((c: { id: number; state_slug: string; city_slug: string; city_name: string }) => (
+                    <Link key={c.id}
+                      href={`/dumpster-rental/${c.state_slug}/${c.city_slug}`}
+                      className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-green-700 transition">
+                      <MapPin className="h-3.5 w-3.5 text-gray-400" />
+                      {c.city_name} Dumpster Rental
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </aside>
         </div>
       </div>
