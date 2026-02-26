@@ -125,6 +125,7 @@ const faqSchema = {
 const BOROUGHS = [
   {
     name: 'Manhattan',
+    slug: 'manhattan',
     description:
       'High-density residential and commercial projects. 10–20 yard containers are most practical due to space constraints. Street permits are almost always required since driveways are rare.',
     tenYard: '$469–$768',
@@ -134,6 +135,7 @@ const BOROUGHS = [
   },
   {
     name: 'Brooklyn',
+    slug: 'brooklyn',
     description:
       'Mix of residential brownstones and commercial blocks. 15–20 yard most common. Many neighborhoods have alternate-side parking rules that affect placement timing.',
     tenYard: '$453–$772',
@@ -143,6 +145,7 @@ const BOROUGHS = [
   },
   {
     name: 'Queens',
+    slug: 'queens',
     description:
       'More suburban character with driveways more common. Wider streets make delivery easier. 20–30 yard containers are more feasible here than in Manhattan or Brooklyn.',
     tenYard: '$438–$832',
@@ -152,6 +155,7 @@ const BOROUGHS = [
   },
   {
     name: 'Bronx',
+    slug: 'bronx',
     description:
       'Urban density similar to Manhattan. 10–20 yard most practical. For apartment buildings, coordination with the building superintendent is often required.',
     tenYard: '$440–$780',
@@ -161,6 +165,7 @@ const BOROUGHS = [
   },
   {
     name: 'Staten Island',
+    slug: 'staten-island',
     description:
       'Most suburban of the five boroughs. Easiest delivery access, most likely to have driveway space. 20–30 yard containers are common for residential projects.',
     tenYard: '$420–$720',
@@ -282,8 +287,13 @@ export default async function NYCDumpsterRentalPage() {
           </div>
 
           <p className="mt-5 max-w-3xl text-gray-600 leading-relaxed">
-            Looking for dumpster rental in New York City? Whether you&apos;re in Manhattan, Brooklyn, Queens, the
-            Bronx, or Staten Island, our directory connects you with local roll-off dumpster companies that serve
+            Looking for dumpster rental in New York City? Whether you&apos;re in{' '}
+            <Link href="/dumpster-rental/new-york/manhattan" className="text-green-700 font-medium hover:underline">Manhattan</Link>,{' '}
+            <Link href="/dumpster-rental/new-york/brooklyn" className="text-green-700 font-medium hover:underline">Brooklyn</Link>,{' '}
+            <Link href="/dumpster-rental/new-york/queens" className="text-green-700 font-medium hover:underline">Queens</Link>, the{' '}
+            <Link href="/dumpster-rental/new-york/bronx" className="text-green-700 font-medium hover:underline">Bronx</Link>, or{' '}
+            <Link href="/dumpster-rental/new-york/staten-island" className="text-green-700 font-medium hover:underline">Staten Island</Link>,
+            our directory connects you with local roll-off dumpster companies that serve
             all five boroughs. NYC dumpster rental is 30–60% more expensive than the national average due to
             permit requirements, landfill fees, and urban logistics — compare quotes before you book.
           </p>
@@ -323,7 +333,11 @@ export default async function NYCDumpsterRentalPage() {
                   <tbody className="divide-y divide-gray-100">
                     {BOROUGHS.map((b) => (
                       <tr key={b.name} className="bg-white hover:bg-gray-50 transition">
-                        <td className="px-4 py-3.5 font-semibold text-gray-900">{b.name}</td>
+                        <td className="px-4 py-3.5 font-semibold text-gray-900">
+                          <Link href={`/dumpster-rental/new-york/${b.slug}`} className="hover:text-green-700 transition">
+                            {b.name}
+                          </Link>
+                        </td>
                         <td className="px-4 py-3.5 text-gray-700">{b.tenYard}</td>
                         <td className="px-4 py-3.5 text-gray-700">{b.twentyYard}</td>
                         <td className="px-4 py-3.5 text-gray-700">{b.thirtyYard}</td>
@@ -338,7 +352,11 @@ export default async function NYCDumpsterRentalPage() {
               <div className="space-y-3 md:hidden">
                 {BOROUGHS.map((b) => (
                   <div key={b.name} className="rounded-xl border border-gray-200 bg-white p-4">
-                    <div className="font-bold text-gray-900 mb-2">{b.name}</div>
+                    <div className="font-bold text-gray-900 mb-2">
+                      <Link href={`/dumpster-rental/new-york/${b.slug}`} className="hover:text-green-700 transition">
+                        {b.name}
+                      </Link>
+                    </div>
                     <dl className="space-y-1 text-sm">
                       <div className="flex justify-between">
                         <dt className="text-gray-500">10-Yard</dt>
@@ -438,12 +456,22 @@ export default async function NYCDumpsterRentalPage() {
                   <div key={b.name} className="rounded-xl border border-gray-200 bg-white p-5">
                     <div className="flex items-center gap-2 mb-2">
                       <Building2 className="h-5 w-5 text-green-700 shrink-0" />
-                      <h3 className="font-bold text-gray-900">{b.name}</h3>
+                      <h3 className="font-bold text-gray-900">
+                        <Link href={`/dumpster-rental/new-york/${b.slug}`} className="hover:text-green-700 transition">
+                          {b.name}
+                        </Link>
+                      </h3>
                     </div>
                     <p className="text-sm text-gray-600 leading-relaxed">{b.description}</p>
                     <p className="mt-2 text-xs font-medium text-green-700">
                       10-yd from {b.tenYard.split('–')[0]} · 20-yd from {b.twentyYard.split('–')[0]}
                     </p>
+                    <Link
+                      href={`/dumpster-rental/new-york/${b.slug}`}
+                      className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-green-700 hover:underline"
+                    >
+                      View {b.name} listings <ArrowRight className="h-3 w-3" />
+                    </Link>
                   </div>
                 ))}
               </div>
