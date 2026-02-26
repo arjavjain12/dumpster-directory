@@ -489,6 +489,22 @@ export default function CostGuidePage() {
               </div>
             </section>
 
+            {/* Cost by city callout */}
+            <div className="rounded-xl border border-blue-100 bg-blue-50 p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="flex-1">
+                <p className="font-semibold text-gray-900 text-sm mb-1">How does your city compare?</p>
+                <p className="text-sm text-gray-600">
+                  We ranked 960 US cities by dumpster rental cost. The most expensive (San Francisco, NYC) charge 53% above the national average. The cheapest (Arkansas, Mississippi) charge 32% below.
+                </p>
+              </div>
+              <Link
+                href="/dumpster-rental-cost-by-city"
+                className="shrink-0 inline-flex items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-blue-700 transition"
+              >
+                See the full ranking <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
             {/* Hidden fees */}
             <section className="rounded-xl border border-amber-200 bg-amber-50 p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">
@@ -667,6 +683,7 @@ export default function CostGuidePage() {
               <h3 className="font-bold text-gray-900 mb-3">Related Guides</h3>
               <div className="space-y-2">
                 {[
+                  { label: 'Cost by City: Most & Least Expensive', href: '/dumpster-rental-cost-by-city' },
                   { label: 'Dumpster Size Guide', href: '/dumpster-sizes' },
                   { label: 'Weight Limit Calculator', href: '/dumpster-weight-limit-calculator' },
                   { label: 'Do You Need a Permit?', href: '/dumpster-rental-permit' },
