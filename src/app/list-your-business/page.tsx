@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Building2, CheckCircle, Star, Phone, Globe, Shield, TrendingUp, Users } from 'lucide-react'
+import { Building2, CheckCircle, Star, Globe, Shield, TrendingUp, Users } from 'lucide-react'
 import ListingForm from './ListingForm'
 
 export const metadata: Metadata = {
@@ -311,11 +311,10 @@ export default function ListYourBusinessPage() {
               Get Listed Free
             </a>
             <a
-              href="tel:+18005550000"
+              href="#pricing"
               className="inline-flex items-center gap-2 rounded-xl border border-green-400 px-8 py-3.5 text-base font-semibold text-white hover:bg-green-500 transition"
             >
-              <Phone className="h-4 w-4" />
-              Call Us: 1-800-555-0000
+              View Pricing Plans
             </a>
           </div>
         </section>
