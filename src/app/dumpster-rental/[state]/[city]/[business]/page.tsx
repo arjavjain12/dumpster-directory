@@ -80,6 +80,48 @@ export default async function BusinessPage({
   const isPremium = biz.tier === 'premium'
   const isBasic   = biz.tier === 'basic'
 
+  // FAQ schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How much does ${biz.name} charge for dumpster rental?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${biz.name} is a dumpster rental company serving ${cityName}, ${stateName}. Pricing varies by dumpster size and rental duration. Contact them directly for a quote — most companies offer free estimates.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What areas does ${biz.name} serve?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${biz.name} serves ${cityName} and surrounding areas within ${biz.service_area_miles} miles. Contact them to confirm service availability at your address.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What dumpster sizes does ${biz.name} offer?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: biz.sizes_available && biz.sizes_available.length > 0
+            ? `${biz.name} offers ${biz.sizes_available.join(', ')} yard roll-off dumpsters. The most popular size for home cleanouts and renovations is the 20-yard dumpster. Contact them to confirm availability and pricing for your project.`
+            : `${biz.name} offers roll-off dumpsters for residential and commercial projects in ${cityName}. Contact them to confirm available sizes and pricing.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `How do I book a dumpster with ${biz.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `You can book a dumpster with ${biz.name} by calling them directly${biz.phone ? ` at ${biz.phone}` : ''} or by submitting a free quote request through our form. Most companies can schedule same-day or next-day delivery for available sizes.`,
+        },
+      },
+    ],
+  }
+
   // LocalBusiness schema
   const schema = {
     '@context': 'https://schema.org',
@@ -108,6 +150,7 @@ export default async function BusinessPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <div className="bg-white border-b border-gray-100">
@@ -269,6 +312,19 @@ export default async function BusinessPage({
                 </div>
               </div>
             )}
+
+            {/* FAQ */}
+            <div className="rounded-xl border border-gray-200 bg-white p-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+              <div className="divide-y divide-gray-100">
+                {faqSchema.mainEntity.map((faq) => (
+                  <div key={faq.name} className="py-4 first:pt-0 last:pb-0">
+                    <h3 className="font-semibold text-gray-900 mb-1.5 text-sm">{faq.name}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Back link */}
             <div>

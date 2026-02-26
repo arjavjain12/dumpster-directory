@@ -119,9 +119,12 @@ const NO_PERMIT_NEEDED = [
 ]
 
 const CITY_COSTS = [
-  { city: 'New York City, NY', cost: '$100–$300+', notes: 'DOT permit required; high-traffic zones cost more' },
+  { city: 'New York City, NY', cost: '$135–$385', notes: 'NYC DOT Right-of-Way permit; valid 5 days, renewable' },
   { city: 'Los Angeles, CA', cost: '$50–$150', notes: 'LADBS permit; varies by district' },
   { city: 'Chicago, IL', cost: '$50–$100', notes: 'CDOT permit; 5–7 day processing time' },
+  { city: 'Boston, MA', cost: '$75–$200', notes: 'City of Boston Transportation Dept; street space rental fee' },
+  { city: 'Philadelphia, PA', cost: '$50–$125', notes: 'Streets Dept permit; apply online at streets.phila.gov' },
+  { city: 'Seattle, WA', cost: '$70–$175', notes: 'SDOT Street Use permit; submit at seattle.gov/transportation' },
   { city: 'Houston, TX', cost: '$15–$40', notes: 'Public Works permit; fast approval typical' },
   { city: 'Miami, FL', cost: '$30–$75', notes: 'City or county permit depending on location' },
   { city: 'Phoenix, AZ', cost: '$25–$50', notes: 'Street Use permit; available online' },
