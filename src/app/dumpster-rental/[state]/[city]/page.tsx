@@ -42,10 +42,23 @@ export async function generateMetadata({
 
   if (!data) return { title: 'Not Found' }
 
-  const { city: c, businesses } = data
+  const { city: c, businesses, pricing } = data
   const stateName = STATE_NAMES[state] ?? titleCase(state)
-  const title = `Dumpster Rental in ${c.city_name}, ${c.state} (February 2026) | Compare Local Companies`
-  const description = `Find and compare dumpster rental companies in ${c.city_name}, ${stateName}. Get free quotes on 10–40 yard roll-off dumpsters. Serving ${c.county}.`
+
+  // Dynamic title: include business count when available, keep under 60 chars
+  const bizCount = businesses.length
+  const title = bizCount > 0
+    ? `Dumpster Rental in ${c.city_name}, ${c.state} | ${bizCount} Local Companies`
+    : `Dumpster Rental in ${c.city_name}, ${c.state} | Compare & Get Free Quotes`
+
+  // Dynamic description: include pricing if available
+  const twentyYd = pricing.find((p: { size_yards: number }) => p.size_yards === 20)
+  const priceSnippet = twentyYd
+    ? ` 20-yard roll-offs from $${twentyYd.price_low}–$${twentyYd.price_high}.`
+    : ' 10–40 yard roll-off dumpsters available.'
+  const description = bizCount > 0
+    ? `Compare ${bizCount} dumpster rental companies in ${c.city_name}, ${stateName}.${priceSnippet} Free quotes, 7-day rental included.`
+    : `Find dumpster rental companies in ${c.city_name}, ${stateName}.${priceSnippet} Free quotes from local providers — no obligation.`
 
   return {
     title,
