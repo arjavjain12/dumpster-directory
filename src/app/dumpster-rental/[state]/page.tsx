@@ -24,11 +24,27 @@ export async function generateMetadata({
   const { state } = await params
   const data = await getStateData(state)
   if (!data) return { title: 'Not Found' }
-  const title = `Dumpster Rental in ${data.stateName} | Find Local Companies by City`
-  const description = `Compare dumpster rental companies across ${data.stateName}. Browse ${data.cities.length}+ cities and get free quotes from local roll-off dumpster providers.`
+  const cityCount = data.cities.length
+  const title = `Dumpster Rental in ${data.stateName} | ${cityCount} Cities — Compare Local Companies`
+  const description = `Find dumpster rental companies in ${data.stateName}. Compare prices across ${cityCount} cities. Free quotes on 10–40 yard roll-off dumpsters from local providers.`
   return {
     title, description,
     alternates: { canonical: `/dumpster-rental/${state}` },
+    openGraph: {
+      title,
+      description,
+      url: `/dumpster-rental/${state}`,
+      images: [{
+        url: `/api/og?title=${encodeURIComponent(`Dumpster Rental in ${data.stateName}`)}&subtitle=${encodeURIComponent(`${cityCount} cities · Compare local companies · Free quotes`)}`,
+        width: 1200,
+        height: 630,
+        alt: `Dumpster Rental in ${data.stateName}`,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [`/api/og?title=${encodeURIComponent(`Dumpster Rental in ${data.stateName}`)}&subtitle=${encodeURIComponent(`${cityCount} cities · Compare local companies · Free quotes`)}`],
+    },
   }
 }
 
@@ -49,6 +65,8 @@ export default async function StatePage({
   const { cities, stateName } = data
   const faqs = getStateFAQs(stateName)
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpsterlisting.com'
+
   const stateSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -58,13 +76,24 @@ export default async function StatePage({
       '@type': 'ListItem',
       position: i + 1,
       name: `${c.city_name} Dumpster Rental`,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/dumpster-rental/${stateSlug}/${c.city_slug}`,
+      url: `${siteUrl}/dumpster-rental/${stateSlug}/${c.city_slug}`,
     })),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Dumpster Rental', item: `${siteUrl}/dumpster-rental` },
+      { '@type': 'ListItem', position: 3, name: `Dumpster Rental in ${stateName}`, item: `${siteUrl}/dumpster-rental/${stateSlug}` },
+    ],
   }
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(stateSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

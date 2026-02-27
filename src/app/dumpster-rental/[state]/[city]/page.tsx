@@ -112,6 +112,19 @@ export default async function CityPage({
     ? (businesses.reduce((acc, b) => acc + (b.rating ?? 0), 0) / businesses.length).toFixed(1)
     : null
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpsterlisting.com'
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Dumpster Rental', item: `${siteUrl}/dumpster-rental` },
+      { '@type': 'ListItem', position: 3, name: `Dumpster Rental in ${stateName}`, item: `${siteUrl}/dumpster-rental/${stateSlug}` },
+      { '@type': 'ListItem', position: 4, name: `Dumpster Rental in ${city.city_name}`, item: `${siteUrl}/dumpster-rental/${stateSlug}/${citySlug}` },
+    ],
+  }
+
   // LocalBusiness schema for the city page
   const citySchema = {
     '@context': 'https://schema.org',
@@ -143,6 +156,7 @@ export default async function CityPage({
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
 
       {/* Hero */}

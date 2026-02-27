@@ -253,9 +253,12 @@ export default function NationalDirectoryPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-3 flex items-center gap-4 text-sm">
+          <div className="mt-3 flex items-center gap-4 text-sm flex-wrap">
             <Link href="/how-much-does-dumpster-rental-cost" className="text-green-700 font-medium hover:underline flex items-center gap-1">
               Full cost guide <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link href="/dumpster-rental-cost-by-city" className="text-green-700 font-medium hover:underline flex items-center gap-1">
+              Most & least expensive cities <ArrowRight className="h-3.5 w-3.5" />
             </Link>
             <Link href="/dumpster-sizes" className="text-green-700 font-medium hover:underline flex items-center gap-1">
               Size comparison guide <ArrowRight className="h-3.5 w-3.5" />
