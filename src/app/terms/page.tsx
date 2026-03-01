@@ -94,7 +94,7 @@ export default function TermsPage() {
             Legal
           </div>
           <h1 className="text-4xl font-extrabold text-gray-900 leading-tight">Terms of Service</h1>
-          <p className="mt-4 text-gray-500 text-sm">Last updated: February 2026</p>
+          <p className="mt-4 text-gray-500 text-sm">Last updated: March 2026</p>
           <p className="mt-4 text-gray-600 leading-relaxed max-w-2xl">
             Please read these Terms of Service carefully before using{' '}
             <span className="font-medium text-gray-800">dumpsterlisting.com</span>. These Terms govern

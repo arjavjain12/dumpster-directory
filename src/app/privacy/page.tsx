@@ -93,7 +93,7 @@ export default function PrivacyPage() {
             Legal
           </div>
           <h1 className="text-4xl font-extrabold text-gray-900 leading-tight">Privacy Policy</h1>
-          <p className="mt-4 text-gray-500 text-sm">Last updated: February 2026</p>
+          <p className="mt-4 text-gray-500 text-sm">Last updated: March 2026</p>
           <p className="mt-4 text-gray-600 leading-relaxed max-w-2xl">
             DumpsterListing ("we," "us," or "our") is committed to protecting your privacy. This Privacy
             Policy explains how we collect, use, and share information when you use our website at{' '}
