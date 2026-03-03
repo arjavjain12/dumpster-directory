@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental vs Junk Removal: Which Should You Choose? (2026)',
   description:
     'Dumpster rental or junk removal — which is cheaper and better for your project? Compare costs, convenience, and use cases to make the right choice.',
-  alternates: { canonical: '/dumpster-rental-vs-junk-removal' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental-vs-junk-removal' },
   openGraph: {
     title: 'Dumpster Rental vs Junk Removal: Full Comparison (2026)',
     description: 'Compare costs, pros, cons, and best use cases for dumpster rental vs junk removal. Find out which saves more money for your project.',

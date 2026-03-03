@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service | DumpsterListing',
   description:
     'Read the Terms of Service for DumpsterListing. Understand your rights and responsibilities when using our dumpster rental directory.',
-  alternates: { canonical: '/terms' },
+  alternates: { canonical: 'https://dumpsterlisting.com/terms' },
   openGraph: {
     title: 'Terms of Service | DumpsterListing',
     description:

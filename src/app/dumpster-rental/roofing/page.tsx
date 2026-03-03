@@ -7,7 +7,7 @@ const data = CATEGORY_DATA['roofing']
 export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
-  alternates: { canonical: '/dumpster-rental/roofing' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental/roofing' },
   openGraph: { title: data.metaTitle, description: data.metaDescription },
 }
 

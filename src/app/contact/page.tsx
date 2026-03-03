@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Contact Us | DumpsterListing',
   description:
     'Get in touch with DumpsterListing. Find answers for homeowners looking for dumpster rental quotes, businesses wanting to get listed, or general inquiries.',
-  alternates: { canonical: '/contact' },
+  alternates: { canonical: 'https://dumpsterlisting.com/contact' },
   openGraph: {
     title: 'Contact Us | DumpsterListing',
     description:

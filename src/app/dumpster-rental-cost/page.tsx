@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Cost (2026) | Prices by Size, City & Project',
   description:
     '2026 dumpster rental prices by size, city, debris type, and duration. Includes overage fees, permit costs, and a junk removal comparison.',
-  alternates: { canonical: '/dumpster-rental-cost' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental-cost' },
   openGraph: {
     title: 'Dumpster Rental Cost Guide (2026)',
     description: 'National average prices by size, cost factors, and money-saving tips.',

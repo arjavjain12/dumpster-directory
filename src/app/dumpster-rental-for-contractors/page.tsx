@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental for Contractors: Commercial & Bulk Options | DumpsterListing',
   description:
     'Commercial dumpster rental for contractors — bulk pricing, recurring rentals, weight capacity, approved debris types, and how to set up an account with local haulers.',
-  alternates: { canonical: '/dumpster-rental-for-contractors' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental-for-contractors' },
   openGraph: {
     title: 'Dumpster Rental for Contractors: Commercial & Bulk Options | DumpsterListing',
     description:

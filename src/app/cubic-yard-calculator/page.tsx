@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Cubic Yard Calculator — Convert Dimensions to Cubic Yards (2026)',
   description:
     'Calculate cubic yards from feet, inches, or yards. Add multiple areas. Instantly see how many cubic yards of debris you have and which dumpster size you need.',
-  alternates: { canonical: '/cubic-yard-calculator' },
+  alternates: { canonical: 'https://dumpsterlisting.com/cubic-yard-calculator' },
   openGraph: {
     title: 'Cubic Yard Calculator — Add Multiple Areas',
     description: 'Enter length, width, and depth in feet or inches. Calculate total cubic yards and find the right dumpster size.',

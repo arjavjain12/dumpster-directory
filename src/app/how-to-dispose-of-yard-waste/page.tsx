@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Dispose of Yard Waste: 6 Options Compared (2026)',
   description:
     'Grass clippings, tree branches, brush, and sod — here are the best ways to dispose of yard waste, including free options, dumpster rental, and curbside pickup.',
-  alternates: { canonical: '/how-to-dispose-of-yard-waste' },
+  alternates: { canonical: 'https://dumpsterlisting.com/how-to-dispose-of-yard-waste' },
   openGraph: {
     title: 'How to Dispose of Yard Waste: Free & Paid Options',
     description: 'Compare curbside pickup, composting, green waste facilities, and dumpster rental for yard waste disposal. Find the cheapest and most convenient option.',

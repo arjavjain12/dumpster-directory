@@ -29,11 +29,11 @@ export async function generateMetadata({
   const description = `Find dumpster rental companies in ${data.stateName}. Compare prices across ${cityCount} cities. Free quotes on 10–40 yard roll-off dumpsters from local providers.`
   return {
     title, description,
-    alternates: { canonical: `/dumpster-rental/${state}` },
+    alternates: { canonical: `https://dumpsterlisting.com/dumpster-rental/${state}` },
     openGraph: {
       title,
       description,
-      url: `/dumpster-rental/${state}`,
+      url: `https://dumpsterlisting.com/dumpster-rental/${state}`,
       images: [{
         url: `/api/og?title=${encodeURIComponent(`Dumpster Rental in ${data.stateName}`)}&subtitle=${encodeURIComponent(`${cityCount} cities · Compare local companies · Free quotes`)}`,
         width: 1200,

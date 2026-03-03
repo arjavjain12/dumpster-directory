@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Dispose of Old Paint | Latex & Oil-Based | DumpsterListing',
   description:
     'Proper paint disposal for latex and oil-based paint — free drop-off programs, drying out latex paint, and when you need a hazmat contractor.',
-  alternates: { canonical: '/how-to-dispose-of-paint' },
+  alternates: { canonical: 'https://dumpsterlisting.com/how-to-dispose-of-paint' },
   openGraph: {
     title: 'How to Dispose of Old Paint (Latex & Oil-Based)',
     description: 'PaintCare drop-off locations, drying out latex paint for trash disposal, HHW facilities, and donation options — all paint disposal methods compared.',

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Dumpster Size Estimator — What Size Dumpster Do I Need? (2026)',
   description:
     'Find out exactly what size dumpster you need. Select your project type, add specific items, and get an instant recommendation with 20% packing buffer — free.',
-  alternates: { canonical: '/dumpster-size-estimator' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-size-estimator' },
   openGraph: {
     title: 'Dumpster Size Estimator — Get the Right Size First Time',
     description: 'Select your project type and add specific items to get an accurate dumpster size recommendation. Avoid paying for too much — or running out of space.',

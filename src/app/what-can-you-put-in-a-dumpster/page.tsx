@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'What Can You Put in a Dumpster? Allowed & Prohibited Items (2026)',
   description:
     'Complete list of what you can and cannot put in a rental dumpster — furniture, appliances, construction debris, yard waste, and hazardous materials.',
-  alternates: { canonical: '/what-can-you-put-in-a-dumpster' },
+  alternates: { canonical: 'https://dumpsterlisting.com/what-can-you-put-in-a-dumpster' },
   openGraph: {
     title: 'What Can You Put in a Dumpster? Full Allowed Items List',
     description: 'See what is and is not allowed in a rental dumpster. Avoid fees and rejected loads with this complete guide to dumpster-accepted items.',

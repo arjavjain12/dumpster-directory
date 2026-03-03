@@ -38,11 +38,11 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `/dumpster-rental/${state}/${city}/${business}` },
+    alternates: { canonical: `https://dumpsterlisting.com/dumpster-rental/${state}/${city}/${business}` },
     openGraph: {
       title,
       description,
-      url: `/dumpster-rental/${state}/${city}/${business}`,
+      url: `https://dumpsterlisting.com/dumpster-rental/${state}/${city}/${business}`,
       images: [{
         url: `/api/og?title=${encodeURIComponent(biz.name)}&subtitle=${encodeURIComponent(`Dumpster Rental · ${cityName}, ${stateName}${biz.rating ? ` · ${biz.rating}★ rating` : ''}`)}`,
         width: 1200,

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'List Your Business | DumpsterListing',
   description:
     'Get your dumpster rental company listed on DumpsterListing and reach customers actively searching for dumpster rental in your city. Free listing available.',
-  alternates: { canonical: '/list-your-business' },
+  alternates: { canonical: 'https://dumpsterlisting.com/list-your-business' },
   openGraph: {
     title: 'List Your Dumpster Business on DumpsterListing',
     description:

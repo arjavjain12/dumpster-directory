@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Near Me | Find Local Companies',
   description:
     'Find dumpster rental near you. Compare local companies, get free quotes, and book roll-off dumpster delivery in your area.',
-  alternates: { canonical: '/dumpster-rental-near-me' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental-near-me' },
   openGraph: {
     title: 'Dumpster Rental Near Me | Find Local Companies',
     description: 'Find dumpster rental near you. Compare local companies, get free quotes, and book roll-off delivery.',

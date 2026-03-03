@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'How Long Can You Keep a Rental Dumpster? (2026 Guide)',
   description:
     'Standard dumpster rentals last 7–14 days. Learn about extensions, long-term rentals, daily overage fees, and how to avoid extra charges.',
-  alternates: { canonical: '/how-long-can-you-keep-a-rental-dumpster' },
+  alternates: { canonical: 'https://dumpsterlisting.com/how-long-can-you-keep-a-rental-dumpster' },
   openGraph: {
     title: 'How Long Can You Keep a Rental Dumpster?',
     description: 'Find out standard rental periods (7–14 days), extension fees, and tips for avoiding extra charges on your dumpster rental.',

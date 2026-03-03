@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Dispose of a Mattress | Free & Paid Options | DumpsterListing',
   description:
     'The cheapest ways to get rid of an old mattress — free pickup programs, retailer take-back, donation, recycling, and when to use a dumpster rental.',
-  alternates: { canonical: '/how-to-dispose-of-mattress' },
+  alternates: { canonical: 'https://dumpsterlisting.com/how-to-dispose-of-mattress' },
   openGraph: {
     title: 'How to Dispose of an Old Mattress: Free & Paid Options',
     description: 'Bye Bye Mattress, retailer take-back, donation, junk removal, and dumpster rental — compare every option for getting rid of a mattress.',

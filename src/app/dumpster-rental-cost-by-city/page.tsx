@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Cost by City (2026): Most & Least Expensive in America',
   description:
     'See where Americans pay the most and least for dumpster rental. We analyzed pricing across 960 US cities — the most expensive cities cost 85% more than the cheapest.',
-  alternates: { canonical: '/dumpster-rental-cost-by-city' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental-cost-by-city' },
   openGraph: {
     title: 'Dumpster Rental Cost by City (2026): Most & Least Expensive in America',
     description:

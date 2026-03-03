@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Same-Day Dumpster Rental: How to Get One Fast | DumpsterListing',
   description:
     'Need a dumpster today? Learn how same-day dumpster rental works, which companies offer it, what it costs, and how to book one in hours.',
-  alternates: { canonical: '/same-day-dumpster-rental' },
+  alternates: { canonical: 'https://dumpsterlisting.com/same-day-dumpster-rental' },
   openGraph: {
     title: 'Same-Day Dumpster Rental: How to Get One Fast | DumpsterListing',
     description:

@@ -30,7 +30,7 @@ export async function generateMetadata({
   const description = `How much does dumpster rental cost in ${data.city.city_name}? Compare 10–40 yard prices, rental fees, and what affects cost in ${data.city.city_name}, ${stateName}.`
   return {
     title, description,
-    alternates: { canonical: `/dumpster-rental/${state}/${city}/cost` },
+    alternates: { canonical: `https://dumpsterlisting.com/dumpster-rental/${state}/${city}/cost` },
   }
 }
 

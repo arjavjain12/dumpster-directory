@@ -60,7 +60,7 @@ export async function getNearbyCities(cityId: number, lat: number, lng: number, 
   const delta = 1.5 // ~100 mile bounding box
   const { data } = await getClient()
     .from('cities')
-    .select('city_name, city_slug, state_slug, state, population')
+    .select('id, city_name, city_slug, state_slug, state, population')
     .neq('id', cityId)
     .gte('latitude', lat - delta)
     .lte('latitude', lat + delta)

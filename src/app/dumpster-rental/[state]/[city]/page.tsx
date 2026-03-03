@@ -64,12 +64,12 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `/dumpster-rental/${state}/${city}`,
+      canonical: `https://dumpsterlisting.com/dumpster-rental/${state}/${city}`,
     },
     openGraph: {
       title,
       description,
-      url: `/dumpster-rental/${state}/${city}`,
+      url: `https://dumpsterlisting.com/dumpster-rental/${state}/${city}`,
       images: [{
         url: `/api/og?title=${encodeURIComponent(`Dumpster Rental in ${c.city_name}, ${c.state}`)}&subtitle=${encodeURIComponent(`Compare ${businesses.length} local companies · Free quotes`)}`,
         width: 1200,

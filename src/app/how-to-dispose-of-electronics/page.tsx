@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Dispose of Electronics (E-Waste) | DumpsterListing',
   description:
     'Learn how to properly dispose of old electronics, TVs, computers, and phones. Find free e-waste recycling near you — and when a dumpster rental makes sense.',
-  alternates: { canonical: '/how-to-dispose-of-electronics' },
+  alternates: { canonical: 'https://dumpsterlisting.com/how-to-dispose-of-electronics' },
   openGraph: {
     title: 'How to Dispose of Old Electronics & E-Waste',
     description: 'Free retailer drop-off programs, manufacturer take-back, municipal e-waste events, and when a dumpster rental makes sense for large cleanouts.',

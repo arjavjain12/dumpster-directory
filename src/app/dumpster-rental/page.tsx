@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Near Me — Compare Local Companies & Prices (2026)',
   description:
     'Find dumpster rental companies in any US city. Compare prices on 10, 20, 30, and 40 yard roll-off dumpsters. Free quotes from local providers in 31,000+ cities.',
-  alternates: { canonical: '/dumpster-rental' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental' },
   openGraph: {
     title: 'Dumpster Rental Near Me — Compare Local Companies & Prices',
     description: 'The largest directory of dumpster rental companies in the US. Find local providers, compare prices, and get free quotes for any project.',

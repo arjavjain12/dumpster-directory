@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'About DumpsterListing — The Dumpster Rental Directory',
   description:
     'DumpsterListing helps homeowners and contractors find local dumpster rental companies fast. Explore our directory of 4,000+ businesses across 500+ cities.',
-  alternates: { canonical: '/about' },
+  alternates: { canonical: 'https://dumpsterlisting.com/about' },
   openGraph: {
     title: 'About DumpsterListing — The Dumpster Rental Directory',
     description:

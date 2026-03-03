@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'How Much Does Dumpster Rental Cost? (2026 Price Guide)',
   description:
     'The average dumpster rental costs $300–$550 for a standard 20-yard container. See exact prices by size (10–40 yard), city, and project type — plus tips to avoid hidden fees.',
-  alternates: { canonical: '/how-much-does-dumpster-rental-cost' },
+  alternates: { canonical: 'https://dumpsterlisting.com/how-much-does-dumpster-rental-cost' },
   openGraph: {
     title: 'How Much Does Dumpster Rental Cost? (2026 Price Guide)',
     description:

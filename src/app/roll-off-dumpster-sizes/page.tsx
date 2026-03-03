@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Roll-Off Dumpster Sizes: 10 to 40 Yard Guide (2026)',
   description:
     'Complete guide to roll-off dumpster sizes — 10, 15, 20, 30, and 40 yard. Dimensions, weight limits, pricing, and which size fits your project.',
-  alternates: { canonical: '/roll-off-dumpster-sizes' },
+  alternates: { canonical: 'https://dumpsterlisting.com/roll-off-dumpster-sizes' },
   openGraph: {
     title: 'Roll-Off Dumpster Sizes: Complete Guide (10–40 Yard)',
     description: 'Every roll-off dumpster size explained — dimensions, capacity, weight limits, pricing, and the right size for each project type.',

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Do You Need a Permit for a Dumpster? (2026 Guide)',
   description:
     "Find out when you need a dumpster rental permit, how to get one, and what it costs. Rules vary by city — here's what to expect.",
-  alternates: { canonical: '/dumpster-rental-permit' },
+  alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental-permit' },
   openGraph: {
     title: 'Dumpster Rental Permit: When You Need One & How to Get It',
     description: 'Do you need a permit to rent a dumpster? Learn when permits are required, costs ($15–$100), and how to apply before your delivery.',

@@ -376,8 +376,8 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `/dumpster-sizes/${sizeSlug}` },
-    openGraph: { title, description, url: `/dumpster-sizes/${sizeSlug}` },
+    alternates: { canonical: `https://dumpsterlisting.com/dumpster-sizes/${sizeSlug}` },
+    openGraph: { title, description, url: `https://dumpsterlisting.com/dumpster-sizes/${sizeSlug}` },
   }
 }
 

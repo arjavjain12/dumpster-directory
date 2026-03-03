@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Dispose of Concrete: 6 Methods + Cost Guide (2026) | DumpsterListing',
   description:
     'Learn the best ways to dispose of concrete in 2026. Includes city-by-city dumpster prices, weight limits, recycling options, overage fee warnings, and free disposal methods.',
-  alternates: { canonical: '/how-to-dispose-of-concrete' },
+  alternates: { canonical: 'https://dumpsterlisting.com/how-to-dispose-of-concrete' },
   openGraph: {
     title: 'How to Dispose of Concrete: All Options Compared (2026 Prices)',
     description: 'Concrete is one of the heaviest materials you can rent a dumpster for. See 2026 city pricing, weight limits, recycling options, and which method saves the most money.',

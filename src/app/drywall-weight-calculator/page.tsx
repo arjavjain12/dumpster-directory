@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Drywall Weight Calculator — How Heavy Is My Drywall? (2026)',
   description:
     'Calculate drywall weight by room dimensions or square footage. Get weight in lbs/tons, number of sheets, and the right dumpster size for drywall removal.',
-  alternates: { canonical: '/drywall-weight-calculator' },
+  alternates: { canonical: 'https://dumpsterlisting.com/drywall-weight-calculator' },
   openGraph: {
     title: 'Drywall Weight Calculator — By Room or Square Footage',
     description: 'Enter room dimensions to calculate total drywall weight and get the right dumpster size for removal.',
