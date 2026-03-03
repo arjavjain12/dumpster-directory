@@ -22,7 +22,30 @@ export const metadata: Metadata = {
     title: 'How Much Does Dumpster Rental Cost? (2026 Price Guide)',
     description:
       'The average dumpster rental costs $300–$550 for a standard 20-yard container. See exact prices by size (10–40 yard), city, and project type — plus tips to avoid hidden fees.',
+    url: 'https://dumpsterlisting.com/how-much-does-dumpster-rental-cost',
+    images: [{
+      url: `/api/og?title=${encodeURIComponent('How Much Does Dumpster Rental Cost?')}&subtitle=${encodeURIComponent('2026 Price Guide · 10–40 yard roll-offs · $250–$750')}`,
+      width: 1200,
+      height: 630,
+      alt: 'How Much Does Dumpster Rental Cost? 2026 Price Guide',
+    }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    images: [`/api/og?title=${encodeURIComponent('How Much Does Dumpster Rental Cost?')}&subtitle=${encodeURIComponent('2026 Price Guide · 10–40 yard roll-offs · $250–$750')}`],
+  },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How Much Does Dumpster Rental Cost? (2026 Price Guide)',
+  description: 'The average dumpster rental costs $300–$550 for a standard 20-yard container. See exact prices by size, city, and project type.',
+  datePublished: '2025-06-01',
+  dateModified: '2026-03-01',
+  author: { '@type': 'Organization', name: 'DumpsterListing.com', url: 'https://dumpsterlisting.com' },
+  publisher: { '@type': 'Organization', name: 'DumpsterListing.com', url: 'https://dumpsterlisting.com' },
+  url: 'https://dumpsterlisting.com/how-much-does-dumpster-rental-cost',
 }
 
 const faqSchema = {
@@ -59,6 +82,14 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'To get the best price on a dumpster rental: (1) Get at least 3 quotes from local companies — prices for the same container can vary 20–30% in the same market. (2) Book mid-week (Tuesday–Thursday) when demand is lower and haulers are more flexible on price. (3) Use your driveway instead of the street to avoid permit fees. (4) Stay under the weight limit — avoid throwing heavy materials like concrete or dirt unless confirmed with the hauler. (5) Return the dumpster on time to avoid daily extension fees.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Have dumpster rental prices increased in 2026?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Dumpster rental prices in 2026 have remained relatively stable compared to 2025 for most markets. The national average for a 20-yard roll-off is still $375–$500. Some markets saw modest increases of 3–7% due to rising fuel and disposal costs, particularly in urban areas. Rural and suburban markets remain the most affordable. Booking in advance and comparing at least 3 local quotes is still the best way to get the lowest available rate in your area.',
       },
     },
   ],
@@ -182,6 +213,10 @@ const SAVINGS_TIPS = [
 export default function HowMuchDoesDumpsterRentalCostPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
