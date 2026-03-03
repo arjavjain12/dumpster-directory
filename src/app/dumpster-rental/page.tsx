@@ -116,11 +116,12 @@ export default function NationalDirectoryPage() {
             { label: 'Dumpster Rental' },
           ]} />
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold text-gray-900">
-            Find Dumpster Rental Companies Near You
+            Dumpster Rental — Compare Local Companies &amp; Prices
           </h1>
           <p className="mt-3 max-w-2xl text-gray-600 leading-relaxed">
-            Compare dumpster rental prices from local companies in any US city. Get free quotes on 10–40 yard
+            Find and compare dumpster rental companies in any US city. Get free quotes on 10–40 yard
             roll-off dumpsters for home cleanouts, renovations, roofing, and construction projects.
+            We cover 31,000+ cities nationwide.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link

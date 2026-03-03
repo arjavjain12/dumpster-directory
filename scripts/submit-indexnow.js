@@ -63,6 +63,12 @@ const URLS = [
   `${SITE_URL}/roll-off-dumpster-sizes`,
   `${SITE_URL}/dumpster-rental-permit`,
   `${SITE_URL}/how-long-can-you-keep-a-rental-dumpster`,
+  `${SITE_URL}/dumpster-rental-cost-by-city`,
+  `${SITE_URL}/same-day-dumpster-rental`,
+  `${SITE_URL}/dumpster-rental-for-contractors`,
+  `${SITE_URL}/how-to-dispose-of-electronics`,
+  `${SITE_URL}/how-to-dispose-of-mattress`,
+  `${SITE_URL}/how-to-dispose-of-paint`,
 ]
 
 async function submitToIndexNow(urls) {
