@@ -63,6 +63,8 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // Noindex cities with no listings — prevents thin content deindexing
+    ...(bizCount === 0 && { robots: { index: false, follow: true } }),
     alternates: {
       canonical: `/dumpster-rental/${state}/${city}`,
     },
