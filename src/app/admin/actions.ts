@@ -8,9 +8,11 @@ import { revalidatePath } from 'next/cache'
 const ADMIN_COOKIE = 'dl_admin_auth'
 
 export async function verifyAdmin() {
+  const password = process.env.ADMIN_PASSWORD
+  if (!password) return false
   const cookieStore = await cookies()
   const token = cookieStore.get(ADMIN_COOKIE)?.value
-  return token === process.env.ADMIN_PASSWORD
+  return token === password
 }
 
 export async function loginAction(formData: FormData) {
