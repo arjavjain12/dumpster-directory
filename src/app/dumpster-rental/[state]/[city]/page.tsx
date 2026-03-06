@@ -51,7 +51,9 @@ export async function generateMetadata({
   const priceFrom = tenYd ? ` · from $${tenYd.price_low}` : ''
   const title = bizCount > 0
     ? `Dumpster Rental in ${c.city_name}, ${c.state} | ${bizCount} Companies${priceFrom}`
-    : `Dumpster Rental in ${c.city_name}, ${c.state} | Compare & Get Free Quotes`
+    : tenYd
+      ? `Dumpster Rental in ${c.city_name}, ${c.state} | Prices from $${tenYd.price_low}`
+      : `Dumpster Rental in ${c.city_name}, ${c.state} | Compare & Get Free Quotes`
 
   // Dynamic description: include pricing if available
   const twentyYd = pricing.find((p: { size_yards: number }) => p.size_yards === 20)
@@ -60,7 +62,9 @@ export async function generateMetadata({
     : ' 10–40 yard roll-off dumpsters available.'
   const description = bizCount > 0
     ? `Compare ${bizCount} dumpster rental companies in ${c.city_name}, ${stateName}.${priceSnippet} Free quotes, 7-day rental included.`
-    : `Find dumpster rental companies in ${c.city_name}, ${stateName}.${priceSnippet} Free quotes from local providers — no obligation.`
+    : tenYd
+      ? `Dumpster rental in ${c.city_name}, ${stateName} from $${tenYd.price_low}.${priceSnippet} Compare local roll-off companies and get free quotes.`
+      : `Find dumpster rental companies in ${c.city_name}, ${stateName}.${priceSnippet} Free quotes from local providers — no obligation.`
 
   return {
     title,

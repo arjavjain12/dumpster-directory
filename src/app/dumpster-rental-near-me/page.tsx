@@ -6,13 +6,13 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { getPopularCities } from '@/lib/supabase'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Near Me | Find Local Companies',
+  title: 'Dumpster Rental Near Me — Compare Prices & Get Free Quotes (2026)',
   description:
-    'Find dumpster rental near you. Compare local companies, get free quotes, and book roll-off dumpster delivery in your area.',
+    'Find the cheapest dumpster rental near you. Compare local companies, see prices from $275, and get free quotes. Same-day delivery available in most areas.',
   alternates: { canonical: 'https://dumpsterlisting.com/dumpster-rental-near-me' },
   openGraph: {
-    title: 'Dumpster Rental Near Me | Find Local Companies',
-    description: 'Find dumpster rental near you. Compare local companies, get free quotes, and book roll-off delivery.',
+    title: 'Dumpster Rental Near Me — Compare Prices & Get Free Quotes (2026)',
+    description: 'Find the cheapest dumpster rental near you. Compare local companies, see prices from $275, and get free quotes.',
     images: [{ url: '/api/og?title=Dumpster%20Rental%20Near%20Me&subtitle=Find%20local%20companies%20%C2%B7%20Free%20quotes%20%C2%B7%2031%2C000%2B%20cities', width: 1200, height: 630 }],
   },
   twitter: { card: 'summary_large_image' },
@@ -273,6 +273,57 @@ export default async function NearMePage() {
         </div>
       </div>
 
+      {/* Find the Cheapest Dumpster Rental */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Find the Cheapest Dumpster Rental Near You</h2>
+        <div className="rounded-xl border border-gray-200 bg-white p-6 space-y-4 text-sm text-gray-600 leading-relaxed">
+          <p>
+            The cheapest dumpster rental near you depends on three factors: container size, rental duration, and your
+            distance from the nearest disposal facility. A 10-yard dumpster typically starts at $275–$400 for a 7-day
+            rental, while a 20-yard — the most popular size — runs $350–$500. Prices are lowest in rural and suburban
+            areas where landfill tipping fees are lower and competition among haulers is higher.
+          </p>
+          <p>
+            To get the best price, request quotes from at least three local companies. Ask each one what&apos;s included:
+            delivery, pickup, rental days, and weight allowance. Some haulers advertise a low base price but charge extra
+            for delivery or have a short rental window. A bundled &quot;all-in&quot; quote is almost always the better deal.
+          </p>
+          <p>
+            Same-day dumpster delivery is available in most metro areas, though it may include a rush surcharge of $25–$75.
+            If your project timeline is flexible, booking 2–3 days ahead often unlocks the best rates and guarantees
+            availability during peak seasons (spring and summer).
+          </p>
+        </div>
+
+        {/* Pricing table */}
+        <div className="mt-6 overflow-x-auto">
+          <table className="w-full rounded-xl border border-gray-200 bg-white text-sm">
+            <thead>
+              <tr className="bg-gray-50 border-b border-gray-200">
+                <th className="px-4 py-3 text-left font-semibold text-gray-900">Size</th>
+                <th className="px-4 py-3 text-left font-semibold text-gray-900">Avg. Price (7-day)</th>
+                <th className="px-4 py-3 text-left font-semibold text-gray-900">Best For</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {[
+                { size: '10 Yard', price: '$275–$400', use: 'Small cleanouts, single-room remodels' },
+                { size: '15 Yard', price: '$300–$450', use: 'Garage cleanouts, small roofing jobs' },
+                { size: '20 Yard', price: '$350–$500', use: 'Kitchen/bath remodels, deck removal' },
+                { size: '30 Yard', price: '$400–$600', use: 'Whole-house cleanouts, new construction' },
+                { size: '40 Yard', price: '$450–$700', use: 'Major demolition, commercial projects' },
+              ].map((row) => (
+                <tr key={row.size}>
+                  <td className="px-4 py-3 font-medium text-gray-900">{row.size}</td>
+                  <td className="px-4 py-3 text-green-700 font-semibold">{row.price}</td>
+                  <td className="px-4 py-3 text-gray-600">{row.use}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Related guides */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Helpful Resources</h2>
@@ -284,6 +335,9 @@ export default async function NearMePage() {
             { label: 'Do You Need a Permit?', href: '/dumpster-rental-permit' },
             { label: 'How Long Can You Keep a Dumpster?', href: '/how-long-can-you-keep-a-rental-dumpster' },
             { label: 'What Can You Put in a Dumpster?', href: '/what-can-you-put-in-a-dumpster' },
+            { label: 'Rent a Dumpster', href: '/rent-a-dumpster' },
+            { label: 'Cheap Dumpster Rental', href: '/cheap-dumpster-rental' },
+            { label: 'Same-Day Dumpster Rental', href: '/same-day-dumpster-rental' },
           ].map((link) => (
             <Link key={link.href} href={link.href}
               className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">

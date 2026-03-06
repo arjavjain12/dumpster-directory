@@ -29,6 +29,58 @@ interface SizeData {
 }
 
 const SIZE_DATA: Record<number, SizeData> = {
+  2: {
+    yards: 2,
+    slug: '2-yard',
+    dimensions: '6 × 3 × 3 ft',
+    lengthFt: 6,
+    widthFt: 3,
+    heightFt: 3,
+    weightLimit: '200–400 lbs',
+    avgPriceLow: 75,
+    avgPriceHigh: 175,
+    rentalDays: 'Monthly',
+    equivalent: 'About 8 trash bags',
+    intro: 'The 2-yard dumpster is a compact commercial container commonly used for ongoing waste service at small businesses, restaurants, and apartment complexes. Unlike roll-off dumpsters, 2-yard bins are front-load containers picked up by garbage trucks on a scheduled basis — weekly or bi-weekly. They are not typically rented for one-time residential projects.',
+    whatFits: ['Daily restaurant or cafe waste', 'Small retail store trash', 'Small office waste', 'Apartment complex overflow'],
+    doesNotFit: ['Renovation or construction debris', 'Bulky furniture', 'Large cleanout projects', 'Heavy materials like concrete'],
+    bestFor: ['Small restaurants and cafes', 'Retail shops', 'Small offices', 'Apartment buildings with low volume'],
+    notGoodFor: ['Home renovation projects', 'Construction sites', 'Estate cleanouts', 'One-time junk removal'],
+    heavyMaterialNote: 'The 2-yard dumpster has a very low weight capacity. It is designed for regular trash pickup, not heavy debris.',
+    faqs: [
+      { q: 'How much does a 2-yard dumpster cost?', a: 'A 2-yard dumpster typically costs $75–$175 per month for scheduled pickup service. This is a commercial container, not a one-time rental like roll-off dumpsters.' },
+      { q: 'Can I rent a 2-yard dumpster for a home project?', a: 'No — 2-yard dumpsters are front-load commercial containers for ongoing waste service. For home projects, the smallest roll-off option is typically a 10-yard dumpster.' },
+      { q: 'How often is a 2-yard dumpster picked up?', a: 'Most waste haulers offer weekly or bi-weekly pickup for 2-yard containers. Additional pickups can be scheduled for an extra fee.' },
+      { q: 'What is the difference between a 2-yard and a 10-yard dumpster?', a: 'A 2-yard is a small front-load container for ongoing commercial waste with scheduled pickup. A 10-yard is a roll-off container delivered for one-time projects like cleanouts and renovations.' },
+      { q: 'How big is a 2-yard dumpster?', a: 'A 2-yard dumpster is approximately 6 feet long, 3 feet wide, and 3 feet tall — about the size of a large desk. It holds roughly 8 standard trash bags.' },
+    ],
+  },
+  3: {
+    yards: 3,
+    slug: '3-yard',
+    dimensions: '6 × 3 × 4 ft',
+    lengthFt: 6,
+    widthFt: 3,
+    heightFt: 4,
+    weightLimit: '300–600 lbs',
+    avgPriceLow: 100,
+    avgPriceHigh: 225,
+    rentalDays: 'Monthly',
+    equivalent: 'About 12 trash bags',
+    intro: 'The 3-yard dumpster is one of the most popular front-load commercial containers in the US. It is the go-to size for mid-sized businesses, medical offices, and multi-unit residential buildings that produce moderate amounts of regular waste. Like the 2-yard, it is serviced on a schedule by a front-load garbage truck — not delivered as a one-time roll-off rental.',
+    whatFits: ['Medium restaurant waste', 'Medical or dental office waste', 'Multi-unit residential building trash', 'Small warehouse or shop waste', 'Event venue daily waste'],
+    doesNotFit: ['Construction or renovation debris', 'Large furniture or appliances', 'Yard waste in bulk', 'Heavy materials'],
+    bestFor: ['Medium restaurants and bars', 'Medical and professional offices', 'Small apartment complexes (4–12 units)', 'Retail stores with moderate waste'],
+    notGoodFor: ['One-time home cleanouts', 'Construction job sites', 'Heavy demolition debris'],
+    heavyMaterialNote: 'The 3-yard container has a limited weight capacity designed for regular commercial trash. Do not load with concrete, dirt, or other dense materials.',
+    faqs: [
+      { q: 'How much does a 3-yard dumpster cost?', a: 'A 3-yard dumpster costs $100–$225 per month depending on pickup frequency and location. Weekly pickup is standard; bi-weekly is cheaper.' },
+      { q: 'What is a 3-yard dumpster used for?', a: 'It is a commercial waste container for ongoing trash service at restaurants, offices, and apartment buildings. It is not a one-time rental for home projects.' },
+      { q: 'How big is a 3-yard dumpster?', a: 'A 3-yard container is approximately 6 feet long, 3 feet wide, and 4 feet tall. It holds about 12 standard trash bags.' },
+      { q: 'Can I get a 3-yard dumpster for a weekend project?', a: 'No — 3-yard containers are for scheduled commercial waste pickup. For weekend home projects, rent a 10-yard roll-off dumpster instead.' },
+      { q: 'How does a 3-yard compare to a 10-yard dumpster?', a: 'A 3-yard is a small commercial front-load bin (ongoing service). A 10-yard is a roll-off container (one-time delivery). The 10-yard holds about 3x more volume and is designed for project-based waste.' },
+    ],
+  },
   10: {
     yards: 10,
     slug: '10-yard',
@@ -91,6 +143,32 @@ const SIZE_DATA: Record<number, SizeData> = {
         q: 'What happens if I exceed the weight limit?',
         a: 'Most 10-yard dumpsters include 2 tons of debris. Additional weight is billed at $60–$100 per ton. Avoid overfilling and ask about weight limits when booking.',
       },
+    ],
+  },
+  12: {
+    yards: 12,
+    slug: '12-yard',
+    dimensions: '13 × 7.5 × 3.5 ft',
+    lengthFt: 13,
+    widthFt: 7.5,
+    heightFt: 3.5,
+    weightLimit: '2–4 tons (4,000–8,000 lbs)',
+    avgPriceLow: 300,
+    avgPriceHigh: 475,
+    rentalDays: '7–10 days',
+    equivalent: '3.5–5 pickup truck loads',
+    intro: 'The 12-yard dumpster is a mid-size option that falls between the standard 10-yard and 15-yard containers. Not every rental company offers a 12-yard, but those that do position it as a "just right" option for projects that are slightly too large for a 10-yard but don\'t need the extra capacity of a 15. It is especially popular for bathroom-plus-bedroom remodels, medium garage cleanouts, and small deck removals.',
+    whatFits: ['Bathroom + bedroom remodel debris', 'Medium garage or shed cleanout', 'Small deck or porch demolition', 'Carpet and flooring from 2–3 rooms', 'Moderate yard waste and landscaping debris'],
+    doesNotFit: ['Whole-house cleanouts', 'Large roofing projects', 'Heavy construction debris', 'Major renovation jobs'],
+    bestFor: ['Multi-room remodels (2–3 rooms)', 'Medium garage or basement cleanouts', 'Small deck or fence removal', 'Downsizing and decluttering projects'],
+    notGoodFor: ['Large construction or demolition jobs', 'Whole-house estate cleanouts', 'Commercial projects'],
+    heavyMaterialNote: 'Like the 10-yard, the 12-yard can hit its weight limit quickly with dense materials such as concrete, tile, or dirt. Confirm the included tonnage with your rental company before loading heavy debris.',
+    faqs: [
+      { q: 'How much does a 12-yard dumpster cost?', a: 'A 12-yard dumpster typically costs $300–$475, including delivery, pickup, and a standard weight allowance. Pricing varies by location and company.' },
+      { q: 'Is a 12-yard dumpster common?', a: 'Not all companies offer a 12-yard — it is less standard than the 10 or 15-yard. If your local provider does not carry it, a 15-yard is the next closest size and typically costs only $25–$50 more.' },
+      { q: 'What is the difference between a 10-yard and 12-yard dumpster?', a: 'A 12-yard is about 1 foot longer and has roughly 20% more volume than a 10-yard. It is a good choice when a 10-yard feels borderline tight for your project scope.' },
+      { q: 'Will a 12-yard dumpster fit in my driveway?', a: 'Yes — at 13 feet long, it fits in most standard driveways. It is only slightly longer than a 10-yard container.' },
+      { q: 'How long can I keep a 12-yard dumpster?', a: 'Standard rental is 7–10 days. Extensions cost $5–$15/day. Most home projects finish well within this window.' },
     ],
   },
   15: {
@@ -350,7 +428,7 @@ const SIZE_DATA: Record<number, SizeData> = {
   },
 }
 
-const ALL_SIZES = [10, 15, 20, 30, 40]
+const ALL_SIZES = [2, 3, 10, 12, 15, 20, 30, 40]
 
 // ─── Static params ────────────────────────────────────────────────────────────
 
@@ -370,8 +448,8 @@ export async function generateMetadata({
   const data = SIZE_DATA[yards]
   if (!data) return { title: 'Not Found' }
 
-  const title = `${yards} Yard Dumpster Rental — Size Guide, Dimensions & Pricing (2026)`
-  const description = `${yards}-yard roll-off dumpster: ${data.dimensions}, capacity ${data.equivalent}, avg cost ${formatPrice(data.avgPriceLow)}–${formatPrice(data.avgPriceHigh)}. See what fits, best uses, and how to rent one.`
+  const title = `${yards}-Yard Dumpster Rental Cost & Size Guide (2026)`
+  const description = `Rent a ${yards}-yard dumpster: ${data.dimensions}, holds ${data.equivalent}. Average rental cost ${formatPrice(data.avgPriceLow)}–${formatPrice(data.avgPriceHigh)}. See what fits and how to rent.`
 
   return {
     title,
@@ -435,7 +513,7 @@ export default async function SizePage({
           ]} />
 
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold text-gray-900">
-            {yards} Yard Dumpster — Size Guide, Dimensions & Pricing
+            {yards}-Yard Dumpster Rental — Cost, Dimensions & Size Guide
           </h1>
 
           {/* Specs strip */}
