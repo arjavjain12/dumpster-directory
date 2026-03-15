@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: {
     default: 'DumpsterListing — Find Dumpster Rental Companies Near You',
-    template: '%s | DumpsterListing',
+    template: '%s',
   },
   description:
     'Compare dumpster rental companies in your city. Get free quotes from local providers. 10, 20, 30, 40 yard roll-off dumpsters available.',

@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { STATE_NAMES } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Near Me — Compare Local Companies & Prices (2026)',
+  title: 'Dumpster Rental Near Me — Compare & Get Quotes (2026)',
   description:
     'Find dumpster rental companies in any US city. Compare prices on 10, 20, 30, and 40 yard roll-off dumpsters. Free quotes from local providers in 31,000+ cities.',
   alternates: { canonical: '/dumpster-rental' },

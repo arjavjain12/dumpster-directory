@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Dispose of Old Paint | Latex & Oil-Based | DumpsterListing',
+  title: 'How to Dispose of Old Paint — Latex & Oil-Based (2026)',
   description:
     'Proper paint disposal for latex and oil-based paint — free drop-off programs, drying out latex paint, and when you need a hazmat contractor.',
   alternates: { canonical: '/how-to-dispose-of-paint' },

@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import CubicYardCalculator from './CubicYardCalculator'
 
 export const metadata: Metadata = {
-  title: 'Cubic Yard Calculator — Convert Dimensions to Cubic Yards (2026)',
+  title: 'Cubic Yard Calculator — Dimensions to CY (2026)',
   description:
     'Calculate cubic yards from feet, inches, or yards. Add multiple areas. Instantly see how many cubic yards of debris you have and which dumpster size you need.',
   alternates: { canonical: '/cubic-yard-calculator' },

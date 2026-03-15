@@ -26,7 +26,8 @@ export async function generateMetadata({
   if (!data) return { title: 'Not Found' }
   const stateName = STATE_NAMES[state] ?? titleCase(state)
   const year = new Date().getFullYear()
-  const title = `Dumpster Rental Cost in ${data.city.city_name}, ${stateName} (${year} Pricing Guide)`
+  const stateAbbr = Object.entries(STATE_NAMES).find(([, v]) => v === stateName)?.[0]?.toUpperCase() ?? ''
+  const title = `Dumpster Rental Cost in ${data.city.city_name}, ${stateAbbr} (${year})`
   const description = `How much does dumpster rental cost in ${data.city.city_name}? Compare 10–40 yard prices, rental fees, and what affects cost in ${data.city.city_name}, ${stateName}.`
   return {
     title, description,

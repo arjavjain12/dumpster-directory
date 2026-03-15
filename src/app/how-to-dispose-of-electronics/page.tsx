@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Dispose of Electronics (E-Waste) | DumpsterListing',
+  title: 'How to Dispose of Electronics & E-Waste (2026)',
   description:
     'Learn how to properly dispose of old electronics, TVs, computers, and phones. Find free e-waste recycling near you — and when a dumpster rental makes sense.',
   alternates: { canonical: '/how-to-dispose-of-electronics' },

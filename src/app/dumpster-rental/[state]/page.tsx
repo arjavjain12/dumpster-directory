@@ -25,7 +25,7 @@ export async function generateMetadata({
   const data = await getStateData(state)
   if (!data) return { title: 'Not Found' }
   const cityCount = data.cities.length
-  const title = `Dumpster Rental in ${data.stateName} | ${cityCount} Cities — Compare Local Companies`
+  const title = `Dumpster Rental in ${data.stateName} | ${cityCount} Cities`
   const description = `Find dumpster rental companies in ${data.stateName}. Compare prices across ${cityCount} cities. Free quotes on 10–40 yard roll-off dumpsters from local providers.`
   return {
     title, description,

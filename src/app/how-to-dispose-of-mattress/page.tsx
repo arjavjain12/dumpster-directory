@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Dispose of a Mattress | Free & Paid Options | DumpsterListing',
+  title: 'How to Dispose of a Mattress: Free & Paid Options',
   description:
     'The cheapest ways to get rid of an old mattress — free pickup programs, retailer take-back, donation, recycling, and when to use a dumpster rental.',
   alternates: { canonical: '/how-to-dispose-of-mattress' },

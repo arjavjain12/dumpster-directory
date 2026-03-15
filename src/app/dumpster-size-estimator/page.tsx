@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import DumpsterEstimator from './DumpsterEstimator'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Size Estimator — What Size Dumpster Do I Need? (2026)',
+  title: 'Dumpster Size Estimator — What Size Do I Need? (2026)',
   description:
     'Find out exactly what size dumpster you need. Select your project type, add specific items, and get an instant recommendation with 20% packing buffer — free.',
   alternates: { canonical: '/dumpster-size-estimator' },

@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import WeightLimitCalculator from './WeightLimitCalculator'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Weight Limit Calculator — Estimate Your Load (2026)',
+  title: 'Dumpster Weight Limit Calculator (2026)',
   description:
     "Calculate whether your debris will exceed your dumpster's weight limit. Instantly estimate weight by material type and see potential overage fees.",
   alternates: { canonical: '/dumpster-weight-limit-calculator' },

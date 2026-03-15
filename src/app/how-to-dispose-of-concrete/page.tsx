@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Dispose of Concrete: 6 Methods + Cost Guide (2026) | DumpsterListing',
+  title: 'How to Dispose of Concrete: 6 Methods + Costs (2026)',
   description:
     'Learn the best ways to dispose of concrete in 2026. Includes city-by-city dumpster prices, weight limits, recycling options, overage fee warnings, and free disposal methods.',
   alternates: { canonical: '/how-to-dispose-of-concrete' },

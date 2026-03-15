@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import DrywallCalculator from './DrywallCalculator'
 
 export const metadata: Metadata = {
-  title: 'Drywall Weight Calculator — How Heavy Is My Drywall? (2026)',
+  title: 'Drywall Weight Calculator — Estimate Your Load (2026)',
   description:
     'Calculate drywall weight by room dimensions or square footage. Get weight in lbs/tons, number of sheets, and the right dumpster size for drywall removal.',
   alternates: { canonical: '/drywall-weight-calculator' },

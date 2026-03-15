@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import ConcreteCalculator from './ConcreteCalculator'
 
 export const metadata: Metadata = {
-  title: 'Concrete Weight Calculator — How Heavy Is My Concrete? (2026)',
+  title: 'Concrete Weight Calculator — Estimate Your Load (2026)',
   description:
     'Calculate the weight of concrete by entering dimensions. Instantly get weight in lbs and tons, cubic yards, and the right dumpster size for your concrete removal project.',
   alternates: { canonical: '/concrete-weight-calculator' },

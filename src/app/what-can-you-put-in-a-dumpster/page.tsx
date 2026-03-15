@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, XCircle, AlertTriangle } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'What Can You Put in a Dumpster? Allowed & Prohibited Items (2026)',
+  title: 'What Can You Put in a Dumpster? Full Items List (2026)',
   description:
     'Complete list of what you can and cannot put in a rental dumpster — furniture, appliances, construction debris, yard waste, and hazardous materials.',
   alternates: { canonical: '/what-can-you-put-in-a-dumpster' },

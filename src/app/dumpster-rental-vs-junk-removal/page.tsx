@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, XCircle } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental vs Junk Removal: Which Should You Choose? (2026)',
+  title: 'Dumpster Rental vs Junk Removal: Full Comparison (2026)',
   description:
     'Dumpster rental or junk removal — which is cheaper and better for your project? Compare costs, convenience, and use cases to make the right choice.',
   alternates: { canonical: '/dumpster-rental-vs-junk-removal' },
