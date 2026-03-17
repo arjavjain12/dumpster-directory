@@ -11,8 +11,8 @@ const auth = new google.auth.GoogleAuth({
 const sc = google.searchconsole({ version: 'v1', auth })
 
 // Last 30 days (GSC has ~3 day lag)
-const end = new Date('2026-03-13')
-const start = new Date('2026-02-25')
+const end = new Date('2026-03-14')
+const start = new Date('2026-03-06')
 
 const { data } = await sc.searchanalytics.query({
   siteUrl: SITE_URL,

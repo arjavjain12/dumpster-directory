@@ -1,9 +1,53 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Search, Star, FileText, Truck, Shield, Clock, MapPin, ArrowRight, CheckCircle } from 'lucide-react'
 import { STATE_NAMES } from '@/lib/utils'
 import { getPopularCities } from '@/lib/supabase'
 import HowItWorksInfographic from '@/components/infographics/HowItWorksInfographic'
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://dumpsterlisting.com' },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does dumpster rental cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Dumpster rental costs range from $250 to $750 depending on container size and location. The national average for a 20-yard roll-off is $350–$450. Smaller 10-yard dumpsters average $250–$350, while large 40-yard containers run $555–$750.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What size dumpster do I need?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A 10-yard dumpster suits single-room cleanouts. A 20-yard is the most popular for whole-home renovations. A 30-yard works for larger construction jobs. A 40-yard handles new construction or major demolition. When unsure, go one size up.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I find dumpster rental near me?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Use DumpsterListing to search by city and compare local dumpster rental companies. Browse by state or city, view ratings and contact info, and get free quotes from multiple providers in your area.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long can I keep a rental dumpster?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard rental periods are 7 to 14 days. Most companies charge $5–$15 per extra day if you need more time. Communicate your timeline upfront to avoid surprise fees.',
+      },
+    },
+  ],
+}
 
 export default async function Home() {
   const popularCities = await getPopularCities(10)
@@ -13,6 +57,7 @@ export default async function Home() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ───────── Hero ───────── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-green-50 to-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(22,163,74,0.12),transparent)]" />
@@ -56,7 +101,7 @@ export default async function Home() {
               {/* Trust bar */}
               <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-gray-500">
                 {[
-                  '5,000+ cities covered',
+                  '31,000+ cities covered',
                   'Free quotes',
                   'No spam',
                   'Local companies',

@@ -1,0 +1,31 @@
+# DumpsterListing
+
+> The largest free directory of dumpster rental companies in the United States, covering 31,000+ cities across all 50 states.
+
+## About
+
+DumpsterListing helps homeowners and contractors find and compare local dumpster rental companies. All data is free to access. Pricing data is collected from 500+ providers and updated monthly.
+
+## Key Pages
+
+- [Homepage](https://dumpsterlisting.com) — Search dumpster rental by city
+- [How Much Does Dumpster Rental Cost?](https://dumpsterlisting.com/how-much-does-dumpster-rental-cost) — Pricing by size, city type, and project
+- [Dumpster Sizes Guide](https://dumpsterlisting.com/dumpster-sizes) — 10, 15, 20, 30, 40 yard comparisons
+- [Dumpster Rental Near Me](https://dumpsterlisting.com/dumpster-rental-near-me) — Find local companies
+- [Dumpster Size Estimator](https://dumpsterlisting.com/dumpster-size-estimator) — Calculator tool
+- [What Can You Put in a Dumpster?](https://dumpsterlisting.com/what-can-you-put-in-a-dumpster) — Allowed and prohibited items
+- [Dumpster Rental vs Junk Removal](https://dumpsterlisting.com/dumpster-rental-vs-junk-removal) — Full comparison
+- [Construction Dumpster Rental](https://dumpsterlisting.com/dumpster-rental/construction)
+- [Residential Dumpster Rental](https://dumpsterlisting.com/dumpster-rental/residential)
+- [About DumpsterListing](https://dumpsterlisting.com/about) — Data methodology and team
+
+## Data Coverage
+
+- 31,000+ US cities with dumpster rental listings
+- 500+ verified dumpster rental companies
+- Pricing data for 10, 15, 20, 30, and 40 yard roll-off containers
+- Updated monthly
+
+## Contact
+
+hello@dumpsterlisting.com
