@@ -11,9 +11,11 @@ interface FAQItem {
 interface FAQProps {
   items: FAQItem[]
   cityName: string
+  /** Set to false to suppress FAQPage JSON-LD (e.g. on templated pages). Defaults to true. */
+  emitSchema?: boolean
 }
 
-export default function FAQ({ items, cityName }: FAQProps) {
+export default function FAQ({ items, cityName, emitSchema = true }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const jsonLd = {
@@ -28,10 +30,12 @@ export default function FAQ({ items, cityName }: FAQProps) {
 
   return (
     <section className="py-12">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {emitSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
 
       <h2 className="mb-8 text-2xl font-bold text-gray-900">
         Frequently Asked Questions — Dumpster Rental in {cityName}

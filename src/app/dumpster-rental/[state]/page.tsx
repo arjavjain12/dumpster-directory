@@ -80,20 +80,11 @@ export default async function StatePage({
     })),
   }
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Dumpster Rental', item: `${siteUrl}/dumpster-rental` },
-      { '@type': 'ListItem', position: 3, name: `Dumpster Rental in ${stateName}`, item: `${siteUrl}/dumpster-rental/${stateSlug}` },
-    ],
-  }
+  // BreadcrumbList schema is already emitted by the <Breadcrumbs> component below.
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(stateSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -152,7 +143,7 @@ export default async function StatePage({
         </div>
 
         <div className="mt-12">
-          <FAQ items={faqs} cityName={stateName} />
+          <FAQ items={faqs} cityName={stateName} emitSchema={false} />
         </div>
       </div>
     </>

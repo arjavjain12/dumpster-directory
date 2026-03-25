@@ -245,7 +245,7 @@ export default async function CityPage({
             <WhatFitsInfographic />
 
             {/* FAQ */}
-            <FAQ items={faqs} cityName={city.city_name} />
+            <FAQ items={faqs} cityName={city.city_name} emitSchema={false} />
           </div>
 
           {/* Sidebar */}
