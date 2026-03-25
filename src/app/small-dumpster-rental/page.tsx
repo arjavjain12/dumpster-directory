@@ -12,6 +12,7 @@ import {
   Package,
 } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Small Dumpster Rental — 10 & 15 Yard Options Near You (2026)',
@@ -179,6 +180,7 @@ export default function SmallDumpsterRentalPage() {
             from local companies across the country. Whether you&apos;re doing a bathroom remodel, clearing
             out a garage, or hauling yard debris, a compact roll-off can handle the job.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"

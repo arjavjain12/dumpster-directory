@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How to Dispose of a Mattress: Free & Paid Options',
@@ -290,6 +291,7 @@ export default function HowToDisposeOfMattressPage() {
             Here's every option ranked by cost and effort, including programs that won't cost you
             a cent.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={5} />
         </div>
       </div>
 

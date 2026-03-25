@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How Long Can You Keep a Rental Dumpster? (2026 Guide)',
@@ -124,6 +125,7 @@ export default function HowLongKeepDumpsterPage() {
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             Most dumpster rentals include 7–14 days. Extensions are available for $5–$15/day, and long-term monthly rentals are an option for larger projects. Here&apos;s what you need to know to avoid surprise fees.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={5} />
         </div>
       </div>
 

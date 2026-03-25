@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, AlertTriangle, HardHat, DollarSign, Wrench } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental for Contractors: Commercial & Bulk Options | DumpsterListing',
@@ -263,6 +264,7 @@ export default function DumpsterRentalForContractorsPage() {
             guide covers everything a contractor needs — right-sizing by project type, weight limits, commercial
             account setup, debris separation strategies, and how to find the haulers who serve your market well.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={10} />
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"

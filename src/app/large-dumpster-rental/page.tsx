@@ -12,6 +12,7 @@ import {
   Truck,
 } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Large Dumpster Rental — 20, 30 & 40 Yard Roll-Off Options (2026)',
@@ -186,6 +187,7 @@ export default function LargeDumpsterRentalPage() {
             isn&apos;t going to cut it, this guide covers everything you need to choose the right large container,
             understand the cost, and find one near you.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"

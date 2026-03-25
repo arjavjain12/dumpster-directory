@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How to Dispose of Yard Waste: 6 Options Compared (2026)',
@@ -232,6 +233,7 @@ export default function HowToDisposeOfYardWastePage() {
             best solution. Here's how to choose the right method based on your volume, budget,
             and timeline.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
         </div>
       </div>
 

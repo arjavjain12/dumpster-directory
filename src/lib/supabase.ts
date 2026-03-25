@@ -70,6 +70,36 @@ export async function getBusinessesByCity(cityId: number) {
   return data || []
 }
 
+/**
+ * For cities with 0 local businesses, fetch businesses from nearby cities
+ * (within ~30 miles) that serve the area.
+ */
+export async function getNearbyBusinesses(cityId: number, lat: number, lng: number, limit = 10) {
+  // Get nearby city IDs
+  const { data: nearbyCities } = await getClient()
+    .rpc('nearby_cities', { city_id: cityId, lat, lng, limit_count: 15 })
+
+  if (!nearbyCities || nearbyCities.length === 0) return []
+
+  // Filter to within ~30 miles
+  const closeCityIds = nearbyCities
+    .filter((c: { distance_miles: number }) => c.distance_miles <= 30)
+    .map((c: { id: number }) => c.id)
+
+  if (closeCityIds.length === 0) return []
+
+  // Fetch businesses from those cities
+  const { data } = await getClient()
+    .from('businesses')
+    .select('*, city:cities(city_name, state, state_slug, city_slug)')
+    .in('city_id', closeCityIds)
+    .eq('is_active', true)
+    .order('rating', { ascending: false })
+    .limit(limit)
+
+  return data || []
+}
+
 export async function getBusinessBySlug(cityId: number, businessSlug: string) {
   const { data, error } = await getClient()
     .from('businesses')

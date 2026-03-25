@@ -67,20 +67,33 @@ export default async function StatePage({
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpsterlisting.com'
 
+  // Sort cities by population (descending) for the "Top Cities" section,
+  // and alphabetically for the full A-Z directory below.
+  const topCities = [...cities].sort((a, b) => b.population - a.population).slice(0, 20)
+  const sortedCities = [...cities].sort((a, b) => a.city_name.localeCompare(b.city_name))
+
+  // Group cities by first letter for the A-Z directory
+  const cityGroups: Record<string, typeof cities> = {}
+  for (const city of sortedCities) {
+    const letter = city.city_name.charAt(0).toUpperCase()
+    if (!cityGroups[letter]) cityGroups[letter] = []
+    cityGroups[letter].push(city)
+  }
+  const letters = Object.keys(cityGroups).sort()
+
+  // Only include top cities in ItemList schema to keep it manageable
   const stateSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: `Dumpster Rental Companies in ${stateName}`,
     numberOfItems: cities.length,
-    itemListElement: cities.map((c, i) => ({
+    itemListElement: topCities.map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: `${c.city_name} Dumpster Rental`,
       url: `${siteUrl}/dumpster-rental/${stateSlug}/${c.city_slug}`,
     })),
   }
-
-  // BreadcrumbList schema is already emitted by the <Breadcrumbs> component below.
 
   return (
     <>
@@ -105,16 +118,13 @@ export default async function StatePage({
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl font-bold text-gray-900">
-            {cities.length} {cities.length === 1 ? 'City' : 'Cities'} in {stateName}
+        {/* Top cities by population */}
+        <div className="mb-10">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            Top Cities in {stateName}
           </h2>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {cities
-            .sort((a, b) => b.population - a.population)
-            .map((city) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {topCities.map((city) => (
               <Link
                 key={city.id}
                 href={`/dumpster-rental/${stateSlug}/${city.city_slug}`}
@@ -140,6 +150,47 @@ export default async function StatePage({
                 <ArrowRight className="h-4 w-4 text-gray-300 group-hover:text-green-500 transition shrink-0 mt-0.5" />
               </Link>
             ))}
+          </div>
+        </div>
+
+        {/* A-Z letter navigation */}
+        <div className="mb-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            All {cities.length} {cities.length === 1 ? 'City' : 'Cities'} in {stateName}
+          </h2>
+          <div className="flex flex-wrap gap-1.5">
+            {letters.map((letter) => (
+              <a
+                key={letter}
+                href={`#letter-${letter}`}
+                className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-gray-200 bg-white text-sm font-semibold text-gray-700 hover:border-green-400 hover:text-green-700 transition"
+              >
+                {letter}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Grouped city list */}
+        <div className="space-y-8">
+          {letters.map((letter) => (
+            <div key={letter} id={`letter-${letter}`}>
+              <h3 className="text-lg font-bold text-gray-800 mb-3 border-b border-gray-200 pb-2">
+                {letter}
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-1.5">
+                {cityGroups[letter].map((city) => (
+                  <Link
+                    key={city.id}
+                    href={`/dumpster-rental/${stateSlug}/${city.city_slug}`}
+                    className="text-sm text-gray-600 hover:text-green-700 transition truncate py-0.5"
+                  >
+                    {city.city_name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="mt-12">
