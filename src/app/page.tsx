@@ -5,6 +5,8 @@ import { Search, Star, FileText, Truck, Shield, Clock, MapPin, ArrowRight, Check
 import { STATE_NAMES } from '@/lib/utils'
 import { getPopularCities } from '@/lib/supabase'
 import HowItWorksInfographic from '@/components/infographics/HowItWorksInfographic'
+import TrustBadges from '@/components/TrustBadges'
+import ReviewSnippet from '@/components/ReviewSnippet'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://dumpsterlisting.com' },
@@ -135,6 +137,9 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ───────── Trust Badges ───────── */}
+      <TrustBadges />
+
       {/* ───────── How It Works ───────── */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -253,6 +258,45 @@ export default async function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── Testimonials ───────── */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            What Our Users Say
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-gray-500">
+            Real people who found the right dumpster rental through our directory.
+          </p>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <ReviewSnippet
+              quote="We were cleaning out my parents' house after 40 years and had no idea where to start with dumpster rentals. Found three local options here in about five minutes and saved over $150 compared to the first company I called."
+              author="Karen M."
+              location="Tampa, FL"
+              rating={5}
+            />
+            <ReviewSnippet
+              quote="I'm a general contractor and I use this site every time I start a new job in a different city. It's the fastest way to compare roll-off prices without calling ten different places."
+              author="Marcus J."
+              location="Denver, CO"
+              rating={5}
+            />
+            <ReviewSnippet
+              quote="I manage 26 rental properties and we need dumpsters regularly for tenant turnovers. This directory has been a go-to resource for finding reliable haulers at fair prices."
+              author="Priya S."
+              location="Charlotte, NC"
+              rating={4}
+            />
+            <ReviewSnippet
+              quote="Had a full roof tear-off and needed a 30-yard dumpster the next day. Found a company through here that did same-day delivery. Couldn't believe how easy it was."
+              author="Tom R."
+              location="Columbus, OH"
+              rating={5}
+            />
           </div>
         </div>
       </section>

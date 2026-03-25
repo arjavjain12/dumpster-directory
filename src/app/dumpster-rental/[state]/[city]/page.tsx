@@ -122,7 +122,16 @@ export default async function CityPage({
   const { city, businesses, pricing, nearby, isShowingNearby } = data
   const stateName = STATE_NAMES[stateSlug] ?? titleCase(stateSlug)
   const stateAbbr = Object.entries(STATE_NAMES).find(([, v]) => v === stateName)?.[0]?.toUpperCase() ?? ''
-  const faqs = getCityFAQs(city.city_name, stateName)
+  const twentyYdPricing = pricing.find((p: { size_yards: number }) => p.size_yards === 20)
+  const avgPrice20yd = twentyYdPricing
+    ? `$${twentyYdPricing.price_low}–$${twentyYdPricing.price_high}`
+    : undefined
+  const faqs = getCityFAQs(city.city_name, stateName, {
+    bizCount: businesses.length,
+    avgPrice20yd,
+    population: city.population,
+    county: city.county,
+  })
   const avgRating = businesses.length
     ? (businesses.reduce((acc, b) => acc + (b.rating ?? 0), 0) / businesses.length).toFixed(1)
     : null

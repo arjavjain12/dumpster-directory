@@ -63,7 +63,7 @@ export default async function StatePage({
   if (!data) notFound()
 
   const { cities, stateName } = data
-  const faqs = getStateFAQs(stateName)
+  const faqs = getStateFAQs(stateName, cities.length)
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpsterlisting.com'
 

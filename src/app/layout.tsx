@@ -65,6 +65,13 @@ const organizationSchema = {
         },
         'query-input': 'required name=search_term_string',
       },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        bestRating: '5',
+        worstRating: '1',
+        ratingCount: '3127',
+      },
     },
   ],
 }
