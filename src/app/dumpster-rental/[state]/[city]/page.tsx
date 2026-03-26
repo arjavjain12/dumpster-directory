@@ -11,7 +11,7 @@ import FAQ from '@/components/FAQ'
 
 import { titleCase, formatNumber, STATE_NAMES } from '@/lib/utils'
 import { getCityFAQs } from '@/lib/faq'
-import { getCityBySlug, getBusinessesByCity, getCityPricing, getNearbyCities } from '@/lib/supabase'
+import { getCityBySlug, getBusinessesByCity, getNearbyBusinesses, getCityPricing, getNearbyCities } from '@/lib/supabase'
 import { getAllCitySlugs } from '@/lib/supabase'
 import WhatFitsInfographic from '@/components/infographics/WhatFitsInfographic'
 
@@ -22,13 +22,24 @@ async function getCityData(stateSlug: string, citySlug: string) {
   const city = await getCityBySlug(stateSlug, citySlug)
   if (!city) return null
 
-  const [businesses, pricing, nearby] = await Promise.all([
+  const [localBusinesses, pricing, nearby] = await Promise.all([
     getBusinessesByCity(city.id),
     getCityPricing(city.id),
     getNearbyCities(city.id, city.latitude, city.longitude, 5),
   ])
 
-  return { city, businesses, pricing, nearby }
+  // If no local businesses, pull in businesses from nearby cities
+  let businesses = localBusinesses
+  let isShowingNearby = false
+  if (businesses.length === 0) {
+    const nearbyBiz = await getNearbyBusinesses(city.id, city.latitude, city.longitude, 10)
+    if (nearbyBiz.length > 0) {
+      businesses = nearbyBiz
+      isShowingNearby = true
+    }
+  }
+
+  return { city, businesses, pricing, nearby, isShowingNearby }
 }
 
 // --- Metadata ---
@@ -63,6 +74,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // Noindex cities with no business listings to avoid thin-content penalties
+    ...(bizCount === 0 && {
+      robots: { index: false, follow: true },
+    }),
     alternates: {
       canonical: `/dumpster-rental/${state}/${city}`,
     },
@@ -104,10 +119,19 @@ export default async function CityPage({
 
   if (!data) notFound()
 
-  const { city, businesses, pricing, nearby } = data
+  const { city, businesses, pricing, nearby, isShowingNearby } = data
   const stateName = STATE_NAMES[stateSlug] ?? titleCase(stateSlug)
   const stateAbbr = Object.entries(STATE_NAMES).find(([, v]) => v === stateName)?.[0]?.toUpperCase() ?? ''
-  const faqs = getCityFAQs(city.city_name, stateName)
+  const twentyYdPricing = pricing.find((p: { size_yards: number }) => p.size_yards === 20)
+  const avgPrice20yd = twentyYdPricing
+    ? `$${twentyYdPricing.price_low}–$${twentyYdPricing.price_high}`
+    : undefined
+  const faqs = getCityFAQs(city.city_name, stateName, {
+    bizCount: businesses.length,
+    avgPrice20yd,
+    population: city.population,
+    county: city.county,
+  })
   const avgRating = businesses.length
     ? (businesses.reduce((acc, b) => acc + (b.rating ?? 0), 0) / businesses.length).toFixed(1)
     : null
@@ -216,10 +240,19 @@ export default async function CityPage({
             <div>
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-2xl font-bold text-gray-900">
-                  Dumpster Rental Companies in {city.city_name}
+                  {isShowingNearby
+                    ? `Dumpster Rental Companies Serving ${city.city_name}`
+                    : `Dumpster Rental Companies in ${city.city_name}`}
                 </h2>
                 <span className="text-sm text-gray-500">{businesses.length} listed</span>
               </div>
+
+              {isShowingNearby && businesses.length > 0 && (
+                <div className="mb-4 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
+                  These companies are located in nearby cities and serve the {city.city_name} area.
+                  Contact them to confirm service availability at your address.
+                </div>
+              )}
 
               {businesses.length > 0 ? (
                 <div className="space-y-4">
@@ -227,8 +260,8 @@ export default async function CityPage({
                     <BusinessCard
                       key={b.id}
                       business={b}
-                      stateSlug={stateSlug}
-                      citySlug={citySlug}
+                      stateSlug={isShowingNearby && b.city ? b.city.state_slug : stateSlug}
+                      citySlug={isShowingNearby && b.city ? b.city.city_slug : citySlug}
                     />
                   ))}
                 </div>
@@ -245,7 +278,7 @@ export default async function CityPage({
             <WhatFitsInfographic />
 
             {/* FAQ */}
-            <FAQ items={faqs} cityName={city.city_name} />
+            <FAQ items={faqs} cityName={city.city_name} emitSchema={false} />
           </div>
 
           {/* Sidebar */}

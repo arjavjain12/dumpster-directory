@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Roll-Off Dumpster Sizes: 10 to 40 Yard Guide (2026)',
@@ -135,6 +136,7 @@ export default function RollOffDumpsterSizesPage() {
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             Roll-off dumpsters come in five standard sizes: 10, 15, 20, 30, and 40 cubic yards. Here&apos;s everything you need to know about dimensions, pricing, and which size fits your project.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
         </div>
       </div>
 

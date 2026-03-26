@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next'
+import { STATE_NAMES } from '@/lib/utils'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dumpsterlisting.com'
 
-// This is the main sitemap. It covers all static, category, and state-level
-// pages. The large dynamic collections (cities, businesses) are split into
-// dedicated sub-sitemaps served from their own routes so that no single
-// sitemap exceeds the 50 000-URL / 50 MB limit.
+// This is the main sitemap. It covers all static, category, state-level,
+// and size pages. The large dynamic collections (cities, businesses) are
+// split into dedicated sub-sitemaps served from their own routes so that
+// no single sitemap exceeds the 50 000-URL / 50 MB limit.
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
@@ -230,5 +231,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...sizePages, ...categoryPages]
+  // ── State pages ─────────────────────────────────────────────────────────────
+  const statePages: MetadataRoute.Sitemap = Object.values(STATE_NAMES).map((name) => ({
+    url: `${BASE_URL}/dumpster-rental/${name.toLowerCase().replace(/\s+/g, '-')}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...sizePages, ...categoryPages, ...statePages]
 }

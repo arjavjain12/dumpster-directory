@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Info } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 import { formatPrice, DEFAULT_PRICING } from '@/lib/utils'
 
 export const metadata: Metadata = {
@@ -177,6 +178,7 @@ export default function CostGuidePage() {
             This guide breaks down pricing by size, what drives costs up or down, and how to get the best rate
             from local companies.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={10} showMethodology />
         </div>
       </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How to Dispose of Furniture: 6 Options (Free & Paid) (2026)',
@@ -223,6 +224,7 @@ export default function HowToDisposeOfFurniturePage() {
             pickup to dumpster rental, here are all your options ranked by cost and effort — so you
             can choose the right one for your situation.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={5} />
         </div>
       </div>
 

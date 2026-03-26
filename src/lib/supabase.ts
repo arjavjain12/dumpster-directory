@@ -12,12 +12,7 @@ export function getClient(): SupabaseClient {
   if (!url || !key || url.startsWith('your_')) {
     throw new Error('Supabase credentials not configured. Add them to .env.local')
   }
-  _client = createClient(url, key, {
-    global: {
-      // Bypass Next.js fetch cache so ISR regenerations always get fresh data
-      fetch: (input, init) => fetch(input, { ...init, cache: 'no-store' }),
-    },
-  })
+  _client = createClient(url, key)
   return _client
 }
 
@@ -72,6 +67,36 @@ export async function getBusinessesByCity(cityId: number) {
     .eq('is_active', true)
     .order('tier', { ascending: false })
     .order('rating', { ascending: false })
+  return data || []
+}
+
+/**
+ * For cities with 0 local businesses, fetch businesses from nearby cities
+ * (within ~30 miles) that serve the area.
+ */
+export async function getNearbyBusinesses(cityId: number, lat: number, lng: number, limit = 10) {
+  // Get nearby city IDs
+  const { data: nearbyCities } = await getClient()
+    .rpc('nearby_cities', { city_id: cityId, lat, lng, limit_count: 15 })
+
+  if (!nearbyCities || nearbyCities.length === 0) return []
+
+  // Filter to within ~30 miles
+  const closeCityIds = nearbyCities
+    .filter((c: { distance_miles: number }) => c.distance_miles <= 30)
+    .map((c: { id: number }) => c.id)
+
+  if (closeCityIds.length === 0) return []
+
+  // Fetch businesses from those cities
+  const { data } = await getClient()
+    .from('businesses')
+    .select('*, city:cities(city_name, state, state_slug, city_slug)')
+    .in('city_id', closeCityIds)
+    .eq('is_active', true)
+    .order('rating', { ascending: false })
+    .limit(limit)
+
   return data || []
 }
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, AlertTriangle, DollarSign } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Cheap Dumpster Rental Near Me — Affordable Prices (2026)',
@@ -284,6 +285,7 @@ export default function CheapDumpsterRentalPage() {
             what drives cost down, real prices by size, and eight proven tactics to lock in the cheapest rate
             near you — without getting blindsided by hidden fees.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"

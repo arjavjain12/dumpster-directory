@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Do You Need a Permit for a Dumpster? (2026 Guide)',
@@ -151,6 +152,7 @@ export default function DumpsterPermitPage() {
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             The short answer: it depends where the dumpster goes. Private property? Usually no permit needed. Public street? Most cities require one. Here&apos;s everything you need to know.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={5} />
         </div>
       </div>
 

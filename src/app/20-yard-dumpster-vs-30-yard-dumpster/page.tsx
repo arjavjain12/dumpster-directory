@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: '20 Yard vs 30 Yard Dumpster: Which Size Do You Need? (2026)',
@@ -125,6 +126,7 @@ export default function TwentyVsThirtyPage() {
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             Both are popular mid-to-large sizes — but they serve different projects. Here&apos;s exactly how they compare on capacity, price, and use cases so you can pick the right one.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={5} />
         </div>
       </div>
 

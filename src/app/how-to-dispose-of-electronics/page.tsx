@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How to Dispose of Electronics & E-Waste (2026)',
@@ -265,6 +266,7 @@ export default function HowToDisposeOfElectronicsPage() {
             the trash is illegal in 25+ states and harmful everywhere. Here's how to recycle them
             for free, get trade-in credit, and handle large-volume cleanouts the right way.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
         </div>
       </div>
 

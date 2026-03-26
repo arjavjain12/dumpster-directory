@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How to Dispose of Concrete: 6 Methods + Costs (2026)',
@@ -235,6 +236,7 @@ export default function HowToDisposeOfConcretePage() {
             means expensive weight overages. Here's everything you need to know, including 2026
             dumpster prices from cities across the US.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
         </div>
       </div>
 

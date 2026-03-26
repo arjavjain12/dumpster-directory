@@ -20,6 +20,7 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: [
       'https://dumpsterlisting.com/sitemap.xml',
       'https://dumpsterlisting.com/cities-sitemap.xml',
+      'https://dumpsterlisting.com/cities-cost-sitemap.xml',
       'https://dumpsterlisting.com/businesses-sitemap.xml',
     ],
   }

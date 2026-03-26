@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 import { formatPrice } from '@/lib/utils'
 import SizeComparisonInfographic from '@/components/infographics/SizeComparisonInfographic'
 import WeightLimitsInfographic from '@/components/infographics/WeightLimitsInfographic'
@@ -118,6 +119,7 @@ export default function DumpsterSizesPage() {
             Too large and you&apos;re paying for space you don&apos;t need. Use this guide to pick the perfect
             roll-off for your project — from small home cleanouts to large commercial builds.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
         </div>
       </div>
 

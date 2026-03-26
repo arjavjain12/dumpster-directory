@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, ArrowRight, Search, Truck, DollarSign, CheckCircle, Package } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 import { STATE_NAMES } from '@/lib/utils'
 
 export const metadata: Metadata = {
@@ -139,6 +140,7 @@ export default function RentADumpsterPage() {
             local dumpster rental companies, see prices from $275, and schedule delivery online —
             most areas offer next-day or same-day service.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/dumpster-rental-near-me"

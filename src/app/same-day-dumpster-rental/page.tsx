@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, AlertTriangle, Clock } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Same-Day Dumpster Rental: How to Get One Fast (2026)',
@@ -293,6 +294,7 @@ export default function SameDayDumpsterRentalPage() {
             know which companies to call. This guide covers exactly how same-day rental works, which haulers
             offer it, what it costs, and how to lock in a delivery in hours rather than days.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={8} />
           <div className="mt-6">
             <Link
               href="/dumpster-rental-near-me"

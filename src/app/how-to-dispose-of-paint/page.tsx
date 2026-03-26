@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How to Dispose of Old Paint — Latex & Oil-Based (2026)',
@@ -265,6 +266,7 @@ export default function HowToDisposeOfPaintPage() {
             often go in the trash once dried. Oil-based paint is hazardous and requires proper
             disposal. Here's what to do with both — including free programs that make it easy.
           </p>
+          <AuthorByline updatedDate="March 2026" readTimeMin={5} />
         </div>
       </div>
 
