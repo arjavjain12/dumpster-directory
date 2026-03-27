@@ -72,7 +72,7 @@ export default function LeadForm({ cityId, cityName, stateAbbr }: LeadFormProps)
     if (Object.keys(v).length) return
     setLoading(true)
     try {
-      const res = await fetch('https://formspree.io/f/maqdawaj', {
+      const res = await fetch('https://formslist.com/f/eGIvsEnZRERf', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({

@@ -76,7 +76,7 @@ export default function ListingForm() {
     if (Object.keys(v).length) return
     setLoading(true)
     try {
-      const res = await fetch('https://formspree.io/f/xrearzdn', {
+      const res = await fetch('https://formslist.com/f/i5-7XcIB8TZr', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(form),
