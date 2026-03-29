@@ -18,6 +18,16 @@ const TOP_CITIES = [
   { city: 'Denver', state: 'Colorado', stateSlug: 'colorado', citySlug: 'denver' },
   { city: 'Charlotte', state: 'North Carolina', stateSlug: 'north-carolina', citySlug: 'charlotte' },
   { city: 'Nashville', state: 'Tennessee', stateSlug: 'tennessee', citySlug: 'nashville' },
+  { city: 'Philadelphia', state: 'Pennsylvania', stateSlug: 'pennsylvania', citySlug: 'philadelphia' },
+  { city: 'Austin', state: 'Texas', stateSlug: 'texas', citySlug: 'austin' },
+  { city: 'Fort Lauderdale', state: 'Florida', stateSlug: 'florida', citySlug: 'fort-lauderdale' },
+  { city: 'Tampa', state: 'Florida', stateSlug: 'florida', citySlug: 'tampa' },
+  { city: 'San Antonio', state: 'Texas', stateSlug: 'texas', citySlug: 'san-antonio' },
+  { city: 'Columbus', state: 'Ohio', stateSlug: 'ohio', citySlug: 'columbus' },
+  { city: 'Indianapolis', state: 'Indiana', stateSlug: 'indiana', citySlug: 'indianapolis' },
+  { city: 'Las Vegas', state: 'Nevada', stateSlug: 'nevada', citySlug: 'las-vegas' },
+  { city: 'Seattle', state: 'Washington', stateSlug: 'washington', citySlug: 'seattle' },
+  { city: 'Jacksonville', state: 'Florida', stateSlug: 'florida', citySlug: 'jacksonville' },
 ]
 
 export default function CategoryPageLayout({ data }: { data: CategoryData }) {

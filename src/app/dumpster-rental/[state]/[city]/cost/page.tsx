@@ -75,12 +75,56 @@ export default async function CostPage({
     '@type': 'Article',
     headline: `Dumpster Rental Cost in ${city.city_name}, ${stateName}`,
     description: `How much does dumpster rental cost in ${city.city_name}? Compare prices by size.`,
-    author: { '@type': 'Organization', name: 'DumpsterListing' },
+    datePublished: '2026-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+    publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://dumpsterlisting.com/dumpster-rental/${stateSlug}/${citySlug}/cost` },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How much does dumpster rental cost in ${city.city_name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Dumpster rental in ${city.city_name} typically costs ${formatPrice(avgLow)}–${formatPrice(avgHigh)} for a 20-yard roll-off container, which is the most popular size. Smaller 10-yard dumpsters start around $275–$450, while large 40-yard containers run $475–$750.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What size dumpster is cheapest in ${city.city_name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `The 10-yard dumpster is the smallest and least expensive option, typically $275–$450. However, if your project requires more capacity, renting a 20-yard upfront is cheaper than renting a 10-yard twice.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Are there hidden fees with dumpster rentals in ${city.city_name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Common extra charges include weight overages ($60–$100/ton above the limit), extra rental days ($5–$15/day), fuel surcharges, and street permit fees ($20–$100) if the dumpster sits on a public road. Always ask for a full quote including all fees before booking.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `How can I get the cheapest dumpster rental in ${city.city_name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Compare quotes from at least 3 local companies, choose the right size for your project, book 2–3 days in advance, and ask about flat-rate pricing vs weight-based billing. Avoid peak summer/fall demand periods when possible.`,
+        },
+      },
+    ],
   }
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(costSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

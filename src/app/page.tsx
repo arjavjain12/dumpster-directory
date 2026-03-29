@@ -9,46 +9,54 @@ import TrustBadges from '@/components/TrustBadges'
 import ReviewSnippet from '@/components/ReviewSnippet'
 
 export const metadata: Metadata = {
+  title: 'Dumpster Rental Near Me — Find Local Companies & Get Free Quotes',
+  description: 'Find and compare dumpster rental companies in your city. Get free quotes on 10–40 yard roll-off dumpsters from local providers. Prices from $275.',
   alternates: { canonical: 'https://dumpsterlisting.com' },
 }
+
+const homepageFaqs = [
+  {
+    q: 'How much does dumpster rental cost?',
+    a: 'Dumpster rental costs range from $250 to $750 depending on container size and location. The national average for a 20-yard roll-off is $350–$450. Smaller 10-yard dumpsters average $250–$350, while large 40-yard containers run $475–$750.',
+  },
+  {
+    q: 'What size dumpster do I need?',
+    a: 'A 10-yard dumpster suits single-room cleanouts. A 20-yard is the most popular for whole-home renovations. A 30-yard works for larger construction jobs. A 40-yard handles new construction or major demolition. When unsure, go one size up.',
+  },
+  {
+    q: 'How do I find dumpster rental near me?',
+    a: 'Use DumpsterListing to search by city and compare local dumpster rental companies. Browse by state or city, view ratings and contact info, and get free quotes from multiple providers in your area.',
+  },
+  {
+    q: 'How long can I keep a rental dumpster?',
+    a: 'Standard rental periods are 7 to 14 days. Most companies charge $5–$15 per extra day if you need more time. Communicate your timeline upfront to avoid surprise fees.',
+  },
+  {
+    q: 'What can I put in a roll-off dumpster?',
+    a: 'Most household and construction debris is accepted: furniture, appliances, drywall, lumber, carpet, roofing shingles, yard waste, and general junk. Prohibited items typically include hazardous materials (paint, batteries, propane tanks, motor oil), electronics, tires, and medical waste. Always confirm with your local company.',
+  },
+  {
+    q: 'Do I need a permit to rent a dumpster?',
+    a: 'If the dumpster is placed on private property (driveway, yard), no permit is usually required. If it must go on a public street, most cities require a street-use permit costing $20–$100. Your rental company can typically pull the permit for you.',
+  },
+  {
+    q: 'What is a roll-off dumpster?',
+    a: 'A roll-off dumpster is an open-top rectangular container that is rolled off a flatbed truck at your location. Sizes range from 10 to 40 cubic yards. They are used for residential cleanouts, construction debris, roofing tear-offs, and large-scale junk removal projects.',
+  },
+  {
+    q: 'How do I get the cheapest dumpster rental?',
+    a: 'Compare quotes from at least 3 local companies, choose the right container size (upsizing once is cheaper than renting twice), book 2–3 days in advance, and ask about all fees upfront — including fuel surcharges, weight overages, and permit costs. Off-season booking (winter) can also lower prices.',
+  },
+]
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does dumpster rental cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Dumpster rental costs range from $250 to $750 depending on container size and location. The national average for a 20-yard roll-off is $350–$450. Smaller 10-yard dumpsters average $250–$350, while large 40-yard containers run $555–$750.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What size dumpster do I need?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A 10-yard dumpster suits single-room cleanouts. A 20-yard is the most popular for whole-home renovations. A 30-yard works for larger construction jobs. A 40-yard handles new construction or major demolition. When unsure, go one size up.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I find dumpster rental near me?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Use DumpsterListing to search by city and compare local dumpster rental companies. Browse by state or city, view ratings and contact info, and get free quotes from multiple providers in your area.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long can I keep a rental dumpster?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Standard rental periods are 7 to 14 days. Most companies charge $5–$15 per extra day if you need more time. Communicate your timeline upfront to avoid surprise fees.',
-      },
-    },
-  ],
+  mainEntity: homepageFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
 }
 
 export default async function Home() {
@@ -297,6 +305,26 @@ export default async function Home() {
               location="Columbus, OH"
               rating={5}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── FAQ ───────── */}
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-gray-500">
+            Everything you need to know about renting a dumpster.
+          </p>
+          <div className="mt-10 divide-y divide-gray-200 rounded-xl border border-gray-200 bg-white">
+            {homepageFaqs.map((faq) => (
+              <div key={faq.q} className="px-6 py-5">
+                <h3 className="font-semibold text-gray-900">{faq.q}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

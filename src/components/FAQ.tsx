@@ -16,7 +16,7 @@ interface FAQProps {
 }
 
 export default function FAQ({ items, cityName, emitSchema = true }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -57,7 +57,7 @@ export default function FAQ({ items, cityName, emitSchema = true }: FAQProps) {
                   className={`h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                 />
               </button>
-              <div className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+              <div className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${isOpen ? 'max-h-[500px]' : 'max-h-0'}`}>
                 <div className="px-6 pb-5 text-gray-600 leading-relaxed">{item.answer}</div>
               </div>
             </div>

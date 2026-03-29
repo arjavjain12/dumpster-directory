@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { MapPin, ArrowRight, Users } from 'lucide-react'
+import { MapPin, ArrowRight, Users, DollarSign } from 'lucide-react'
 
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
-import { titleCase, formatNumber, STATE_NAMES } from '@/lib/utils'
+import { titleCase, formatNumber, formatPrice, STATE_NAMES, DEFAULT_PRICING } from '@/lib/utils'
 import { getStateFAQs } from '@/lib/faq'
 import { getCitiesByState, getAllStates } from '@/lib/supabase'
 
@@ -114,6 +114,26 @@ export default async function StatePage({
             Browse dumpster rental companies across {stateName}. Select your city to compare local
             providers, view pricing, and get free quotes.
           </p>
+
+          {/* Pricing quick reference */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            {([10, 20, 30] as const).map((size) => {
+              const p = DEFAULT_PRICING[size]
+              return (
+                <div key={size} className="rounded-lg bg-green-50 border border-green-200 px-4 py-2.5 text-sm">
+                  <span className="text-gray-500">{size} yd: </span>
+                  <span className="font-semibold text-gray-900">{formatPrice(p.low)}–{formatPrice(p.high)}</span>
+                </div>
+              )
+            })}
+            <Link
+              href={`/dumpster-rental/${stateSlug}/cost`}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-green-800 transition"
+            >
+              <DollarSign className="h-4 w-4" />
+              {stateName} Cost Guide
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -194,7 +214,7 @@ export default async function StatePage({
         </div>
 
         <div className="mt-12">
-          <FAQ items={faqs} cityName={stateName} emitSchema={false} />
+          <FAQ items={faqs} cityName={stateName} />
         </div>
       </div>
     </>

@@ -236,6 +236,18 @@ export default async function CityPage({
             {/* Pricing Table */}
             <PricingTable cityPricing={pricing} cityName={city.city_name} />
 
+            {/* Cost guide callout */}
+            <div className="rounded-xl border border-blue-100 bg-blue-50 p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <p className="font-semibold text-gray-900 text-sm">What affects dumpster prices in {city.city_name}?</p>
+                <p className="text-xs text-gray-600 mt-0.5">Our cost guide covers local pricing factors, hidden fees, and money-saving tips.</p>
+              </div>
+              <Link href={`/dumpster-rental/${stateSlug}/${citySlug}/cost`}
+                className="shrink-0 flex items-center gap-1 text-sm font-semibold text-blue-700 hover:text-blue-800 transition whitespace-nowrap">
+                View {city.city_name} Cost Guide <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
             {/* Business Listings */}
             <div>
               <div className="flex items-center justify-between mb-5">
@@ -278,7 +290,7 @@ export default async function CityPage({
             <WhatFitsInfographic />
 
             {/* FAQ */}
-            <FAQ items={faqs} cityName={city.city_name} emitSchema={false} />
+            <FAQ items={faqs} cityName={city.city_name} />
           </div>
 
           {/* Sidebar */}

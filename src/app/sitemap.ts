@@ -74,6 +74,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/cheapest-dumpster-rental-near-me`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/affordable-dumpster-rental`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/local-dumpster-rental`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/is-dumpster-diving-legal`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/list-your-business`,
       lastModified: now,
       changeFrequency: 'monthly',
@@ -244,7 +268,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // ── Dumpster-size detail pages ───────────────────────────────────────────────
-  const sizePages: MetadataRoute.Sitemap = [10, 15, 20, 30, 40].map((size) => ({
+  const sizePages: MetadataRoute.Sitemap = [2, 3, 4, 6, 10, 12, 15, 20, 30, 40].map((size) => ({
     url: `${BASE_URL}/dumpster-sizes/${size}-yard`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
@@ -276,5 +300,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...sizePages, ...categoryPages, ...statePages]
+  // ── State cost pages ─────────────────────────────────────────────────────────
+  const stateCostPages: MetadataRoute.Sitemap = Object.values(STATE_NAMES).map((name) => ({
+    url: `${BASE_URL}/dumpster-rental/${name.toLowerCase().replace(/\s+/g, '-')}/cost`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...sizePages, ...categoryPages, ...statePages, ...stateCostPages]
 }

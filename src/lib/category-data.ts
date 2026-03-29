@@ -20,10 +20,10 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
   'roll-off': {
     slug: 'roll-off',
     primaryKeyword: 'roll off dumpster rental',
-    h1: 'Roll-Off Dumpster Rental — How It Works & What to Expect',
-    metaTitle: 'Roll-Off Dumpster Rental Guide (2026) — Sizes & Pricing',
+    h1: 'Roll-Off Dumpster Rental Near Me — How It Works & What to Expect',
+    metaTitle: 'Roll-Off Dumpster Rental Near Me (2026) — Sizes, Prices & How to Book',
     metaDescription:
-      'Everything about roll-off dumpster rental: how it works, sizes (10–40 yard), pricing, what you can dump, and how to find the best local company.',
+      'Find roll-off dumpster rental near you. Compare sizes (10–40 yard), pricing from $275, and how it works. Get free quotes from local companies in minutes.',
     intro: `A roll-off dumpster is the large, rectangular open-top container you see parked in driveways and job sites across the US. It gets its name from the way it's delivered — the container rolls off the back of a specialized truck onto your property. Roll-off dumpsters are the go-to choice for any project generating significant waste: home cleanouts, renovations, roofing, construction, and landscaping. Unlike the smaller front-load bins used for regular trash service, roll-offs are rented for a specific project and hauled away when you're done.`,
     stats: [
       { label: 'Sizes available', value: '10–40 cubic yards' },
@@ -91,16 +91,28 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
         q: 'What size roll-off do I need?',
         a: 'The 20-yard is the most popular all-around size. For a bathroom remodel or single-room cleanout, choose a 10-yard. For roofing or whole-home renovation, go with a 20. For construction or large commercial work, choose a 30 or 40-yard.',
       },
+      {
+        q: 'How do I find roll-off dumpster rental near me?',
+        a: 'Search by city on DumpsterListing to compare local roll-off dumpster companies near you. Look for locally-owned companies — they typically price 15–25% lower than national chains. Get at least 3 quotes before booking to ensure you get the best rate.',
+      },
+      {
+        q: 'What is the difference between a roll-off and a standard dumpster?',
+        a: 'A roll-off dumpster is an open-top rectangular container delivered by a specialized truck that rolls it off onto your property. Standard front-load dumpsters are enclosed, permanently placed, and emptied by a truck on a recurring service schedule. For residential projects and construction, roll-offs are the right choice.',
+      },
+      {
+        q: 'How quickly can I get a roll-off dumpster delivered?',
+        a: 'Most local roll-off companies offer next-day delivery, and many provide same-day service for an additional fee ($25–$75 rush charge). Booking 48 hours ahead gives you the best availability and pricing. Peak season (spring and summer) can limit same-day options.',
+      },
     ],
   },
 
   construction: {
     slug: 'construction',
     primaryKeyword: 'construction dumpster rental',
-    h1: 'Construction Dumpster Rental — Sizes, Pricing & What to Know',
-    metaTitle: 'Construction Dumpster Rental (2026) — Sizes & Pricing',
+    h1: 'Construction Dumpster Rental Near Me — Sizes, Pricing & What to Know',
+    metaTitle: 'Construction Dumpster Rental Near Me (2026) — From $375 | Compare Sizes',
     metaDescription:
-      'Rent a dumpster for your construction project. Compare sizes, pricing, and weight limits for residential and commercial construction waste disposal.',
+      'Find construction dumpster rental near you. Compare 20–40 yard containers from $375, weight limits, and tips for keeping your job site clean and compliant.',
     intro: `Construction projects generate enormous amounts of debris fast — lumber, drywall, concrete, roofing materials, metal, packaging, and mixed waste all pile up simultaneously. A construction dumpster rental keeps your job site clean, compliant with waste management regulations, and moving efficiently. Whether you're framing a new home, doing a gut renovation, or managing a commercial build, having the right container on site from day one is non-negotiable. Construction dumpsters differ from standard residential rentals in capacity, weight tolerance, and sometimes material restrictions — here's what you need to know before you book.`,
     image: '/images/construction-dumpster.jpg',
     imageAlt: 'Large roll-off dumpster on an active construction site',
@@ -169,16 +181,28 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
         q: 'Do I need a permit for a construction dumpster?',
         a: 'If the container is on private property (your lot or parking area), no permit is needed. If it must go on public right-of-way, check with your city. Most contractors factor permit costs into project budgets.',
       },
+      {
+        q: 'How do I find construction dumpster rental near me?',
+        a: 'Search by city on DumpsterListing to compare local construction dumpster companies. When calling, mention you need a construction container — providers may offer contractor pricing or higher weight allowances for job site rentals. Getting 3 quotes is standard practice for contractors.',
+      },
+      {
+        q: 'Can I get a construction dumpster delivered to a job site?',
+        a: 'Yes — roll-off trucks can access most job sites, driveways, and parking lots. The truck needs approximately 60 feet of clear approach. For tight sites, confirm access dimensions with your provider before booking.',
+      },
+      {
+        q: 'What construction debris is not allowed in a dumpster?',
+        a: 'Prohibited items on construction sites include: asbestos-containing materials, lead paint debris, hazardous chemicals, propane tanks, and certain treated woods. Most lumber, drywall, concrete (in limited amounts), roofing, and packaging are accepted. Always confirm with your provider.',
+      },
     ],
   },
 
   residential: {
     slug: 'residential',
     primaryKeyword: 'residential dumpster rental',
-    h1: 'Residential Dumpster Rental — For Homeowners Who Mean Business',
-    metaTitle: 'Residential Dumpster Rental (2026) — Sizes & Cost',
+    h1: 'Residential Dumpster Rental — Sizes, Costs & Tips for Homeowners',
+    metaTitle: 'Residential Dumpster Rental Near Me (2026) — From $275 | Sizes & Cost',
     metaDescription:
-      'Renting a dumpster for your home project? Compare sizes, costs, and tips for residential roll-off dumpster rental. Find the right container for cleanouts, renovations, and more.',
+      'Find residential dumpster rental near you. Compare 10–20 yard containers from $275 for cleanouts, renovations, roofing, and yard work. Free quotes from local companies.',
     intro: `Residential dumpster rental gives homeowners the same professional waste disposal tool that contractors have used for decades. Whether you're clearing out decades of accumulated stuff, knocking out a basement renovation, replacing a roof, or doing major landscaping, a roll-off dumpster dropped in your driveway is dramatically more efficient than multiple trips to the transfer station. Most homeowners are surprised at how easy it is — you call, they deliver, you fill it at your own pace, they haul it away. No renting a truck, no dump fees, no multiple trips.`,
     image: '/images/small-dumpster-residential.jpg',
     imageAlt: 'Residential roll-off dumpster rental in a suburban driveway',
@@ -247,6 +271,18 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
         q: 'How quickly can I get a dumpster delivered?',
         a: 'Most local companies offer next-day or same-day delivery. Calling 2–3 days ahead ensures better availability. Peak season (spring/summer) can have tighter schedules.',
       },
+      {
+        q: 'What is the cheapest residential dumpster rental near me?',
+        a: 'The cheapest residential option is a 10-yard dumpster from a local independent company, typically $200–$350 in most markets. Avoid national chains — local operators price 15–25% lower. Compare at least 3 quotes, book mid-week, and ask about any fill-in discounts for that week.',
+      },
+      {
+        q: 'Can I put household junk and renovation debris in the same dumpster?',
+        a: 'Yes — residential roll-offs accept mixed loads. Furniture, appliances, carpet, drywall, lumber, roofing shingles, and general junk can all go in together. Hazardous materials (paint, batteries, propane) are always prohibited.',
+      },
+      {
+        q: 'Do HOAs restrict residential dumpster rentals?',
+        a: 'Some HOAs prohibit visible dumpsters on the street or have rules about placement and duration. Check your HOA guidelines before booking. Most allow dumpsters in driveways for active projects — you may need to notify your HOA in advance.',
+      },
     ],
   },
 
@@ -254,9 +290,9 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'commercial',
     primaryKeyword: 'commercial dumpster rental',
     h1: 'Commercial Dumpster Rental — Bulk Waste Solutions for Businesses',
-    metaTitle: 'Commercial Dumpster Rental (2026) — Sizes & Pricing',
+    metaTitle: 'Commercial Dumpster Rental Near Me (2026) — Pricing & Service Options',
     metaDescription:
-      'Commercial dumpster rental for businesses, contractors, and property managers. Compare sizes, pricing, and ongoing service options for commercial waste disposal needs.',
+      'Commercial dumpster rental for businesses, contractors, and property managers. Compare 20–40 yard containers, ongoing service options, and volume pricing near you.',
     intro: `Commercial dumpster rental covers a wide range of business needs — from a retail store clearing out old inventory to a property management company handling ongoing waste for a multi-unit complex. Unlike residential one-time rentals, commercial clients often need scheduled pickups, swap services, or long-term container placement. The right commercial provider understands job site timelines, volume pricing, and the regulatory requirements that come with business waste disposal. Here's what to know before you rent.`,
     stats: [
       { label: 'Common sizes', value: '20–40 cubic yards' },
@@ -330,9 +366,9 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'concrete',
     primaryKeyword: 'concrete dumpster rental',
     h1: 'Concrete Dumpster Rental — Heavy Material Disposal Done Right',
-    metaTitle: 'Concrete Dumpster Rental (2026) — Pricing & Sizes',
+    metaTitle: 'Concrete Dumpster Rental (2026) — Weight Limits, Sizes & Pricing',
     metaDescription:
-      'Renting a dumpster for concrete, dirt, or masonry? Learn about weight limits, specialty containers, and pricing for heavy material disposal.',
+      'Renting a dumpster for concrete, dirt, or masonry? Learn which container handles heavy debris without overages, weight limits by size, and pricing from $150.',
     intro: `Concrete, dirt, brick, asphalt, and stone are among the heaviest materials you can dispose of — and they require special handling when renting a dumpster. Standard roll-off containers have weight limits of 2–6 tons, and a half-full container of broken concrete can easily max that out. For heavy debris like concrete and masonry, most rental companies offer smaller, reinforced "heavy material" dumpsters — typically 4–12 cubic yards — specifically engineered for dense loads. Renting the wrong container can result in overage fees of $80–$100 per extra ton, so getting this right at booking matters.`,
     stats: [
       { label: 'Best container size', value: '4–12 cubic yards' },
@@ -398,9 +434,9 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'yard-waste',
     primaryKeyword: 'yard waste dumpster rental',
     h1: 'Yard Waste Dumpster Rental — Landscaping & Garden Debris Disposal',
-    metaTitle: 'Yard Waste Dumpster Rental (2026) — Sizes & Pricing',
+    metaTitle: 'Yard Waste Dumpster Rental Near Me (2026) — From $275 | Sizes & Pricing',
     metaDescription:
-      'Renting a dumpster for yard waste, landscaping, or tree removal? Learn what\'s accepted, best sizes, and pricing for organic debris disposal.',
+      'Find yard waste dumpster rental near you. Compare 10–20 yard containers from $275 for landscaping, tree removal, and brush disposal. Free quotes from local companies.',
     intro: `Major landscaping projects generate more debris than most homeowners expect. A tree removal, overgrown shrub removal, sod replacement, or large-scale yard cleanup can quickly fill several pickup truck loads with branches, brush, grass, mulch, and soil. A yard waste dumpster rental eliminates the multiple trips to the green waste facility and lets you work efficiently across days. Most providers accept organic yard debris alongside regular waste in standard containers, though some municipalities require separate disposal. Understanding what's accepted — and what isn't — saves you time and avoids extra charges.`,
     image: '/images/yard-waste-dumpster.jpg',
     imageAlt: 'Dumpster filled with yard waste and tree branches for landscaping disposal',
@@ -468,9 +504,9 @@ export const CATEGORY_DATA: Record<string, CategoryData> = {
     slug: 'roofing',
     primaryKeyword: 'roofing dumpster rental',
     h1: 'Roofing Dumpster Rental — The Right Container for Shingle Tear-Off',
-    metaTitle: 'Roofing Dumpster Rental (2026) — Sizes & Weight Limits',
+    metaTitle: 'Roofing Dumpster Rental Near Me (2026) — Sizes, Weight Limits & Pricing',
     metaDescription:
-      'Renting a dumpster for a roofing project? Compare sizes and pricing for roofing shingle disposal, weight limits, and what roofing contractors need to know.',
+      'Find roofing dumpster rental near you. Compare 20–30 yard containers for shingle disposal from $375. Avoid weight overage fees — see exactly what size you need.',
     intro: `Asphalt shingles are heavier than they look. A single layer of standard 3-tab shingles weighs about 2–4 lbs per square foot — meaning a 1,500 sq ft roof tear-off generates 3,000–6,000 lbs of debris before you account for underlayment, nails, and flashing. Multiple layers multiply that weight fast. Getting the right dumpster for a roofing job is less about volume than it is about weight — choose too small, or without confirming the weight allowance, and you'll pay significant overage fees. Here's how to get it right.`,
     image: '/images/roofing-dumpster.jpg',
     imageAlt: 'Dumpster filled with old roofing shingles during residential roof replacement',

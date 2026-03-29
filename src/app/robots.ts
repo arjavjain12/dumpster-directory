@@ -8,6 +8,18 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
+      // Block aggressive scrapers and SEO crawlers
+      { userAgent: 'AhrefsBot', disallow: '/' },
+      { userAgent: 'SemrushBot', disallow: '/' },
+      { userAgent: 'DotBot', disallow: '/' },
+      { userAgent: 'MJ12bot', disallow: '/' },
+      { userAgent: 'BLEXBot', disallow: '/' },
+      { userAgent: 'PetalBot', disallow: '/' },
+      { userAgent: 'serpstatbot', disallow: '/' },
+      { userAgent: 'SEOkicks', disallow: '/' },
+      { userAgent: 'Baiduspider', disallow: '/' },
+      { userAgent: 'YandexBot', disallow: '/' },
+      { userAgent: 'Bytespider', disallow: '/' },
       // Explicit AI bot access for GEO (Generative Engine Optimization)
       { userAgent: 'GPTBot', allow: '/' },
       { userAgent: 'ChatGPT-User', allow: '/' },
