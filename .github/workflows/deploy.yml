@@ -1,0 +1,48 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync code to VPS
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -az --delete --exclude='.git' --exclude='node_modules' --exclude='.next' --exclude='tsconfig.tsbuildinfo'
+          path: ./
+          remote_path: /opt/dumpsterlisting/
+          remote_host: 147.93.27.63
+          remote_user: root
+          remote_key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Build and restart container
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 147.93.27.63
+          username: root
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            set -e
+            cd /opt/dumpsterlisting
+            nixpacks build . --name dumpsterlisting
+            docker stop dumpsterlisting && docker rm dumpsterlisting
+            docker run -d \
+              --name dumpsterlisting \
+              --network dokploy-network \
+              --restart unless-stopped \
+              --env-file /opt/dumpsterlisting/.env \
+              -e PORT=3000 \
+              -l 'traefik.enable=true' \
+              -l 'traefik.http.routers.dumpsterlisting.rule=Host(`dumpsterlisting.com`) || Host(`www.dumpsterlisting.com`)' \
+              -l 'traefik.http.routers.dumpsterlisting.entrypoints=websecure' \
+              -l 'traefik.http.routers.dumpsterlisting.tls.certresolver=letsencrypt' \
+              -l 'traefik.http.services.dumpsterlisting.loadbalancer.server.port=3000' \
+              -l 'traefik.http.routers.dumpsterlisting-http.rule=Host(`dumpsterlisting.com`) || Host(`www.dumpsterlisting.com`)' \
+              -l 'traefik.http.routers.dumpsterlisting-http.entrypoints=web' \
+              -l 'traefik.http.routers.dumpsterlisting-http.middlewares=redirect-to-https@docker' \
+              dumpsterlisting
