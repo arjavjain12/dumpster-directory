@@ -13,7 +13,7 @@ jobs:
       - name: Sync code to VPS
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -az --delete --exclude='.git' --exclude='node_modules' --exclude='.next' --exclude='tsconfig.tsbuildinfo'
+          switches: -az --delete --exclude='.git' --exclude='node_modules' --exclude='.next' --exclude='tsconfig.tsbuildinfo' --exclude='.env'
           path: ./
           remote_path: /opt/dumpsterlisting/
           remote_host: 147.93.27.63
