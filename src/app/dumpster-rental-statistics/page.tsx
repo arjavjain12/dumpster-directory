@@ -90,6 +90,17 @@ const GROWTH_PROJECTIONS = [
 export default function DumpsterRentalStatisticsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'Dumpster Rental Industry Statistics (2026) — Market Size, Prices & Trends',
+        description: 'Key dumpster rental industry statistics for 2026: $6.2B market size, average prices by region, most popular sizes, busiest seasons, and growth projections through 2030.',
+        datePublished: '2026-02-01',
+        dateModified: '2026-03-01',
+        author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+        publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/dumpster-rental-statistics' },
+      }) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

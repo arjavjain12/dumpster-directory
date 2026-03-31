@@ -25,6 +25,18 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Dumpster Rental Checklist: Everything You Need Before You Book',
+  description: 'A step-by-step dumpster rental checklist covering what to do before booking, during your rental period, and when scheduling pickup.',
+  datePublished: '2026-02-15',
+  dateModified: '2026-03-01',
+  author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/dumpster-rental-checklist' },
+}
+
 const PRE_RENTAL_ITEMS = [
   {
     title: 'Measure Your Placement Area',
@@ -124,6 +136,7 @@ const PICKUP_ITEMS = [
 export default function DumpsterRentalChecklistPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

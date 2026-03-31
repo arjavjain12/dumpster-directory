@@ -9,6 +9,8 @@ import WhatFitsInfographic from '@/components/infographics/WhatFitsInfographic'
 
 const RELATED_SERVICES: Record<string, Array<{ label: string; href: string; desc: string }>> = {
   construction: [
+    { label: 'Deck Demolition Dumpster', href: '/dumpster-rental/deck-demolition', desc: 'Lumber, fasteners, and concrete footings' },
+    { label: 'Home Renovation Dumpster', href: '/dumpster-rental/home-renovation', desc: 'Multi-room renovation debris' },
     { label: 'Roofing Dumpster Rental', href: '/dumpster-rental/roofing', desc: 'Shingle and tear-off disposal' },
     { label: 'Concrete Dumpster Rental', href: '/dumpster-rental/concrete', desc: 'Heavy debris and slab removal' },
     { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'All-purpose job site containers' },
@@ -25,9 +27,13 @@ const RELATED_SERVICES: Record<string, Array<{ label: string; href: string; desc
     { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'General heavy material containers' },
   ],
   residential: [
+    { label: 'Kitchen Renovation Dumpster', href: '/dumpster-rental/kitchen-renovation', desc: 'Cabinets, tile, and fixture removal' },
+    { label: 'Bathroom Remodel Dumpster', href: '/dumpster-rental/bathroom-renovation', desc: 'Tile, tub, and vanity disposal' },
+    { label: 'Garage Cleanout Dumpster', href: '/dumpster-rental/garage-cleanout', desc: 'Reclaim your garage in a weekend' },
+    { label: 'Basement Cleanout Dumpster', href: '/dumpster-rental/basement-cleanout', desc: 'Full basement purge and clearout' },
+    { label: 'Moving Dumpster Rental', href: '/dumpster-rental/moving', desc: 'Declutter before or during your move' },
     { label: 'Yard Waste Dumpster Rental', href: '/dumpster-rental/yard-waste', desc: 'Landscaping and organic debris' },
     { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'Standard containers for home projects' },
-    { label: 'Commercial Dumpster Rental', href: '/dumpster-rental/commercial', desc: 'For larger home renovation projects' },
   ],
   'yard-waste': [
     { label: 'Residential Dumpster Rental', href: '/dumpster-rental/residential', desc: 'Full home cleanout and renovation' },

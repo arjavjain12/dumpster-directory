@@ -169,6 +169,17 @@ const CHECKLIST_ITEMS = [
 export default function HowToChooseDumpsterCompanyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'How to Choose a Dumpster Rental Company: 8 Things to Check',
+        description: 'The 8 things to verify before booking a dumpster rental company — licensing, insurance, pricing transparency, reviews, and more.',
+        datePublished: '2026-02-15',
+        dateModified: '2026-03-01',
+        author: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+        publisher: { '@type': 'Organization', name: 'DumpsterListing', url: 'https://dumpsterlisting.com' },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://dumpsterlisting.com/how-to-choose-a-dumpster-rental-company' },
+      }) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
