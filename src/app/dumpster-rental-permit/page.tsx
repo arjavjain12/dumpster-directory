@@ -268,6 +268,28 @@ export default function DumpsterPermitPage() {
           </div>
         </section>
 
+        {/* By project type */}
+        <section className="rounded-xl border border-gray-100 bg-gray-50 p-6">
+          <h2 className="font-semibold text-gray-900 mb-4">Permits by Project Type</h2>
+          <p className="text-sm text-gray-600 mb-4">Permit requirements can vary by the type of project. Street placement is common for these project types:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction', desc: 'Street placement common on job sites' },
+              { label: 'Roofing Dumpster Rental', href: '/dumpster-rental/roofing', desc: 'Often placed curbside during tear-offs' },
+              { label: 'Residential Cleanouts', href: '/dumpster-rental/residential', desc: 'Driveway placement usually avoids permits' },
+              { label: 'Commercial Dumpster Rental', href: '/dumpster-rental/commercial', desc: 'May need additional permits in dense areas' },
+              { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'Standard roll-off placement rules apply' },
+              { label: 'Concrete Removal', href: '/dumpster-rental/concrete', desc: 'Weight limits and permits both apply' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href}
+                className="flex flex-col rounded-lg border border-gray-200 bg-white px-4 py-3 hover:border-green-300 transition group">
+                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700 transition">{link.label}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{link.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Find a Dumpster Rental Company Near You</h2>

@@ -171,6 +171,46 @@ export default function DumpsterSizeEstimatorPage() {
           </div>
         </section>
 
+        {/* Related tools */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Related Calculators & Guides</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Cubic Yard Calculator', href: '/cubic-yard-calculator', desc: 'Convert dimensions to cubic yards' },
+              { label: 'Dumpster Weight Limit Calculator', href: '/dumpster-weight-limit-calculator', desc: 'Check if your load exceeds weight limits' },
+              { label: 'Concrete Weight Calculator', href: '/concrete-weight-calculator', desc: 'Estimate slab and demolition weight' },
+              { label: 'Drywall Weight Calculator', href: '/drywall-weight-calculator', desc: 'Calculate drywall removal weight' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href}
+                className="flex flex-col rounded-xl border border-gray-200 bg-white px-4 py-3 hover:border-green-200 hover:shadow-sm transition group">
+                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700 transition">{link.label}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{link.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Shop by project type */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Find Dumpsters by Project Type</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { label: 'Construction Projects', href: '/dumpster-rental/construction' },
+              { label: 'Residential Cleanouts', href: '/dumpster-rental/residential' },
+              { label: 'Roofing Projects', href: '/dumpster-rental/roofing' },
+              { label: 'Concrete Removal', href: '/dumpster-rental/concrete' },
+              { label: 'Yard Waste', href: '/dumpster-rental/yard-waste' },
+              { label: 'Roll-Off Rentals', href: '/dumpster-rental/roll-off' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href}
+                className="flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">
+                <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Know Your Size? Find a Dumpster Near You.</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Browse local dumpster rental companies and get free quotes — takes less than 2 minutes.</p>

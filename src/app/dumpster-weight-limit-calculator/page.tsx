@@ -175,15 +175,17 @@ export default function DumpsterWeightCalculatorPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">Related Calculators & Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { label: 'Cubic Yard Calculator', href: '/cubic-yard-calculator' },
-              { label: 'Concrete Weight Calculator', href: '/concrete-weight-calculator' },
-              { label: 'Dumpster Size Estimator', href: '/dumpster-size-estimator' },
-              { label: 'How to Dispose of Concrete', href: '/how-to-dispose-of-concrete' },
+              { label: 'Cubic Yard Calculator', href: '/cubic-yard-calculator', desc: 'Convert dimensions to cubic yards' },
+              { label: 'Concrete Weight Calculator', href: '/concrete-weight-calculator', desc: 'Estimate slab and demolition weight' },
+              { label: 'Dumpster Size Estimator', href: '/dumpster-size-estimator', desc: 'Find the right dumpster size' },
+              { label: 'Drywall Weight Calculator', href: '/drywall-weight-calculator', desc: 'Calculate drywall removal weight' },
+              { label: 'How to Dispose of Concrete', href: '/how-to-dispose-of-concrete', desc: 'Concrete disposal and recycling options' },
+              { label: 'Concrete Dumpster Rental', href: '/dumpster-rental/concrete', desc: 'Rentals for heavy debris projects' },
             ].map((link) => (
               <Link key={link.href} href={link.href}
-                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:text-green-700 hover:border-green-200 transition">
-                <ArrowRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
-                {link.label}
+                className="flex flex-col rounded-xl border border-gray-200 bg-white px-4 py-3 hover:border-green-200 hover:shadow-sm transition group">
+                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700 transition">{link.label}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{link.desc}</span>
               </Link>
             ))}
           </div>
@@ -193,10 +195,16 @@ export default function DumpsterWeightCalculatorPage() {
         <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Find the Right Dumpster for Your Load</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">Compare local dumpster rental companies with the right size and weight limits for your project.</p>
-          <Link href="/dumpster-rental"
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 font-bold text-green-700 hover:bg-green-50 transition">
-            Find Local Companies <ArrowRight className="h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/dumpster-rental/concrete"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-3.5 font-bold text-green-700 hover:bg-green-50 transition">
+              Concrete & Heavy Debris <ArrowRight className="h-5 w-5" />
+            </Link>
+            <Link href="/dumpster-rental/construction"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/40 px-8 py-3.5 font-bold text-white hover:bg-green-800 transition">
+              Construction Projects
+            </Link>
+          </div>
         </section>
       </div>
     </>

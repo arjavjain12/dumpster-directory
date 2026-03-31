@@ -376,6 +376,10 @@ export default function DumpsterRentalStatisticsPage() {
             {[
               { label: 'How Much Does Dumpster Rental Cost?', href: '/how-much-does-dumpster-rental-cost', desc: 'Full pricing breakdown by size and city' },
               { label: 'Dumpster Size Guide', href: '/dumpster-sizes', desc: 'Compare 10 to 40-yard containers' },
+              { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction', desc: 'Most common use — job site debris disposal' },
+              { label: 'Residential Dumpster Rental', href: '/dumpster-rental/residential', desc: 'Home cleanout and renovation rentals' },
+              { label: 'Roofing Dumpster Rental', href: '/dumpster-rental/roofing', desc: 'Shingle and tear-off disposal' },
+              { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'The standard container type for all projects' },
               { label: 'How to Choose a Dumpster Company', href: '/how-to-choose-a-dumpster-rental-company', desc: '8 things to check before you book' },
               { label: 'Dumpster Rental Checklist', href: '/dumpster-rental-checklist', desc: 'Everything you need before renting' },
               { label: 'Dumpster Rental vs Junk Removal', href: '/dumpster-rental-vs-junk-removal', desc: 'Side-by-side cost and feature comparison' },

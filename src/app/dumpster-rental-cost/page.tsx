@@ -685,6 +685,11 @@ export default function CostGuidePage() {
               <h3 className="font-bold text-gray-900 mb-3">Related Guides</h3>
               <div className="space-y-2">
                 {[
+                  { label: 'Construction Dumpster Costs', href: '/dumpster-rental/construction' },
+                  { label: 'Residential Dumpster Costs', href: '/dumpster-rental/residential' },
+                  { label: 'Roofing Dumpster Costs', href: '/dumpster-rental/roofing' },
+                  { label: 'Concrete Removal Costs', href: '/dumpster-rental/concrete' },
+                  { label: 'Commercial Dumpster Costs', href: '/dumpster-rental/commercial' },
                   { label: 'Cost by City: Most & Least Expensive', href: '/dumpster-rental-cost-by-city' },
                   { label: 'Dumpster Size Guide', href: '/dumpster-sizes' },
                   { label: 'Weight Limit Calculator', href: '/dumpster-weight-limit-calculator' },

@@ -7,6 +7,53 @@ import type { CategoryData } from '@/lib/category-data'
 import WeightLimitsInfographic from '@/components/infographics/WeightLimitsInfographic'
 import WhatFitsInfographic from '@/components/infographics/WhatFitsInfographic'
 
+const RELATED_SERVICES: Record<string, Array<{ label: string; href: string; desc: string }>> = {
+  construction: [
+    { label: 'Roofing Dumpster Rental', href: '/dumpster-rental/roofing', desc: 'Shingle and tear-off disposal' },
+    { label: 'Concrete Dumpster Rental', href: '/dumpster-rental/concrete', desc: 'Heavy debris and slab removal' },
+    { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'All-purpose job site containers' },
+    { label: 'Commercial Dumpster Rental', href: '/dumpster-rental/commercial', desc: 'Large-scale project disposal' },
+  ],
+  roofing: [
+    { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction', desc: 'Full job site debris disposal' },
+    { label: 'Concrete Dumpster Rental', href: '/dumpster-rental/concrete', desc: 'Heavy tear-out material' },
+    { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'Standard containers for roofing projects' },
+  ],
+  concrete: [
+    { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction', desc: 'Full construction waste disposal' },
+    { label: 'Roofing Dumpster Rental', href: '/dumpster-rental/roofing', desc: 'Heavy shingle and tear-off removal' },
+    { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'General heavy material containers' },
+  ],
+  residential: [
+    { label: 'Yard Waste Dumpster Rental', href: '/dumpster-rental/yard-waste', desc: 'Landscaping and organic debris' },
+    { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'Standard containers for home projects' },
+    { label: 'Commercial Dumpster Rental', href: '/dumpster-rental/commercial', desc: 'For larger home renovation projects' },
+  ],
+  'yard-waste': [
+    { label: 'Residential Dumpster Rental', href: '/dumpster-rental/residential', desc: 'Full home cleanout and renovation' },
+    { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'General purpose containers' },
+    { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction', desc: 'Job site and landscaping debris' },
+  ],
+  commercial: [
+    { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction', desc: 'Job site debris disposal' },
+    { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off', desc: 'Standard commercial containers' },
+    { label: 'Residential Dumpster Rental', href: '/dumpster-rental/residential', desc: 'Smaller scale renovation projects' },
+  ],
+  'roll-off': [
+    { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction', desc: 'Job site waste management' },
+    { label: 'Residential Dumpster Rental', href: '/dumpster-rental/residential', desc: 'Home cleanout and renovation' },
+    { label: 'Commercial Dumpster Rental', href: '/dumpster-rental/commercial', desc: 'Business and commercial projects' },
+    { label: 'Concrete Dumpster Rental', href: '/dumpster-rental/concrete', desc: 'Heavy material disposal' },
+  ],
+}
+
+const BLOG_RESOURCES = [
+  { label: 'How Much Does Dumpster Rental Cost?', href: '/how-much-does-dumpster-rental-cost' },
+  { label: 'Industry Statistics & Pricing Trends', href: '/dumpster-rental-statistics' },
+]
+
+const CONTRACTOR_RESOURCE = { label: 'Dumpster Rental for Contractors', href: '/dumpster-rental-for-contractors' }
+
 const TOP_CITIES = [
   { city: 'Houston', state: 'Texas', stateSlug: 'texas', citySlug: 'houston' },
   { city: 'Chicago', state: 'Illinois', stateSlug: 'illinois', citySlug: 'chicago' },
@@ -198,6 +245,27 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
               </div>
             </section>
 
+            {/* Related Services */}
+            {RELATED_SERVICES[data.slug] && (
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                  Related Dumpster Rental Services
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {RELATED_SERVICES[data.slug].map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="group flex flex-col rounded-xl border border-gray-200 bg-white px-4 py-3 hover:border-green-300 hover:shadow-sm transition-all"
+                    >
+                      <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700 transition">{service.label}</span>
+                      <span className="text-xs text-gray-500 mt-0.5">{service.desc}</span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+
             {/* City links */}
             <section>
               <h2 className="text-xl font-bold text-gray-900 mb-4">
@@ -291,6 +359,10 @@ export default function CategoryPageLayout({ data }: { data: CategoryData }) {
                   ...(data.slug === 'residential'
                     ? [{ label: 'Dumpster vs Junk Removal', href: '/dumpster-rental-vs-junk-removal' }]
                     : []),
+                  ...(data.slug === 'construction' || data.slug === 'commercial' || data.slug === 'roofing'
+                    ? [CONTRACTOR_RESOURCE]
+                    : []),
+                  ...BLOG_RESOURCES,
                 ].map((link) => (
                   <Link
                     key={link.href}

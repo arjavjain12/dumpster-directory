@@ -224,6 +224,11 @@ const HAULER_TIPS = [
 ]
 
 const RELATED_GUIDES = [
+  { label: 'Construction Dumpster Rental', href: '/dumpster-rental/construction' },
+  { label: 'Commercial Dumpster Rental', href: '/dumpster-rental/commercial' },
+  { label: 'Roll-Off Dumpster Rental', href: '/dumpster-rental/roll-off' },
+  { label: 'Roofing Dumpster Rental', href: '/dumpster-rental/roofing' },
+  { label: 'Concrete Dumpster Rental', href: '/dumpster-rental/concrete' },
   { label: 'How Much Does Dumpster Rental Cost?', href: '/dumpster-rental-cost' },
   { label: 'Roll-Off Dumpster Sizes Guide', href: '/roll-off-dumpster-sizes' },
   { label: 'Dumpster Weight Limit Calculator', href: '/dumpster-weight-limit-calculator' },

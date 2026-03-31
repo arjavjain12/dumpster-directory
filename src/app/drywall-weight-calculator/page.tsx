@@ -102,13 +102,38 @@ export default function DrywallWeightCalculatorPage() {
           </div>
         </section>
 
+        {/* Related tools */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Related Calculators & Guides</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Cubic Yard Calculator', href: '/cubic-yard-calculator', desc: 'Convert room dimensions to cubic yards' },
+              { label: 'Dumpster Weight Limit Calculator', href: '/dumpster-weight-limit-calculator', desc: 'Check if drywall fits within weight limits' },
+              { label: 'Dumpster Size Estimator', href: '/dumpster-size-estimator', desc: 'Get the right dumpster size for your project' },
+              { label: 'Concrete Weight Calculator', href: '/concrete-weight-calculator', desc: 'Also removing concrete? Estimate that weight' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href}
+                className="flex flex-col rounded-xl border border-gray-200 bg-white px-4 py-3 hover:border-green-200 hover:shadow-sm transition group">
+                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700 transition">{link.label}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{link.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Need a Dumpster for Your Renovation?</h2>
-          <p className="text-green-100 mb-6 max-w-xl mx-auto">Find local dumpster rental companies and get free quotes in minutes.</p>
-          <Link href="/dumpster-rental"
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 font-bold text-green-700 hover:bg-green-50 transition">
-            Find Local Companies <ArrowRight className="h-5 w-5" />
-          </Link>
+          <p className="text-green-100 mb-6 max-w-xl mx-auto">Find local dumpster rental companies for renovation and construction projects.</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/dumpster-rental/residential"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-3.5 font-bold text-green-700 hover:bg-green-50 transition">
+              Residential Dumpsters <ArrowRight className="h-5 w-5" />
+            </Link>
+            <Link href="/dumpster-rental/construction"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/40 px-8 py-3.5 font-bold text-white hover:bg-green-800 transition">
+              Construction Dumpsters
+            </Link>
+          </div>
         </section>
       </div>
     </>

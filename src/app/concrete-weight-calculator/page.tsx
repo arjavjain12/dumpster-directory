@@ -140,18 +140,45 @@ export default function ConcreteWeightCalculatorPage() {
           </div>
         </section>
 
+        {/* Related tools */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Related Calculators & Guides</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Dumpster Weight Limit Calculator', href: '/dumpster-weight-limit-calculator', desc: 'Check if concrete exceeds your dumpster limit' },
+              { label: 'Dumpster Size Estimator', href: '/dumpster-size-estimator', desc: 'Get a size recommendation for your project' },
+              { label: 'Cubic Yard Calculator', href: '/cubic-yard-calculator', desc: 'Convert dimensions to cubic yards' },
+              { label: 'How to Dispose of Concrete', href: '/how-to-dispose-of-concrete', desc: 'Disposal options and recycling tips' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href}
+                className="flex flex-col rounded-xl border border-gray-200 bg-white px-4 py-3 hover:border-green-200 hover:shadow-sm transition group">
+                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700 transition">{link.label}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{link.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="rounded-2xl bg-gradient-to-r from-green-700 to-green-700 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">Ready to Rent a Dumpster for Your Concrete Project?</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">
             Find local dumpster rental companies that specialize in concrete and heavy debris. Get free quotes in minutes.
           </p>
-          <Link
-            href="/dumpster-rental"
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 font-bold text-green-700 hover:bg-green-50 transition"
-          >
-            Find Local Companies <ArrowRight className="h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/dumpster-rental/concrete"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-3.5 font-bold text-green-700 hover:bg-green-50 transition"
+            >
+              Concrete Dumpster Rentals <ArrowRight className="h-5 w-5" />
+            </Link>
+            <Link
+              href="/dumpster-rental"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/40 px-8 py-3.5 font-bold text-white hover:bg-green-800 transition"
+            >
+              All Local Companies
+            </Link>
+          </div>
         </section>
       </div>
     </>
