@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/api/og'],
   },
+  alternates: {
+    types: {
+      'application/rss+xml': 'https://dumpsterlisting.com/feed.xml',
+    },
+  },
   robots: {
     index: true,
     follow: true,
